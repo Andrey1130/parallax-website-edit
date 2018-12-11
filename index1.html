@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>The Firestarter Group Digital Portal</title>
+        <meta name="description" content="The Firestarter Group publishes multimedia content each month, featuring our innovative work supporting the vision of communities across the globe.">
+        <!-- keywords -->
+        <meta name="keywords" content="social, philanthropy, innovation, entrepreneurship, social entrepreneurship, community investment">
+        <!-- favicon -->
+        <link rel="shortcut icon" href="images/firestarter_fav.png">
+        <link rel="apple-touch-icon" href="images/apple_touch_firestarter_57.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="images/apple_touch_firestarter_72.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="images/apple_touch_firestarter_114.png">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"> 
+        <link href="style.css" rel="stylesheet">
+        <link href="css/animations.css" rel="stylesheet">
+        <link href="css/font-awesome.min.css" rel="stylesheet">
+        <link href="css/bootstrap.css" rel="stylesheet">
+        <link href="css/responsive.css" rel="stylesheet">
+        <link rel="stylesheet" href="hint.css">
+        <link rel="css/nov_18/waii_style.css">
+        <!--[if lt IE 9]>
+        <script src="js/html5shiv.min.js"></script>
+        <link href="http://www.firestarter.org/css/animations-ie-fix.js" rel='stylesheet'>
+        <![endif]-->
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-25926409-7"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+
+            gtag('config', 'UA-25926409-7');
+        </script>
+    </head>
+
+    <body>
+
+
+
+        <!-- PDF Modal -->
+        <div class="modal fade" id="PdfModal" tabindex="-1" role="dialog" aria-labelledby="PdfModal" aria-hidden="true" data-refresh="true">
+            <div class="modal-dialog  modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Download PDF</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>For our internal outcome tracking, it is helpful to know who gains access to our report.  Please share some of the optional information below if you feel comfortable:</p>
+                        <form id="pdfForm" action="mail.php" method="post">
+                            <div class="radio"><label><input type="radio" name="optradio" value="1" onchange="pdfOption(this.value)"> If you want to share your information.</label></div>
+                            <div class="radio"><label><input type="radio" name="optradio" value="2" onchange="pdfOption(this.value)"> If you want to not share your information.</label></div>
+                            <div id="showinfo" style="display:none;">
+                                <div class="form-group"><input type="text" class="form-control" placeholder="Country" name="country" disabled="disabled" /></div>
+                                <div class="form-group"><input type="text" class="form-control" placeholder="Zip Code (If in the US)" name="zipcode" disabled="disabled"></div>
+                                <div class="form-group"><input type="email" class="form-control" placeholder="E-mail" name="mailaddr" disabled="disabled"></div>
+                            </div>
+                            <div class="form-group" id="showprefer" style="display:none;"><input type="checkbox"  name="prefer" value="Yes" disabled="disabled"/> <label class="form-check-label">I prefer not to share</label></div>
+                            <input type="submit" class="btn btn-primary" value="Access PDF" style="display:none;" />
+                        </form>
+                    </div>  
+                </div>
+            </div>
+        </div>
+
+
+        <nav class="menu-hide">
+            <div class="menu-block">
+                <div class="menu-head clearfix">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-12">
+                            <div class="row">
+                                <div class="col-4 col-sm-4 col-md-4 col-lg-7"><a href="index.html#" class="menu-open menubar-toggle"></a></div>
+                                <div class="col-8 col-sm-8 col-md-8 col-lg-4 ml-auto"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="menu-wrapper">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-12">
+                            <div class="row">
+                                <div class="col-lg-7">
+                                    <ul class="navigaltion">
+                                        <li><a href="index.html">Home</a></li>
+                                        <li><a href="about_firestarter.html">About FS</a></li>
+
+                                        <li><a href="films.html">Film</a></li>
+
+                                        <li><a href="about_firestarter.html#contact">Contact</a></li>
+                                        <li><a href="our_shelves.html">Bookshelf</a></li>
+                                    </ul>
+                                </div>
+
+
+
+                                <div class="col-lg-4 ml-auto">
+                                    <div class="modal-logo"><img src="images/firestarter_web_logo.png" alt=""></div>
+                                    <h4>Welcome to the Firestarter Digital Portal</h4>
+                                    <p>Each month, you will find new original content published through our digital portal. Here, we give insight into our ongoing work, share latest research publications, and give unique access to our ongoing media production. 
+                                    </p>
+                                    <p>This month, we are excited to share, <i>We Are In It</i>, a film we produced in 2016 about the experiences of migrant communities living across Houston, TX.</p>
+                                    <!-- Begin Mailchimp Signup Form -->
+                                    <link href="http://cdn-images.mailchimp.com/embedcode/slim-10_7.css" rel="stylesheet" type="text/css">
+                                    <style type="text/css">
+                                        #mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
+                                        /* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
+                                           We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+                                    </style>
+                                    <div id="mc_embed_signup">
+                                        <form action="https://firestarter.us17.list-manage.com/subscribe/post?u=45de124d26652bbcd9a8d20d0&amp;id=b4053a8816" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                                            <div id="mc_embed_signup_scroll">
+                                                <label for="mce-EMAIL">We can remind you when new content is up:</label>
+                                                <div class="form-group">
+                                                    <input type="email" value="" name="EMAIL" class="email form-control" id="mce-EMAIL" placeholder="your email address" required>
+                                                </div>
+                                                <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                                                <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_45de124d26652bbcd9a8d20d0_b4053a8816" tabindex="-1" value=""></div>
+                                                <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+                                            </div>
+                                        </form>
+                                    </div>
+
+                                    <!--End mc_embed_signup-->
+                                    <ul class="social-link">
+                                        <li><a class="facebook" href="https://www.facebook.com/wearethefirestarter/" target="_blank"><i class="fa fa-facebook-f" aria-hidden="true"></i></a></li>
+                                        <li><a class="twitter" href="https://twitter.com/starting_fire" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                                        <li><a class="instagram" href="https://www.instagram.com/wearethefirestarter/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </nav>
+
+        <header class="header">
+            <div class="row">
+                <div class="col-6 clearfix"><a href="index.html#" class="menu-open menubar-toggle"></a></div>
+                <div class="col-6 clearfix">
+                    <ul class="social d-none d-md-block">
+                        <li><a href="https://www.facebook.com/wearethefirestarter/" target="_blank"><i class="fa fa-facebook-f" aria-hidden="true"></i></a></li>
+                        <li><a href="https://twitter.com/starting_fire" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="https://www.instagram.com/wearethefirestarter/" title="instagram" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                    </ul>
+                    <div class="logo"><a href="index.html"><img src="images/firestarter_lettermark_bw.png" alt=""></a></div>
+                    <ul class="social d-block d-md-none">
+                        <li><a href="https://www.facebook.com/wearethefirestarter" target="_blank"><i class="fa fa-facebook-f" aria-hidden="true"></i></a></li>
+                        <li><a href="https://twitter.com/starting_fire" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="https://www.instagram.com/wearethefirestarter/" title="instagram" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        
+<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/175444778?title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;max-height: 100vh;background: black;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+        
+                <div class="waii-mid-block">
+            <div class="container">
+                <div class="row">
+                    
+                    <div class="col-lg-4">
+                        <div class="media">
+                            <a href="http://www.weareinitfilm.com"><img src="images/Nov-2018/Firestarter_poster_We_Are_In_It.jpg"></a>
+                        </div>
+                    </div>
+                                       
+                    <div class="col-lg-4">
+                        <div class="media">
+                            <div class="mr-3"><h2>We Are In It (2016)</h2></div>
+                        </div>
+                                            
+                        <p>We are in it features visceral scenes from the everyday lives of Karla, Serges, Hussein, Nancy and Tutu. For all of them, Houston is their common space of struggle, pleasure, and shelter. For them, Houston is a second, third or even fourth city of residence, both home and metropolis of hostility. Here, they are safe, restless, part of a diaspora that struggles to find meaning beyond labels of foreigner, immigrant, undocumented, alien, and refugee.
+ </p><br>
+                        Filmed  in  Houston, Texas<br>
+Running Time: 107min<br>
+Ratio 16:9<br>
+Digital Frame rate  23.976<br>
+Screening format: DCP<br>
+Language: English, Arabic, Burmese, Swahili<br>
+Subtitles: English and Spanish<br>
+                        <hr>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <div class="media">
+                            <div class="mr-3"><h2>Cast</h2></div>
+                        </div>
+                                            
+                        <p>Directed by Yehuda Sharim<br><br>
+Produced by Yan Digilov and the Firestarter Group<br>
+Edited by Abbigail Vandersnick<br>
+Camera Operation by Yehuda Sharim & Luis Afable<br>
+Translation and Subtitles by Lorena Alvarado and Abbigail Vandersnick<br>
+Post Production Sound by Scott Szabo<br>
+Post Production Picture by Ryan Nguyen<br>
+Post Production Assistant Picture by Dan Diaz <br><br>
+                            
+Cast (in order of appearance): Hussein Alkhudari, Karla de Jesus, Tu Tu, Serges Amani, and Nancy Adossi.<br><br>
+Supported by Rice University Center for Civic Leadership<br><br>
+                            <a href="http://www.weareinitfilm.com" target="_blank">Learn more at www.weareinitfilm.com</a>
+                            
+                            
+ </p>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+          <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 align-self-center"><a href="index.html"><img src="images/firestarter_web_logo.png" alt="" style="display:none;"></a></div>
+                    <div class="col-md-6 align-self-center text-center">© 2018 The Firestarter Group - Digital Development Team</div>
+                    <div class="col-md-3 align-self-center" style="display:none;">
+                        <ul>
+                            <li><a class="facebook" href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook-f" aria-hidden="true"></i></a></li>
+                            <li><a class="twitter" href="https://twitter.com/" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                            <li><a class="google" href="https://plus.google.com" target="_blank"><i class="fa fa-google-plus"></i></a></li>
+                            <li><a class="instagram" href="https://instagram.com/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <a href="index.html#" class="back-to-top"><i class="fa fa-angle-up"></i></a>
+        <!-- Bootstrap core JavaScript================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="js/jquery-min.js" ></script>
+        <script src="js/popper.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/ie10-viewport-bug-workaround.js"></script>
+        <script src="js/ie-emulation-modes-warning.js"></script>
+        <script src="js/custom.js"></script>
+        <script src="js/jquery.easing.min.js"></script>
+        <script src="js/css3-animate-it.js"></script>
+        <script src="js/jquery.fancybox.js"></script>
+        <script type="text/javascript" src="js/jquery.mixitup.min.js"></script>
+        <script src="js/jquery.matchHeight-min.js"></script>
+        <script type="text/javascript">
+                                $('.coleql_height').matchHeight();
+        </script>
+        <script type="text/javascript">
+            (function () {
+                var bsModal = null;
+                $("[data-toggle=modal]").click(function (e) {
+                    e.preventDefault();
+                    var trgId = $(this).attr('data-target');
+                    if (bsModal == null)
+                        bsModal = $(trgId).modal;
+                    $.fn.bsModal = bsModal;
+                    //$(trgId + " .modal-body").load($(this).attr("href"));
+                    $(trgId).bsModal('show');
+                });
+            })();
+
+            function pdfOption(e) {
+                if (e == '1') {
+                    $('#showinfo input').val('');
+                    $('#showinfo').show();
+                    $('input[name="country"]').removeAttr('disabled');
+                    $('input[name="zipcode"]').removeAttr('disabled');
+                    $('input[name="mailaddr"]').removeAttr('disabled');
+                    $('input[type="submit"]').show();
+
+                    $('#showprefer').hide();
+                    $('input[name="prefer"]').attr('disabled', 'disabled');
+                } else if (e == '2') {
+                    $('#showprefer input').val('');
+                    $('#showinfo').hide();
+                    $('input[name="country"]').attr('disabled', 'disabled');
+                    $('input[name="zipcode"]').attr('disabled', 'disabled');
+                    $('input[name="mailaddr"]').attr('disabled', 'disabled');
+
+                    $('#showprefer').show();
+                    $('input[name="prefer"]').removeAttr('disabled');
+                    $('input[type="submit"]').show();
+                }
+            }
+
+            $(function () {
+                $('form#pdfForm').submit(function (e) {
+                    e.preventDefault(); //prevent form from submitting
+                    var form = $(this);
+                    var url = form.attr('action');
+
+                    //console.log(form.serialize());
+                    //return false;
+
+                    $.ajax({
+                        type: "POST",
+                        url: url,
+                        data: {action: 'pdfform', formdata: form.serialize()}, // serializes the form's elements.
+                        success: function (data) {
+                            //alert(data); // show response from the php script.
+                            //location.href = "http://www.firestarter.org/thank-you.php?msg=1";
+                            //$('#pdfForm')[0].reset();
+                            $('#PdfModal').modal('hide');
+                            window.open('http://www.firestarter.org/images/firestarter_kinder_report.pdf');
+                        }
+                    });
+                });
+            });
+
+            $(document).on('hidden.bs.modal', function (e) {
+                if ($(e.target).attr('data-refresh') == 'true') {
+                    // Remove modal data
+                    $('#pdfForm')[0].reset();
+                    $('#showinfo').hide();
+                    $('input[name="country"]').attr('disabled', 'disabled');
+                    $('input[name="zipcode"]').attr('disabled', 'disabled');
+                    $('input[name="mailaddr"]').attr('disabled', 'disabled');
+
+                    $('#showprefer').hide();
+                    $('input[name="prefer"]').attr('disabled', 'disabled');
+                    $('input[type="submit"]').hide();
+                    $(e.target).removeData('bs.modal');
+                    // Empty the HTML of modal
+                    //$(e.target).html('');
+                }
+            });
+        </script>
+        <!--<a style="display:none;" id="downloadLink" href="http://www.firestarter.org/images/firestarter_kinder_report.pdf" target="_blank" type="application/octet-stream" download="http://www.firestarter.org/images/firestarter_kinder_report.pdf">click here</a>
+        <script type="text/javascript">
+            var delay = 3000;
+            window.setTimeout(function () {
+                $('#downloadLink')[0].click();
+            }, delay);
+        </script>-->
+    </body>
+<script>'undefined'=== typeof _trfq || (window._trfq = []);'undefined'=== typeof _trfd && (window._trfd=[]),_trfd.push({'tccl.baseHost':'secureserver.net'}),_trfd.push({'ap':'cpsh'},{'server':'a2plcpnl0852'}) // Monitoring performance to make your website faster. If you want to opt-out, please contact web hosting support.</script><script src='https://img1.wsimg.com/tcc/tcc_l.combined.1.0.6.min.js'></script></html>

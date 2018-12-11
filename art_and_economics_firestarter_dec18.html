@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>The Firestarter Group Digital Portal</title>
+    <meta name="description" content="The Firestarter Group publishes multimedia content each month, featuring our innovative work supporting the vision of communities across the globe.">
+    <!-- keywords -->
+    <meta name="keywords" content="social, philanthropy, innovation, entrepreneurship, social entrepreneurship, community investment">
+    <!-- favicon -->
+    <link rel="shortcut icon" href="images/firestarter_fav.png">
+    <link rel="apple-touch-icon" href="images/apple_touch_firestarter_57.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple_touch_firestarter_72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple_touch_firestarter_114.png">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <link href="css/animations.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
+    <link rel="stylesheet" href="hint.css">
+    <link rel="stylesheet" href="css/dec_18/parallax.css">
+    <link href="http://fonts.googleapis.com/css?
+family=Reenie+Beanie:regular" rel="stylesheet" type="text/css">
+    <!--[if lt IE 9]>
+        <script src="js/html5shiv.min.js"></script>
+        <link href="css/animations-ie-fix.js" rel='stylesheet'>
+        <![endif]-->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-25926409-7"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+                    function gtag() {
+                        dataLayer.push(arguments);
+                    }
+                    gtag('js', new Date());
+        
+                    gtag('config', 'UA-25926409-7');
+    </script>
+</head>
+
+<body>
+    <!-- PDF Modal -->
+    <div class="modal fade" id="PdfModal" tabindex="-1" role="dialog" aria-labelledby="PdfModal" aria-hidden="true" data-refresh="true">
+        <div class="modal-dialog  modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Download PDF</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>For our internal outcome tracking, it is helpful to know who gains access to our report. Please share some of the optional information below if you feel comfortable:</p>
+                    <form id="pdfForm" action="mail.php" method="post">
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="optradio" value="1" onchange="pdfOption(this.value)">Yes, I can share some basic info</label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="optradio" value="2" onchange="pdfOption(this.value)">No, I prefer not to share</label>
+                        </div>
+                        <div id="showinfo" style="display:none;">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Country" name="country" disabled="disabled" />
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Zip Code (If in the US)" name="zipcode" disabled="disabled">
+                            </div>
+                            <div class="form-group">
+                                <input type="email" class="form-control" placeholder="E-mail" name="mailaddr" disabled="disabled">
+                            </div>
+                        </div>
+                        <!--<div class="form-group" id="showprefer" style="display:none;"><input type="checkbox"  name="prefer" value="Yes" disabled="disabled"/> <label class="form-check-label">I prefer not to share</label></div>-->
+                        <input type="submit" class="btn btn-primary" value="Access PDF" style="display:none;" />
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav class="menu-hide">
+        <div class="menu-block">
+            <div class="menu-head clearfix">
+                <div class="row justify-content-center">
+                    <div class="col-lg-12">
+                        <div class="row">
+                            <div class="col-4 col-sm-4 col-md-4 col-lg-7">
+                                <a href="#" class="menu-open menubar-toggle"></a>
+                            </div>
+                            <div class="col-8 col-sm-8 col-md-8 col-lg-4 ml-auto"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-wrapper">
+                <div class="row justify-content-center">
+                    <div class="col-lg-12">
+                        <div class="row">
+                            <div class="col-lg-7">
+                                <ul class="navigaltion">
+                                    <li><a href="index.html">Home</a>
+                                    </li>
+                                    <li><a href="about_firestarter.html">About FS</a>
+                                    </li>
+                                    <li><a href="films.html">Film</a>
+                                    </li>
+                                    <li><a href="about_firestarter.html#contact">Contact</a>
+                                    </li>
+                                    <li><a href="our_shelves.html">Bookshelf</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-4 ml-auto">
+                                <div class="modal-logo">
+                                    <img src="images/firestarter_web_logo.png" alt="">
+                                </div>
+                                <h4>Welcome to the Firestarter Digital Portal</h4>
+                                <p>Each month, you will find new original content published through our digital portal. Here, we give insight into our ongoing work, share latest research publications, and give unique access to our ongoing media production.</p>
+                                <p>This month, we have four pieces of writing about this ethics of social change in the realms of art, economics, and philanthropy. We encourage you to read each piece throughout the month and welcome you to share your thoughts about them with colleagues and friends!</p>
+                                <!-- Begin Mailchimp Signup Form -->
+                                <link href="//cdn-images.mailchimp.com/embedcode/slim-10_7.css" rel="stylesheet" type="text/css">
+                                <style type="text/css">
+                                    #mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
+                                                                            /* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
+                                                                               We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+                                </style>
+                                <div id="mc_embed_signup">
+                                    <form action="https://firestarter.us17.list-manage.com/subscribe/post?u=45de124d26652bbcd9a8d20d0&amp;id=b4053a8816" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                                        <div id="mc_embed_signup_scroll">
+                                            <label for="mce-EMAIL">We can remind you when new content is up:</label>
+                                            <div class="form-group">
+                                                <input type="email" value="" name="EMAIL" class="email form-control" id="mce-EMAIL" placeholder="your email address" required>
+                                            </div>
+                                            <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                                            <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                                                <input type="text" name="b_45de124d26652bbcd9a8d20d0_b4053a8816" tabindex="-1" value="">
+                                            </div>
+                                            <div class="clear">
+                                                <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <!--End mc_embed_signup-->
+                                <ul class="social-link">
+                                    <li><a class="facebook" href="https://www.facebook.com/wearethefirestarter/" target="_blank"><i class="fa fa-facebook-f" aria-hidden="true"></i></a>
+                                    </li>
+                                    <li><a class="twitter" href="https://twitter.com/starting_fire" target="_blank"><i class="fa fa-twitter"></i></a>
+                                    </li>
+                                    <li><a class="instagram" href="https://www.instagram.com/wearethefirestarter/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <header class="header">
+        <div class="row">
+            <div class="col-6 clearfix">
+                <a href="#" class="menu-open menubar-toggle"></a>
+            </div>
+            <div class="col-6 clearfix">
+                <ul class="social d-none d-md-block">
+                    <li><a href="https://www.facebook.com/wearethefirestarter/" target="_blank"><i class="fa fa-facebook-f" aria-hidden="true"></i></a>
+                    </li>
+                    <li><a href="https://twitter.com/starting_fire" target="_blank"><i class="fa fa-twitter"></i></a>
+                    </li>
+                    <li><a href="https://www.instagram.com/wearethefirestarter/" title="instagram" target="_blank"><i class="fa fa-instagram"></i></a>
+                    </li>
+                </ul>
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="images/firestarter_lettermark_bw.png" alt="">
+                    </a>
+                </div>
+                <ul class="social d-block d-md-none">
+                    <li><a href="https://www.facebook.com/wearethefirestarter" target="_blank"><i class="fa fa-facebook-f" aria-hidden="true"></i></a>
+                    </li>
+                    <li><a href="https://twitter.com/starting_fire" target="_blank"><i class="fa fa-twitter"></i></a>
+                    </li>
+                    <li><a href="https://www.instagram.com/wearethefirestarter/" title="instagram" target="_blank"><i class="fa fa-instagram"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <div class="banner-wrapper animatedParent animateOnce">
+        <div class="banner animated fadeIn" style="background-image:url(images/Dec-2018/OceanRain.jpg);">
+            <div class="banner-text">
+                <div class="container">
+                    <h1>In Need of Ethical Action</h1>
+                    <h3>Art and Economics as a prompt for social change</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section w1 animatedParent animateOnce">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center animated fadeInUp" style="margin-bottom: 100px;">
+                    <p><span class="first-letter-block" style="height: 100px; width: 100px; padding: 20px 0 0 0;">I</span>n a time when public discourse is filtered through layer after layer of pessimism and self-doubt, our constant challenge is to establish a meeting space where multiple truths and identities coexist. While our lives often feel like a never-ending submission to a rotating cast of curators, no one entry can tell the true story of who we are and what we wish to construct. In many ways, that is why we created a digital publication arm through Firestarter.org.</p>
+                    <p>This month, you will find four pieces written for consideration in four wildly separate realms. Each piece, alone, is a contribution to a community to which we feel intimately tied. These spaces have welcomed us, giving us room to flourish, and yet, they remain in dire need of reform, built upon entirely insufficient structures to achieve the ideals they propose. Together, they are an expression of our dynamic selves.</p>
+                </div>
+                <div class="row animated fadeInUp" id="portfoliolist">
+                    <div class="col-md-6 col-lg-3 portfolio cat1" data-cat="cat1">
+                        <div class="portfolio-wrapper">
+                            <a href="#boxtext1">
+                                <div class="overlay">
+                                    <div class="table-div">
+                                        <div class="table-cell">
+                                            <hr>
+                                            <h5>Napkins as Bandages</h5>
+                                            <p>About Film, Displacement, and The Future</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <img src="images/Dec-2018/lock_and_blood.jpg" alt="" />
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 portfolio cat1" data-cat="cat1">
+                        <div class="portfolio-wrapper">
+                            <a href="#alogrithms">
+                                <div class="overlay">
+                                    <div class="table-div">
+                                        <div class="table-cell">
+                                            <hr>
+                                            <h5>Oppresive Algorithms</h5>
+                                            <p>A Look at Modern Techniques to Further Dehumanize US Refugee Resettlement</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <img src="images/Dec-2018/space.jpg" alt="" />
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 portfolio cat2" data-cat="cat2">
+                        <div class="portfolio-wrapper">
+                            <a href="#mizrahi">
+                                <div class="overlay">
+                                    <div class="table-div">
+                                        <div class="table-cell">
+                                            <hr>
+                                            <h5>MIZRAHI  MANIFESTO</h5>
+                                            <p>Conceiving the Role of Art and Film in Telling Stories of Our Future</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <img src="images/Dec-2018/MizIM1.jpg" alt="" />
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 portfolio cat2" data-cat="cat2">
+                        <div class="portfolio-wrapper">
+                            <a href="#ethics">
+                                <div class="overlay">
+                                    <div class="table-div">
+                                        <div class="table-cell">
+                                            <hr>
+                                            <h5>
+                                                On the Role of Ethics in Giving
+                                            </h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <img src="images/Dec-2018/Texas.jpg" alt="" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Sans:700|Droid+Serif' rel='stylesheet' type='text/css'>
+    <!-- <div id="napkins"> -->
+    <div id="box">
+        <div id="boxtext1">
+           <!--  <h1 style="padding-left: 17px;">When Napkins are Our Only Bandages:<br>
+               About Film, Displacement, and The Future
+            </h1> -->
+             <h1 >When Napkins are Our Only Bandages:<br>
+               About Film, Displacement, and The Future
+            </h1>
+            <p>His car died, again, so he ubers to work. The kids didn’t leave the house for a few months now. Over the phone I tried to explain to him that the air pollution is terrible, so I had to leave the city. Then, I wanted to talk about the film traveling to LA and then England, France, but instead we talked about his weak immune system, weekly diseases, “I am so sorry, I can’t find my breath,” and that we need to think about ways for him to get a new car – “it is not healthy for the twins to be locked in the house for months, they can be depressed, they need the sun, the sun.”</p>
+        </div>
+    </div>
+    <!-- <div id="boxtext1">
+        <div class="banner-wrapper animatedParent animateOnce">
+            <div class="banner animated fadeIn" style="background-image:url(images/Dec-2018/lock_and_blood_cover.jpg.jpg);">
+                
+                    <div class="container" id="textbox" style="opacity: 0.6; width: 87%; margin-left: 6em;margin-bottom: 290px; background-color: #ffffff; margin-top: 89px;">
+                        <h1>When Napkins are Our Only Bandages:<br>
+                            About Film, Displacement, and The Future</h1>
+                        <p style="color: #000000; ">His car died, again, so he ubers to work. The kids didn’t leave the house for a few months now. Over the phone I tried to explain to him that the air pollution is terrible, so I had to leave the city. Then, I wanted to talk about the film traveling to LA and then England, France, but instead we talked about his weak immune system, weekly diseases, “I am so sorry, I can’t find my breath,” and that we need to think about ways for him to get a new car – “it is not healthy for the twins to be locked in the house for months, they can be depressed, they need the sun, the sun.”</p>
+                    </div>
+                </div>
+           
+        </div>
+    </div> -->
+    <div id="c">
+        <h2>Blood Flowers</h2>
+        <p style="margin-left: 151px;">Flowers like Blood
+            <br>Blood and flowers
+            <br>his bleeding looks like flowers, his private garden that he scratches, his hands sneaking through
+            <br>the broken gateway so he can finally dig in the body, nails touching the bone, removing soil
+            <br>from the skin that covers his hands
+            <br>
+            <br>Flowers like Blood
+            <br>Blood and flowers
+            <br>Uninsured hands
+            <br>Working hands
+            <br>Flowers of the sleepless
+            <br>That restless blossom
+            <br>That swells and bulges
+            <br>And damns
+            <br>And stains
+            <br>And condemns us for our innocent blindness
+            <br>And if innocence is
+            <br>A color then
+            <br>It’s the color of all the eyes that have escaped and ignored and now spread wide in this field
+            <br>a field of eye grenades
+            <br>
+            <br>How did we learn how to betray?
+            <br>Each other? Ourselves? This moment?
+            <br>Our drifting histories and futures?
+            <br>Who crowned this monotony?
+            <br>Waking up into a world covered with flowers
+            <br>
+            <br>Flowers like Blood
+            <br>Blood and flowers
+            <br>I brought you flowers
+            <br>I brought you flowers and now
+            <br>More work
+            <br>I do everything I could
+            <br>I do everything I could for my family
+            <br>
+        </p>
+    </div>
+    <hr width="100%" style="margin: 100px 0; height:5px; background-color: black;">
+    <p>
+        <img src="images/Dec-2018/messing.jpg" style="width: 60%; display: block; border-radius: 5px; margin: auto">
+    </p>
+    <div id="about">
+        <h2>MESSing</h2>
+        <p>I edit all day: I return to that long drive to the OCEAN. So many tears. Blood. Infection. Butterflies. Joy in the shape of cheap snacks. Random dancing moves in the car. Then I have to leave. When I go down to grab some coffee, I notice a group of demonstrators: local workers — from custodians to other staff members — who didn’t get a raise for years. We begin talking. “It’s two women cleaning the entire library, two women, alone, all night, locked in the library chasing dust and dirt.” They want me to film their fellow workers “fresh” in the morning and then “dead” after a day of work. “We want to be filmed only if you show us REAL and not lying about us.” As the conversation develops more questions are asked: “Are you sure that you want to film us? They would kick you out of here if they knew that you are working with us…. yes….Naaaa…. I’m just messing with you… just messing.”</p>
+    </div>
+    <div class="bg-section-dec" id="section-3" style="background-image:url(images/Dec-2018/come_on.jpg);">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8"></div>
+            </div>
+        </div>
+    </div>
+    <div class="section scroll-content">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 mb-4 text-lg">
+                    <p>Come On
+                        <br>
+                        <br>There is that moment when Hana looks at me and says “come on”: she watches me pausing, standing behind and filming her from a distance, but she wants me to keep on walking with her, talking about the pool, life, her books, and what we might film next. Come on stay with us. Come on with us. We are walking home. Come on and be with us in this moment, this actuality, this life. Come on stop removing yourself. Come on drop the cliché’s – artist dressed in black, depressed, carrying the world and a camera, exhausted, hopeless, tired of life, closed in your local café with $6 late’ and Kamboucha, and fantastic scripts escaping and avoiding our realities – come on, we need, we need you around, soulfilming, do not separate film from life, soulflying, don’t mistake propaganda or PR for borders with film, we need you with your eyes OPEN. COME On!
+                        <br>
+                        <br>Come On
+                        <br>
+                        <br>I am obsessed with one thing: film as a work of love. Love not in the naïve sense of the word, for love is never one thing, a one-chord sentiment. Love doesn’t fit any box. For love is always unstable, always in motion, always beyond a clear message, moving towards us, coming closer, evaporating, touching (there is no love without touch!), asking us to get closer to our better selves, and we fail, miserably, and we try again, and it is us, with us, within us, our room of skeletons revealed, pretenses exposed, and art is the space where we dare to laugh (or at least breathe) in the face of our most pathetic attempts to hide, conceal, ignore our damaged beauty. For me love means attention, concentration that results in deep listening to geometry, color, space, movement, silence, hesitation, heartbeats, eyebeats, and soulbeats. I am talking about that poetic space where all is seen, offered, revealed without limitations and hesitations. And in such a space the camera and the act of filmmaking means something different. It is not a matter of exhibiting, pretending to be this or that, following a script, etc. no pretense. None. We are working with life. We are in motion. We are never one. The camera is part of life, wait, watch that lens floating over these waves. I am, I don’t really matter, not here, the one who operates the camera, I exi(s)t in life, with life, am not separated, outside any time or space. We are sharing space. The era of maybes is over. My people, the glass of eye liquor is here, shall we drink?!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr width="100%" style="margin: 100px 0; height:5px; background-color: black;">
+    <p>
+        <img src="images/Dec-2018/standing_ball.jpg" style="width: 60%; display: block; border-radius: 5px; margin: auto">
+    </p>
+    <div id="about">
+        <h2>Standing on a Ball</h2>
+        <p>I ask Hana to stand on a ball and watch traffic down Westheimer. It’s around 5:20PM. Abbas will need to go to work soon, but he decides to join us. Now, he watches me filming Hana. She says it’s fun to stand like that and watch the world go by. After a few minutes, all three of us head back home. The scene is over. Hana dribbles the ball, and Abbas instructs her about the best way to dribble the ball, “you mustn’t allow the ball to go above your waist, yes?”</p>
+        <p>From hiding in studios, building walls around it to exclude it from the city, and then hiring (brown and black) guards to protect it - what are the implications of such isolating acts in filmmaking?</p>
+        <p>I am interested in Film/art as a practice that brings people and multiple cultures together to look/touch/engage with the diversity of our living experiences and challenges. Film that is a point of connection and exchange with life and different communities and movement. Against the old/new vision – from the old film studios and netflix — that project images on distant walls/screens, I would like to think about films as a call for a gathering, a shared call for astonishment, a meeting point; that is, leave your phone idiot and see yourself, lost in wars and empty news, try to remember what you saw before your eyes left you.</p>
+        <p>Yes, we are here in this darkness, “we are in it,” we share this moment, we share what is bleak and not always comprehensible, we share this future, and it is we who better recognize that we have to act together.</p>
+        <p>At heart, while greed and corporate visions have taken over film and filmmaking, filming is a result of an encounter where we relate and see one another, it is a reminder of that democratic space, where multiple viewpoints co-exist, and truth is shared by the community and not one individual. Here, in this decolonial space and time, the camera is owned by the hand and legs that are constantly in motion, moving in and out from this historical context to another dream, the experience of immigrants and refugees in this city.</p>
+    </div>
+    <div class="bg-section-dec" id="section-3" style="background-image:url(images/Dec-2018/Camera_moving.jpg);">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8"></div>
+            </div>
+        </div>
+    </div>
+    <div class="section scroll-content">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 mb-4 text-lg">
+                    <h2 style="text-align: left; color: black;">Camera and the Body or Moving with No Health Insurance</h2>
+                    <p>Words mislead, but the body offers the sincerest of testimonies. No lies. Open sores. Like, Abbas, I am a body. We are here together. Bodies sharing space. One body with the camera, and another making food. Samira asks me to wait with the filming and just come and sit. “Food is ready.” Mouths chewing. Being. We are. We eat together. Listen, intimate concentration, the chewing of all images and throwing it all down our throats where images are never really images. Saying nothing. Hands moving cups of tea around. Fingers hold sugar cubes. More sugar. Sugaring life
+                        <br>
+                        <br>Sugaring this camera that stands between us
+                        <br>Sugaring light
+                        <br>Sugaring this moment
+                        <br>Then I return to the camera
+                        <br>Abbas asks if I want another cup of tea or do
+                        <br>I want to continue filming us, the family while watching an Iranian film,
+                        <br>“it could be good for our film.”
+                        <br>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr width="100%" style="margin: 100px 0; height:5px; background-color: black;">
+    <p>
+        <img src="images/Dec-2018/cabbage.jpg" style="width: 60%; display: block; border-radius: 5px; margin: auto">
+    </p>
+    <div id="about">
+        <h2>All that Cabbage: About Knives and Endless Fear</h2>
+        <p>Indeed, given the history of film and filmmaking in establishing colonial and imperial ventures, including its past and current corrupted, violent/fascist, and sexist tendencies, can we imagine a different cinema? With different aims and potential? Can we even come to terms with film that is not merely to serve power but actually dismantle such structures and at the same time create structures of allegiance? Also, what will this film look like? How can we conceive of a conversation between such an enterprise and the current structures of distribution and film making? More importantly, our audience, through what eyes/fears/doubts/enthusiasm can they recognize such an endeavor and its focus on what Cesare Zevattini names as “actualities” will be perceived?</p>
+        <p>Or perhaps such queries boil down into one question: Can we reclaim our sensitivities?</p>
+        <p>Cabbages over the old wooden table. Soon will come knives. Ali will cut them. “It is the first time that he cut cabbages,” he will apologize. Abbas will try to instruct him: “You should not cut them like that,” but “like that” and “like that.”</p>
+        <p>Later that day, around noon, I am invited to lunch with a group of students, all of which are the first in their family with access higher education. Around the lunch table I talk with about five of them. They ask me about my favorite film, my Netflix membership, etc. One of them, Gustavo, is even afraid to have any eye contact with me. He remains silent throughout. They ask me to bring my films to campus. Then, before they leave, we shake hands, and Gustavo still struggles to find a way to look back, to watch me, to make any eye contact, and with that we bid each other farewell. And I think about my father and his eyes and my mother staying for hours in her favorite sofa watching films and her determination to put her eyes there, in those fictions, as a way to inhale something different from what the daily grind can offer her/us.</p>
+    </div>
+    <p>
+        <img src="images/Dec-2018/abbasstrip1.jpg" style="width: 60%; display: block; border-radius: 5px; margin: auto">
+    </p>
+    <div id="about">
+        <p>What do to with all that weakness?
+            <br>
+            <br>About the fear of being too human or too weak, a burden
+            <br>
+            <br>She does not want to be a “burden”
+            <br>No, she will not accept IT
+            <br>She wants everybody to do their thing
+            <br>She doesn’t need phone calls
+            <br>She will not wait for Sabbath dinner
+            <br>She will live without waiting
+            <br>She will teach herself to stop expecting
+            <br>She was diagnosed with breast cancer a year ago
+            <br>She insisted to go alone to the hospital
+            <br>She called the taxi and at work just said she is out for some random errands
+            <br>She watches he films until very late but remains in that long hospital corridor
+            <br>She waited alone for the doctor that was always late and always blind with his phone
+            <br>She is the only one that saw herself shaking in the nurses’ room
+            <br>
+            <br>Abbas told me that I have to leave the film and visit her, “She is you mother. She did everything for you. You cannot leave her alone like that in this moment.”</p>
+    </div>
+    <p>
+        <img src="images/Dec-2018/abbasstrip2.jpg" style="width: 60%; display: block; border-radius: 5px; margin: auto">
+    </p>
+    <div id="about">
+        <p>I hold the camera and film Abbas talking on the phone and bleeding. I keep the camera playing.
+            <br>Recording.
+            <br>Recording.
+            <br>Recording.
+            <br>Recording blood.
+            <br>
+        </p>
+    </div>
+    <p>
+        <img src="images/Dec-2018/abbasstrip3.1.jpg" style="width: 60%; display: block; border-radius: 5px; margin: auto">
+    </p>
+    <div id="about">
+        <p>When napkins are our only bandages
+            <br>When bread has to be the cheapest
+            <br>When water is always in colors
+            <br>When the night shift is also the day shift and a life shift
+            <br>When the eyes are too tired to see the road, any road
+            <br>When she tells you that she is hungry because she didn’t eat for the entire day and her head hurts and you offer her some cookies and milk, here, just eat that for now
+            <br>When you don’t understand why they keep asking you what is your race as they pretend that it doesn’t matter in this country
+            <br>When sickness and the hope that IT will go away is much cheaper than buying medicine
+            <br>When your eyes hurt again because something gets to you attacks you screams in you, and you have only napkins to cover all that mess
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+        </p>
+    </div>
+    <div class="bg-section-dec" id="section-3" style="background-image:url(images/Dec-2018/angry_hana.jpg);">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8"></div>
+            </div>
+        </div>
+    </div>
+    <div class="section scroll-content">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 mb-4 text-lg">
+                    <p>Hana is angry being disrespected
+                        <br>And she is not afraid to speak out
+                        <br>
+                        <br>I press “stop”
+                        <br>
+                        <br>I get home
+                        <br>To learn that Sibhatleab was been involved in a car accident
+                        <br>His broken back was hit again,
+                        <br>He is in the ER
+                        <br>To his three kids in Ethiopia, his friends say that he is very busy in work
+                        <br>Ahmed, a friend from work visits him, who like Sibhatleab, came to this country with dreams and now
+                        <br>fights to make it
+                        <br>We don’t find America
+                        <br>We don’t find America
+                        <br>Yet Sibhatleab still believes that he will make it to the shooting range
+                        <br>To practice his new gun that
+                        <br>He thought he will finally get a job as a security officer for $11 per hour
+                        <br>They told him that his best chance after
+                        <br>25 years in prison after
+                        <br>6 six years in refugee camps after
+                        <br>Years in a cell underground after
+                        <br>Praying all day in the morning but
+                        <br>Now the gun will wait
+                        <br>Alone in this hospital with
+                        <br>Pain killers that don’t kill because pain can’t really die and
+                        <br>Yan tells me that Sibhatleab is not in any risk but
+                        <br>We know that the risk is always there
+                        <br>The risk of finding refuge but not peace or love or justice in this America
+                        <br>The risk of being called an immigrant or a refugee and being marked as a threat
+                        <br>The risk of being
+                        <br>The risk of being a black man
+                        <br>The risk of breathing
+                        <br>The risk of watching the violent turmoil of this country with unborn eyes
+                        <br>
+                    </p>
+                    <div id="sticky_note" style="margin-top: -80px;">
+                        <ul>
+                            <li>
+                                <a href="#" onclick="return false;">
+                                    <h2>Film Note #14</h2>
+                                    <p>The opening and closing of the door could be used as a cut between scenes – the amusement park, Hana’s crying, and then the change in moods during our long drive back home.</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="parallax_set">
+        <div class="parallax_layer para_black_layer"></div>
+        <div class="parallax_layer parallax_text">
+            <h2>Community Film Screening<br> 
+                    Rice Cinema<br> 
+                    September 2018 </h2>
+            <p>Again, it seems that Abbas’ exhaustion doesn’t end; in that sense, there is no separation between life and film. And life, like some scenes, is not that pretty – are we watching horror? Are we living in horror? Watching is being conflated with living – instead of watching as a way to establish and affirm distance from what is being watched.
+                <br>
+                <br>Breaking the wall and the screen: the eyes are part of the body, our present, breathing, breathing through the eyes.
+                <br>
+                <br>The family arrived in the cinema late. We cancelled the screening. They didn’t eat the entire day so we went to eat. No film. Real food. Pozole soups. Abbas said that the food brought him back to life.
+                <br>
+                <br>In the parking area, we promise to each other to meet again soon. Samira begins crying. Hana tells me that filming brings so much fun to her life, and Ali asks:
+                <br>“When we will end filming the trilogy, what shall we do then?
+                <br>Can we have another trilogy together?”</p>
+        </div>
+    </div>
+    <div id="alogrithms">
+        <div class="banner-wrapper animatedParent animateOnce">
+            <div class="banner animated fadeIn" style="background-image:url(images/Dec-2018/space_big.jpg);">
+                <div class="banner-text">
+                    <div class="container">
+                        <h1>Oppressive Algorithms</h1>
+                        <h3 style="color: white; text-shadow: 2px 2px #000;">A Look at Modern Techniques to Further Dehumanize US Refugee Resettlement</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section w1 animatedParent animateOnce">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center animated fadeInUp" style="margin-bottom: 100px;">
+                        <p>The engine of modern political, economic, and social progress is fueled by the pervasive mindset of problem-solving. This approach stems from and further reinforces the assumption that errors in the world are externally sourced, while solutions come from elite minds with a capacity to see. Such a division between those holding power and those who act only after being given direction or permission is at the heart of America’s treatment of migrant communities. Much like the professional problem-solver, who lives comfortably by finding perpetual fault in others, federal systems serving refugees continue to rely upon the self-reinforced assumption that new arrivals are a burden – perhaps even a danger – to their surrounding communities.</p>
+                        <p>A single lever has been consistently pulled to adjust the refugee resettlement process, undeterred by available statistics, cost-benefit analyses, and surveys of long-term outcomes. Since federal refugee resettlement was formed in 1980, annual budgets for the office of refugee resettlement have experienced a precipitous drop. From its peaks in the early 1980’s, the program has been cut by about 60%. Between 2002 and 2015, average spending has hovered around $600 million or less than 0.02% of the federal budget [1]. To this day, no outspoken voice has emerged to challenge this status quo. Unfortunately, in parallel, the notion that all low-income communities must be forced into work rather than supported through shared investment has become entirely normalized, even among many progressive figures who nonetheless swear by the bipartisan value of a problem-solving approach.</p>
+                        <div class="col-md-12 mb-4 figures">
+                            <p>
+                                <a href="images/Dec-2018/data.jpg" class="fancybox">
+                                    <img src="images/Dec-2018/data.jpg" alt="">
+                                </a> <a href="https://docs.google.com/spreadsheets/d/1BYip4Gr-luSzwtIHrry-REz2FbUpAhrKGPK_ovdNwZg/edit?usp=sharing" target="_blank" style="font-size: 10px;"> Click here to access raw data available from the Firestarter Open Data Network.</a>
+                            </p>
+                        </div>
+                        <p>While those notions stem from misguided and cynical calculus of election campaign managers, it is far more alarming to see them arise in some of the country’s most venerated academic institutions. In January 2018, researchers of the Immigration Policy Lab at Stanford University garnered broad media attention after publishing an article in Science Magazine that outlined an innovative approach, using computer algorithms and machine learning, to resettle refugees without any increased cost. In the paper entitled Improving Refugee Integration Through Data-Driven Algorithmic Assignment (2017)[2], their model utilized rudimentary linear algebra techniques to feed historical employment data into cost-minimizing machine learning projections. According to their hypothesis, computer algorithms can better match refugees with cities that lead to faster employment.</p>
+                        <p>Primarily, and above all else, the most confounding question evoked by this publication is why the top scholars in our country are spending their collective intellect to develop technologies for extracting cost savings from a miniscule federal program serving the poorest of the poor. However, prior to exploring the consequences of such an endeavor and posing what it says about our nation, much can be learned from further dissecting this misguided effort.</p>
+                        <p>The specifics of the proposed process are less interesting or relevant than the hypothesis they claim to have evidenced. Essentially, the authors took data about where refugees were formerly placed and how likely they were to find a job within 90 days. By letting a machine test correlations between refugee characteristics (e.g. age, education level, national origin) and the city in which they were resettled, probabilities were output for their likelihood of finding a job. In the end, the paper’s authors conclude that a computer can be trained to work more effectively than the individuals who make those decisions, today. A single paragraph from the publication summarizes the authors’ intentions critically flawed insinuations:</p>
+                        <div class="col-md-12 mb-4">
+                            <blockquote>
+                                <p>In contrast to more expensive interventions (such as language or job training programs) that are sometimes implemented long after refugees’ arrival, our approach is cost-efficient and implemented before refugees’ arrival, giving them the strongest foundation possible from which to integrate into host societies. Furthermore, our approach modifies an existing policy process, facilitating its immediate implementation, and it is dynamic in that it adapts to synergies over time. Because of the algorithm’s data-driven learning capacity, policy-makers do not need to invest in identifying the precise sources of those synergies—local economic conditions, social environments, resettlement office efficacy, etc.—to harness their benefits.[3] <sup class="hint--bottom hint--bounce hint--large" style="background:#24a1db" aria-label="Name: Haval Khider; Gender: Male; Origin: Baghdad, Iraq; Arrival: 2008; Interview conducted by: Yehuda Sharim, 2016; Edited and compiled by: Jasmine Lin; page 5.">3</sup>"</p>
+                            </blockquote>
+                        </div>
+                        <p>We find four ethical and intellectual breaches within this short claim.</p>
+                        <div class="col-md-12 mb-4">
+                            <blockquote>
+                                <p>In contrast to more expensive interventions (such as language or job training programs) that are sometimes implemented long after refugees’ arrival, our approach is cost-efficient...</p>
+                            </blockquote>
+                        </div>
+                        <p>The machine-learning approach is posed as an alternative to investments in education and training, which are deemed too expensive to be viable. The that it must be made cost-efficient, ignoring all historical data suggesting that it always has been, is not new. It is of historical relevance that when the largest cuts to the resettlement process were made between 1986 and 1990, citizens across the country fought losing legal battles against regulations that prevented new arrivals from learning English or obtaining vocational training prior to entering the workforce.[4] Meanwhile, lawmakers chose to ignore positive results of financial incentive programs for employers who offered on-the-job training to newly arrived refugees.[5] Instead, the notion that refugees must be forced into employment by minimizing the time period for financial assistance overwhelmed public discourse.</p>
+                        <p>The authors of this paper are – perhaps unknowingly or somewhat naively – favorably contrasting their cost-efficient efforts with the hopes and dreams of families who had once been told that opportunity awaited them in the land of the free. Having accepted arguments that demonize refugees, immigrants, and the poor by labeling them as dependent drains on our national budget, the authors propose that a small investment in machine-learning would be a fair alternative to treating people with decency and humanity.</p>
+                        <div class="col-md-12 mb-4">
+                            <blockquote>
+                                <p>…and implemented before refugees’ arrival, giving them the strongest foundation possible from which to integrate into host societies.</p>
+                            </blockquote>
+                        </div>
+                        <p>The foundation built by rapid employment is, in fact, preparing refugees for the realities of America. Entering low-wage employment without speaking English, without the option to learn or become recertified in a trade, and without any real choice of employers helps refugees integrate into the fabric of society built for the perpetually impoverished, a rapidly growing segment of America. However, despite the false claims in the report, it has never been shown to contribute towards a path of growth and prosperity.[6] In fact, our research indicates alarming trends that have emerged from the rapid employment model, worsening for those arriving amid more vulnerable circumstances.[7]</p>
+                        <p>Beyond the mistaken notion that communities fighting perpetual poverty are simply unable – or unwilling – to assimilate American values, those ideas of integration carry with them frightful notions that mimic the country’s history of xenophobia and paranoia, instead of recognizing the contributions of immigration and multiculturalism. Suggesting that the best interest of vulnerable communities are served by forced low-wage employment, rather than public investment, is unfounded, irresponsible, and reprehensible.</p>
+                        <div class="col-md-12 mb-4">
+                            <blockquote>
+                                <p>Furthermore, our approach modifies an existing policy process, facilitating its immediate implementation, and it is dynamic in that it adapts to synergies over time.</p>
+                            </blockquote>
+                        </div>
+                        <p>The benefits of slight modifications are felt entirely by the social and political systems supporting the status quo. They are not felt by citizens governed by those detached alterations, allowing for a small group of individuals, drafting plans from the opulent confines of a social science laboratory, to dictate the terms of life for the masses of impoverished families. This classic form of problem-solving cultivates bipartisan neglect and is fundamentally disinterested in the experiences of individuals for whom regulations are being dictated. It is not surprising then that the findings of this report utilize only pre-established machine learning algorithms and high school level linear algebra. As such, modifications to existing policy require only a pinky wiggle from the intellectually well-endowed, requiring no real investigation or creativity. This is the best bipartisanship has to offer. It is another example of the success with which regressive systems are built to support the needs of the poor, and yet, they merely reinforce the interests of those problem-solvers in power.</p>
+                        <div class="col-md-12 mb-4">
+                            <blockquote>
+                                <p>Because of the algorithm’s data-driven learning capacity, policy-makers do not need to invest in identifying the precise sources of those synergies—local economic conditions, social environments, resettlement office efficacy, etc.—to harness their benefits.</p>
+                            </blockquote>
+                        </div>
+                        <p>Current performance indicators for refugee resettlement report on the numbers of individuals employed each year, as well as their 90-day job retention, average wages, and access to health coverage – though not necessarily the actual number covered. In Texas, about 80% of refugees between 2011 and 2015 met a narrow definition of self-sufficiency prior to the end of 180 days with job retention rates around 70%.</p>
+                        <p>Despite the fact that these statistics suggest only about 56% of arrivals maintain employment thanks to the resettlement process, Texas has been historically highlighted as a national model for the system’s success. With no more than 6 months of financial assistance available, agencies have no incentive to explore outcomes for families outside of the short-term focus of rapid employment. In other words, since the modern system emerged in 1990, policymakers have never shown concerns for critical factors such as social adjustment, mental health, gender-based opportunity disparity, English language proficiency, opportunity for professional recertification, young adult education, or access to transportation. The level of neglect found within the system has been and remains appalling. Single mothers, large families, young refugees, and the elderly regularly come to the country with no plans made for their well-being, whatsoever. Though any cursory assessment of the process will reveal that rapid employment is unable to serve the needs of new arrivals, no investment is being made to listen to or meet the needs of vulnerable communities. Nonetheless, the authors are focused on using technology to further absolve policymakers of that responsibility. It is unfathomable to consider how denial of social responsibility takes on new faces over time; it seems that we are entering an era where the burden of governance can be shifted to a machine learning algorithm, bereaving our public institutions further from basic humanity.</p>
+                        <p>The Stanford report is just one in a long history of social experiments run on refugee arrivals. Refugees and immigrants are ideal targets for politicians trying to make a case against poverty alleviation programs, since recent arrivals are often socially isolated, economically struggling, and unable to vote in the next election cycle. Throughout the 1980’s, the Office of Refugee Resettlement ran demonstration projects to see how far they could push employment requirements, moving from a three-year plan to rapid employment within weeks of arrival.[10]</p>
+                        <p>It is important to note that those programs never showed evidence that shorter support periods had the capacity to serve the long- term needs of refugees – and some even cost more while producing worse outcomes. . Nevertheless, public discourse about the need to reduce refugee dependency fueled a broader effort to derail the fight against income inequality. Unfortunately, the researchers from Stanford contributed their own layer of pseudo-knowledge to this debate. To this day, a salient double standard exists in economic policymaking for the wealthiest and the poorest in America.</p>
+                        <p>This brings us back to the most glaring affront: Stanford political scientists are writing papers about extracting cost-savings from refugees. Indeed, convoluted arguments and seemingly complex narratives must be made to find ways by which to take even more money from the poorest residents in America. So what are we doing to get cost savings from the richest of the rich?</p>
+                        <p>Efforts to eliminate tax loopholes with simplified tax codes or to increase rates for the top 1% of earners present complexity for policymakers only insofar as they must find mechanisms by which to excuse themselves and their supporters from these glaringly obvious measures. While the wealthy avoid higher taxes by sighting long-term trickle-down effects, impoverished refugees start their lives in America by repaying the federal government for the cost of their flight into the country. This country invests in the wealthy and takes from the poor thanks to the elite problem-solving capacities of its most esteemed citizens.</p>
+                        <p>Why are the latest technologies used to construct arguments for neglect and to extract financial savings from those who are unquestionably most poor? Because viewing immigrants merely as cheap labor aligns with the economic values that have been rewarded by this country since its foundation. That is why problem-solving equates to violent consent and bipartisanship is merely the dilution of responsibility.</p>
+                        <p>Building systems to care for our communities takes far more than the analytical mind of political scientists. It requires an insertion of humanity into systems that are accustomed to treating communities of color and immigrants like cattle, moved in line, left and right, before fulfilling their economic roll and then forgotten. It will take more than a finger wave by America’s elite to respond to a growing global catastrophe. Fortunately, the tools required to address those issues intelligently do not require a graduate degree. Rather, they come from basic human considerations and values embedded in all spiritual traditions to treat newcomers as you would your own.</p>
+                        <p>It cannot be understated: The treatment of our immigrant communities is a mirror into the standards we have set for America, as a whole. The dissolution of public institutions; the belief that democracy need not extend beyond those with direct access to power; the fictitious belief that profit is linked to productivity; these present circumstances require a creative mind to move beyond the gravitational pull of problem-solving techniques.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="mizrahi">
+        <div class="banner-wrapper animatedParent animateOnce">
+            <div class="banner animated fadeIn" style="background-image:url(images/Dec-2018/MizIm2.jpg);">
+                <div class="banner-text">
+                    <div class="container">
+                        <h1>Mizrahi Manifesto</h1>
+                        <h3 style="color: white; text-shadow: 2px 2px #000;">Conceiving the Role of Art and Film in Telling Stories of Our Future</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section w1 animatedParent animateOnce">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center animated fadeInUp" style="margin-bottom: 100px;">
+                        <p>My fathers and mothers, who immigrated to …. from …, never held a camera.</p>
+                        <p>If I will ask them to sit in front of this camera, they will refuse. Instead, they will go to the kitchen to cut us some watermelon. Mixing salty cheese and slices of watermelon, we will eat quietly. Do you see it? Red watermelon slices watch us as we watch them.</p>
+                        <p>Watermelon moments, watermelon days, all is recorded.</p>
+                        <p>Like our parents, I always KNEW that this camera is a suspicious object, associated with exploitation, colonialism, imperialism, patriarchy, war, protecting borders that we wanted to cross, reporting the news that we had to watch but never acknowledged us.</p>
+                        <p>I want to think about ways where to hold a camera and film is not necessarily to become a filmmaker, the analyst of images, the maker of visual leaflets, the one who waits to be bought – can Netflix buy me? Will Amazon distribute me? When will Sundance find me? And who, yes who, will give me some award after thinking that films can compete, and chase, and bite, and punch, and bleed, and pose with steroid muscles, and win?</p>
+                        <p>Like a poem, I am two or ten elements that are suddenly in a conversation, or even a conflict.</p>
+                        <p>To be Mizrahi is to never stop filming, be swimming in an influx of sparks, not knowing where the ON/OFF button is, because the internal and communal investigation started long before you remember. I think about all the films we made without any camera, and how we keep re-watching them until we…</p>
+                        <div class="parallax_set">
+                            <div class="parallax_layer para_black_layer"></div>
+                            <div class="parallax_layer parallax_text">
+                                <p><i>
+                I am the son of people who never belonged<br>
+Until I was born<br>
+I was supposed to be the ticket IN<br>
+I was asked to dress before any random walk<br>
+I was forced to shave<br>
+I did my best to become a razor<br><br>
+
+I was invited to parties that<br>
+Insisted on ignoring the existence of my father<br>
+I was offered drinks<br>
+I drunk from cups that were thrown against my parents<br><br>
+
+Driving phony cars on invented highways<br>
+Can you, Can you tell me<br>
+What is the worth of this IN ticket<br>
+When you see your father<br>
+SH SH ShAK ing<br>
+Can you, can you tell<br>
+How to hold my father when he is trembling when He is IN<br>
+Finally IN<br>
+In this moment that he cannot swallow himself<br>
+In being allowed into Making It but<br>
+Afraid to be and to become<br>
+What is the worth of this IN<br>
+                        Can you, Can you tell<br></i>
+                                </p>
+                            </div>
+                        </div>
+                        <p>To make Mizrahi films is to hold the camera and to never be satisfied with the image, any image, any colors, no matter how beautiful, how “beautifized,” how aesthetically satisfying, how much it appeals to the judges and critics and army generals, and whether it is IN or OUT of focus. On the contrary, filming should not be about the image.</p>
+                        <p>By the term “Mizrahi” I want to begin talking about a PRAXIS, and thus treating “Mizrahim” as a verb, an ACT, rather than deploying it as noun to identify different displaced communities within and beyond one national/religious/ethnic borders. My father is never only the men who came from… and my mother is not only the one who arrived from… we come from many places, and you shouldn’t think that you know me because my accent, or the way I answered your question: “So where are you from?</p>
+                        <p>No, where are you really really from?”</p>
+                        <p>Perhaps, more than expertise, the question is with what kind of tenderness you hold the camera.</p>
+                        <p>To make Mizrahi films is to think and rethink the ethical and social role of the camera. This camera and your hands are always part of that commitment to the often disremembered, unaccounted, vulnerable, fragile people, your peoples. Without love this camera is an empty and even a dangerous machine, an object often used and misused to sustain political fantasies and domination.</p>
+                        <p>Filming without love and thus a public commitment for justice is merely a mechanical act, posing in front of a set of catastrophes, playing it PROFESSIONAL, using expertise to mask neglect and exploitation.</p>
+                        <div class="parallax_set">
+                            <div class="parallax_layer para_black_layer"></div>
+                            <div class="parallax_layer parallax_text">
+                                <p>
+                                    <i>
+                                    I am the son of families who got confused every independence day<br>
+                                    Fireworks, <br>
+                                    Watched behind closed windows<br>
+                                    Wait,<br>
+                                    Is it for us or aimed against us<br>
+                                    Look up,<br>
+                                    The world that excommunicated us knows how to party <br><br>
+
+                                    Now <br>
+                                    Look right,<br>
+                                    we are the fireworks of this moment<br>
+                                    Yeah<br>
+                                    Look Left,<br>
+                                    We explode, colorful to death<br>
+                                    No, <br>
+                                    We prefer to avoid the busy streets and stay at home, confined within familiar walls<br>
+                                    Don’t tell me,<br>
+                                    Clap Clap <br>
+                                    Don’t, one day the skies will end<br>
+                                    and we will not be on display for the moon <br>
+                                    </i>
+                                </p>
+                            </div>
+                        </div>
+                        <p>To make Mizrahi films is to make Mizrahi literature, poetry, dance, dust, a life that is about and with people. To see and meet. To talk and listen. To touch, to expose wounds. To return to your parents; it’s Passover, they are blessing moments that will never return, and you are asking your old grandmother to pray again because you want to film it in your being and soul before . . .</p>
+                        <p>I know that I’m not Mizrahi.
+                            <br>I always knew it even when I had to hide the histories of my parents.
+                            <br>I know that I’m not Mizrahi, I keep telling myself.
+                            <br>Yes, I am not. Not not. Really not. All the no no not.
+                            <br>It is NOT that I have a problem to be Mizrahi, that is, to pretend
+                            <br>that I’m your Oriental, to fit into the inferior-exotic category, to be the only Mizrahi body in your university to play the diversity game, but I, I always hated fitting, because it is not really about participating, but more about obeying.
+                            <br>
+                            <br>I know that I’m not Mizrahi.
+                            <br>I don’t listen to Mizrahi music just like I don’t live in a Mizrahi planet, surrounded by Mizrahi trees, and the Mizrahi sun, or Mizrahi dogs that bark, yes, I am tired of barking, bleeding anger. Please, listen. I’m tired of barking but I’m not tired of biting. Mizrahi bites. Until Mizrahi blood will cover Mizrahi faces. Mizrahi police with Mizrahi sirens will chase us. And Mizrahi cops holding Mizrahi rifles will warn me: You have the right to remain. You do.
+                            <br>
+                            <br>NO apologies, capital from beginning to end, LEGENDS WITH AN ACCENT.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="ethics">
+        <div class="banner-wrapper animatedParent animateOnce">
+            <div class="banner animated fadeIn" style="background-image:url(images/Dec-2018/Texas_12.jpg);">
+                <div class="banner-text">
+                    <div class="container">
+                        <h1>On the Role of Ethics in Giving </h1>
+                        <h3 style="color: white; text-shadow: 2px 2px #000;">Separating profit motives from public investment in Houston</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section w1 animatedParent animateOnce">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center animated fadeInUp" style="margin-bottom: 100px;">
+                        <p>Over the past two decades one component of the nonprofit sector has experienced unprecedented growth. As the gap between rich and poor widens and the social safety net all-but-disappears – especially in our state of Texas – the business of helping others has found sophisticated ways to support itself with countless new fundraising innovations. Massive digital campaigns and crowdfunding tools for every occasion have been joined by an entirely new category of nonprofits built solely for the purpose of fundraising on behalf of other causes.</p>
+                        <p>Most of those emerging innovations in fundraising utilize consumer marketing strategies built by the private sector for the sole purpose of maximizing profit, and while they may lead to increased revenue, those tools can have far-reaching negative impacts. In Houston, in particular, where the city’s ethos has always encouraged free enterprise, the line between successful business practice and effective social support is being obscured.
+                            <p>
+                                <p>Throughout 2018, a number of local organizations across the city utilized live raffle fundraisers without considering their full implications. A close offshoot of live auctions or prize auctions, live raffles sell tickets for individuals to win a portion of overall raffle sales. Of course, private individuals would be arrested for running this kind of number game, while casinos use them to amass incredible wealth at the disproportionate cost of low-income communities.[11] This oversight of ethical norms is just one example of the problematic consequences of private-sector logic being applied in the philanthropic world.</p>
+                                <p>Before writing this article, the brain trust at Firestarter thought nonprofit live auctions for cash were merely unethical. In Texas - we have since discovered- they are illegal.[12] The organizations that advertised their fundraising efforts to the general public took money from the very communities they claim to be helping, but also, they clouded our collective vision for what a charitable institution can or should do. When philanthropy is not guided primarily by ethics and values, there are deleterious consequences on the way that we all, as individuals, perceive the work.</p>
+                                <p>The steady steps taken by fundraising efforts across the country towards market-based solutions highlight a dangerous route that philanthropy has historically taken and is at risk of repeating, today. Beyond fundraising strategy, we see a wave of market-driven solutions, like social impact bonds and microfinance loans, proposed as the way to fix unproductive public institutions, rather than vice versa, as a socially conscious standard that must be applied to broken markets.</p>
+                                <p>We cannot forget that in America, today, private sector productivity is at historical lows. Despite the fact that interest rates remain outpaced by inflation, a recent McKinsey analysis laments that capital investment is far below historical trends. They describe “an increasing share of income going to high-income households that are less likely to spend” and “corporate short-termism” as components of the overall macroeconomic outlook, which casts severe doubt on the country’s long-term growth.[13] Soaring corporate profits have produced no growth for the average American’s wages in the last half century.[14][15] Even before the last recession, the share of national GDP taken home by American workers has been sharply falling to all-time lows.[16] By all measures, the booming private sector has no interest or ability in supporting the needs of low-income – or even middle class- American families.</p>
+                                <p>Ignoring structural market failures, we repeatedly hear the unfounded notion that the poor are themselves causing those sharp declines. According to this narrative - bereft of statistics or facts - the poor, immigrants, and all recipients of public assistance are costing us money and taking our jobs. Arguments to eliminate public institutions are always paired with the notion that everyone with a desire to succeed will be better off, leaving only the poor who choose not to work and live by a different set of values than the rest of us.</p>
+                                <p>Philanthropy, and its promise to realize meaningful change, is diametrically opposed to those notions that demonize the poor. It is underpinned by the idea that all communities are innately productive, and so philanthropists recognize the collective benefits of investing in the public when capital owners refuse to do so. In that sense, philanthropy is primarily tasked with infusing humanity into societal structures that will otherwise collapse without it.</p>
+                                <p>One public campaign being run on the streets of Houston, however, jeopardizes that vital objective. Just around the corner from Firestarter Headquarters near the Galleria and at sites across Houston, big blue and orange signs offer advise on how residents should spend their money to make a meaningful change. The signs were not designed by experienced social service providers, nor were they inspired by local philanthropists who posses a history of making keen social investments. Rather, on March 2, 2017, Mayor Turner announced that a group of management districts across the city were taking the unprecedented lead in advocating and fundraising for Meaningful Change.</p>
+                                <p><a href="http://www.Meaningfulchange.org">Meaningfulchange.org</a> has one basic message: Do not give money to the homeless. On the front page, they encourage donations to a local nonprofit, before educating the public about the community they claim to support.</p>
+                                <p>The “fast facts” layout a clear message. Each homeless person costs you, the taxpayer, $40,000, annually. They are criminals, drug addicts, and “etc.” – a careful descriptor that invites readers to insert the pejorative term they prefer most. The website goes on to clarify that ideal solutions have been built to suit their needs, and yet, the poor choose to ignore them. By helping the homeless with direct cash assistance, you are making them dependent and enabling their wrong choices.</p>
+                                <p>If you read any of our report on the <a href=f irestarer_refugee_realities_Oct18.html>realities of refugee resettlement</a>, you will find that those same exact narratives, nearly word for word, have been successfully used to defund assistance for immigrants and refugees since the early 1980’s. Of course, if you are familiar with any of our country’s history, you will find they have been used for demonizing the poor and communities of color on countless occasion. They were the primary narratives behind the elimination of welfare in the 1990’s, and they have only been slightly adjusted to include fears of terrorism towards select communities over the past two decades.</p>
+                                <p>This message is not merely about the homeless. It has nothing to do with the challenging work of running shelters across the city. It is inexorably linked to an argument being made across the country, supplanting the shortcomings of our economic systems with condemnation of the poor. Worse yet, it is unequivocally always tied to direct profit motif, and it has been given a comfortable home in the progressive hub of Houston.</p>
+                                <p>There is, of course, a reason that management districts have taken the uncharacteristic step of educating the public about the best way to give our charitable dollars. Management districts are a unique creation of Texas private sector mavericks, who have found legal means to divert public property taxes for their own interests. This behemoth of a gentrifying force grows in strength when property values grow, allowing businesses to invest in themselves, and further driving up property values. They have a direct financial interest in eliminating homelessness, not out of compassion for families on the edge of our society and not out of well-researched faith in the capacities of a local nonprofit institutions. The homeless lower property values, and the private businesses who get a cut of property tax increases want them gone.</p>
+                                <p>The narrative that points blame at unrepresented communities is easy to spot. It lacks complexity and underpins justifications for all private sector success as a merit-based outcome. It ignores any meaningful data and denies history, hoping that we all take for granted forces that will not change. Most dangerously, it invites discrimination in its most virulent form to masquerade as thoughtful critique. As such, it is a private sector value that should be left detached from the challenging work of realizing social change.</p>
+                                <p>We cannot fight for the rights of immigrants, if our city condones this message about the poor. We cannot fight for equal pay in the workplace; we cannot celebrate cultural diversity; we cannot make gains for LGBTQ rights; we cannot bring awareness to mental health; we cannot claim our rights as individuals when private interests convince us to dehumanize one another.</p>
+                                <p>At present, hundreds of nonprofits, faith leaders, and community leaders are listed as supporters of the “meaningful change” message. Though I would venture to guess that most are not aware of it, their names are being used to manufacture consent to a deeply harmful sentiment. It is important that we ask ourselves why the pursuit of private profits has been so successful in uniting these groups, while we remain divided in the fight for individual recognition, the fight to justify our lives as productive members of this country, and the fight to recognize what’s true and what isn’t.</p>
+                                <p>Every day, I see someone pull their window down in front of those signs to give out a spare dollar. For members of our community who have spent a lifetime on the other end of those accusations, a very different set of values guides our actions. Those human values are the only ones that can fuel philanthropy, in opposition to ideas that perpetuate violence and greed.</p>
+                                <p><b>Meaningfulchange.com encourages users to <a href="http://meaningfulchange.org/wp-content/uploads/2017/04/Meaningful_Change_Reference_Guide_DRAFT.pdf">download their marketing materials</a> for distribution across the city, and shares a <a href="https://www.dropbox.com/sh/e5t003cosf4guhw/AAD4gkKy3eu9zcWq4ZlpPkq2a?dl=0">link to their dropbox folder</a>.  All comments made on that link are sent to the leaders in charge of the campaign, as well as social media comments marked #meaningfulchange.</b>
+                                </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 align-self-center">
+                    <a href="index.html">
+                        <img src="images/firestarter_web_logo.png" alt="" style="display:none;">
+                    </a>
+                </div>
+                <div class="col-md-6 align-self-center text-center">© 2018 The Firestarter Group - Digital Development Team</div>
+                <div class="col-md-3 align-self-center" style="display:none;">
+                    <ul>
+                        <li><a class="facebook" href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook-f" aria-hidden="true"></i></a>
+                        </li>
+                        <li><a class="twitter" href="https://twitter.com/" target="_blank"><i class="fa fa-twitter"></i></a>
+                        </li>
+                        <li><a class="google" href="https://plus.google.com" target="_blank"><i class="fa fa-google-plus"></i></a>
+                        </li>
+                        <li><a class="instagram" href="https://instagram.com/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer> <a href="#" class="back-to-top"><i class="fa fa-angle-up"></i></a>
+    <!-- Bootstrap core JavaScript================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery-min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+    <script src="js/ie-emulation-modes-warning.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/css3-animate-it.js"></script>
+    <script src="js/jquery.fancybox.js"></script>
+    <script type="text/javascript" src="js/jquery.mixitup.min.js"></script>
+    <script src="js/jquery.matchHeight-min.js"></script>
+    <script type="text/javascript">
+        $('.coleql_height').matchHeight();
+    </script>
+    <script type="text/javascript">
+        (function () {
+                        var bsModal = null;
+                        $("[data-toggle=modal]").click(function (e) {
+                            e.preventDefault();
+                            var trgId = $(this).attr('data-target');
+                            if (bsModal == null)
+                                bsModal = $(trgId).modal;
+                            $.fn.bsModal = bsModal;
+                            //$(trgId + " .modal-body").load($(this).attr("href"));
+                            $(trgId).bsModal('show');
+                        });
+                    })();
+        
+                    function pdfOption(e) {
+                        if (e == '1') {
+                            $('#showinfo input').val('');
+                            $('#showinfo').show();
+                            $('input[name="country"]').removeAttr('disabled');
+                            $('input[name="zipcode"]').removeAttr('disabled');
+                            $('input[name="mailaddr"]').removeAttr('disabled');
+                            $('input[type="submit"]').show();
+        
+                            //$('#showprefer').hide();
+                            //$('input[name="prefer"]').attr('disabled', 'disabled');
+                        } else if (e == '2') {
+                            $('#showprefer input').val('');
+                            $('#showinfo').hide();
+                            $('input[name="country"]').attr('disabled', 'disabled');
+                            $('input[name="zipcode"]').attr('disabled', 'disabled');
+                            $('input[name="mailaddr"]').attr('disabled', 'disabled');
+        
+                            //$('#showprefer').show();
+                           //$('input[name="prefer"]').removeAttr('disabled');
+                            $('input[type="submit"]').show();
+                        }
+                    }
+        
+                    $(function () {
+                        $('form#pdfForm').submit(function (e) {
+                            e.preventDefault(); //prevent form from submitting
+                            var form = $(this);
+                            var url = form.attr('action');
+        
+                            //console.log(form.serialize());
+                            //return false;
+        
+                            $.ajax({
+                                type: "POST",
+                                url: url,
+                                data: {action: 'pdfform', formdata: form.serialize()}, // serializes the form's elements.
+                                success: function (data) {
+                                    //alert(data); // show response from the php script.
+                                    //location.href = "http://www.firestarter.org/thank-you.php?msg=1";
+                                    //$('#pdfForm')[0].reset();
+                                    $('#PdfModal').modal('hide');
+                                    window.open('http://www.firestarter.org/images/firestarter_kinder_report.pdf');
+                                }
+                            });
+                        });
+                    });
+        
+                    $(document).on('hidden.bs.modal', function (e) {
+                        if ($(e.target).attr('data-refresh') == 'true') {
+                            // Remove modal data
+                            $('#pdfForm')[0].reset();
+                            $('#showinfo').hide();
+                            $('input[name="country"]').attr('disabled', 'disabled');
+                            $('input[name="zipcode"]').attr('disabled', 'disabled');
+                            $('input[name="mailaddr"]').attr('disabled', 'disabled');
+        
+                            //$('#showprefer').hide();
+                            //$('input[name="prefer"]').attr('disabled', 'disabled');
+                            $('input[type="submit"]').hide();
+                            $(e.target).removeData('bs.modal');
+                            // Empty the HTML of modal
+                            //$(e.target).html('');
+                        }
+                    });
+    </script>
+    <!--<a style="display:none;" id="downloadLink" href="http://www.firestarter.org/images/firestarter_kinder_report.pdf" target="_blank" type="application/octet-stream" download="http://www.firestarter.org/images/firestarter_kinder_report.pdf">click here</a>
+        <script type="text/javascript">
+            var delay = 3000;
+            window.setTimeout(function () {
+                $('#downloadLink')[0].click();
+            }, delay);
+        </script>-->
+    <script src="js/dec_18/parallaxFade.js"></script>
+    <script src="js/snap.js"></script>
+
+</body>
+
+</html>

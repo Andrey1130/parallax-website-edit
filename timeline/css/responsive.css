@@ -1,0 +1,68 @@
+/* #Media Queries
+================================================== */
+
+@media (min-width: 992px) and (max-width: 1199px) {
+.w4 [class*=col-]{ -ms-flex: 0 0 33.3333%; flex: 0 0 33.3333%; max-width: 33.3333%;}
+.navigaltion li a{ font-size:36px;}
+} 
+/* END__ */
+
+@media (min-width: 768px) and (max-width: 991px) {
+.banner{ height:500px; background-attachment:inherit; background-repeat:no-repeat;}
+.banner-text h1{ font-size:40px;}
+.banner-text h3{ font-size:32px;}
+.banner-text p{ font-size:20px;}
+.w2 .image, .w5 .image{ position:relative; width:100%; left:auto; right:auto; top:auto;}
+.w2 .content, .w5 .content{ padding:80px;}
+.w4 h2{ font-size:50px;}
+.w4 [class*=col-]{ -ms-flex: 0 0 50%; flex: 0 0 50%; max-width: 50%;}
+.navigaltion li a{ font-size:36px;}
+.navigaltion{ margin-bottom:20px;}
+.menu-block{ padding:96px 0 25px; height:auto}
+.menu-wrapper{ position:relative; top:auto; -webkit-transform:translateY(0); -ms-transform:translateY(0%); transform:translateY(0%);}
+} 
+
+/* END__ */
+
+@media only screen and (max-width: 767px) {
+h1, .h1, .block-section h2 {font-size:1.875rem;}
+h2, .h2 {font-size:1.6875rem;}
+h3, .h3 {font-size:1.4375rem;}
+h4, .h4 {font-size:1.25rem;}
+h5, .h5 {font-size:1.125rem;}
+h6, .h6 {font-size:1rem;}
+.banner{ height:400px; background-attachment:inherit; background-repeat:no-repeat;}
+.banner-text{ bottom:20px;}
+.banner-text h1{ font-size:36px;}
+.banner-text h3{ font-size:24px;}
+.banner-text p{ font-size:16px;}
+.section{ padding:25px 0;}
+.w1 p{ font-size:16px;}
+.w2 .image, .w5 .image{ position:relative; width:100%; left:auto; right:auto; top:auto;}
+.w2 .content, .w5 .content{ padding:20px;}
+.w4 h2{ font-size:40px;}
+.w4 [class*=col-]{ -ms-flex: 0 0 50%; flex: 0 0 50%; max-width: 50%;}
+#filters li { -ms-flex: 0 0 100%; flex: 0 0 100%; max-width: 100%;}
+.scroll-content .title, .bg-section h2{ font-size:36px;}
+.bg-section{ padding:40px 0;}
+.text-lg p{ font-size:18px;}
+.modal-logo img{ width:200px;}
+.navigaltion li a{ font-size:20px;}
+.navigaltion{ margin-bottom:20px;}
+.menu-block{ padding:96px 0 25px; height:auto}
+.menu-wrapper{ position:relative; top:auto; -webkit-transform:translateY(0); -ms-transform:translateY(0%); transform:translateY(0%);}
+.logo, .header .social{ float:none; display:block; text-align:right;}
+.header .social li{ float:none; display:inline-block;}
+.empty-top{ height:200px;}
+.mid-block{ padding:30px 0 0 0}
+.team-wrapper{ padding:30px 0 0 0;}
+
+} 
+/* END__ */
+
+@media (max-width: 575px) {
+.w4 [class*=col-], #filters li { -ms-flex: 0 0 100%; flex: 0 0 100%; max-width: 100%;}
+.scroll-content .title, .bg-section h2{ font-size:30px;}
+} 
+/* END__ */
+

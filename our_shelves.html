@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>The Firestarter Group Digital Portal</title>
+        <meta name="description" content="The Firestarter Group publishes multimedia content each month, featuring our innovative work supporting the vision of communities across the globe.">
+        <!-- keywords -->
+        <meta name="keywords" content="social, philanthropy, innovation, entrepreneurship, social entrepreneurship, community investment">
+        <!-- favicon -->
+        <link rel="shortcut icon" href="images/firestarter_fav.png">
+        <link rel="apple-touch-icon" href="images/apple_touch_firestarter_57.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="images/apple_touch_firestarter_72.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="images/apple_touch_firestarter_114.png">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"> 
+        <link href="style.css" rel="stylesheet">
+        <link href="css/animations.css" rel="stylesheet">
+        <link href="css/font-awesome.min.css" rel="stylesheet">
+        <link href="css/bootstrap.css" rel="stylesheet">
+        <link href="css/responsive.css" rel="stylesheet">
+        <link rel="stylesheet" href="hint.css">
+        <!--[if lt IE 9]>
+        <script src="js/html5shiv.min.js"></script>
+        <link href="http://www.firestarter.org/css/animations-ie-fix.js" rel='stylesheet'>
+        <![endif]-->
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-25926409-7"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+
+            gtag('config', 'UA-25926409-7');
+        </script>
+    </head>
+
+    <body>
+
+
+
+        <!-- PDF Modal -->
+        <div class="modal fade" id="PdfModal" tabindex="-1" role="dialog" aria-labelledby="PdfModal" aria-hidden="true" data-refresh="true">
+            <div class="modal-dialog  modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Download PDF</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>For our internal outcome tracking, it is helpful to know who gains access to our report.  Please share some of the optional information below if you feel comfortable:</p>
+                        <form id="pdfForm" action="mail.php" method="post">
+                            <div class="radio"><label><input type="radio" name="optradio" value="1" onchange="pdfOption(this.value)"> If you want to share your information.</label></div>
+                            <div class="radio"><label><input type="radio" name="optradio" value="2" onchange="pdfOption(this.value)"> If you want to not share your information.</label></div>
+                            <div id="showinfo" style="display:none;">
+                                <div class="form-group"><input type="text" class="form-control" placeholder="Country" name="country" disabled="disabled" /></div>
+                                <div class="form-group"><input type="text" class="form-control" placeholder="Zip Code (If in the US)" name="zipcode" disabled="disabled"></div>
+                                <div class="form-group"><input type="email" class="form-control" placeholder="E-mail" name="mailaddr" disabled="disabled"></div>
+                            </div>
+                            <div class="form-group" id="showprefer" style="display:none;"><input type="checkbox"  name="prefer" value="Yes" disabled="disabled"/> <label class="form-check-label">I prefer not to share</label></div>
+                            <input type="submit" class="btn btn-primary" value="Access PDF" style="display:none;" />
+                        </form>
+                    </div>  
+                </div>
+            </div>
+        </div>
+
+
+        <nav class="menu-hide">
+            <div class="menu-block">
+                <div class="menu-head clearfix">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-12">
+                            <div class="row">
+                                <div class="col-4 col-sm-4 col-md-4 col-lg-7"><a href="our_shelves.html#" class="menu-open menubar-toggle"></a></div>
+                                <div class="col-8 col-sm-8 col-md-8 col-lg-4 ml-auto"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="menu-wrapper">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-12">
+                            <div class="row">
+                                <div class="col-lg-7">
+                                    <ul class="navigaltion">
+                                        <li><a href="index.html">Home</a></li>
+                                        <li><a href="about_firestarter.html">About FS</a></li>
+
+                                        <li><a href="films.html">Film</a></li>
+
+                                        <li><a href="about_firestarter.html#contact">Contact</a></li>
+                                        
+                                        <li><a href="Archive.html">Bookshelf</a></li>
+                                    </ul>
+                                </div>
+
+
+
+                                <div class="col-lg-4 ml-auto">
+                                    <div class="modal-logo"><img src="images/firestarter_web_logo.png" alt=""></div>
+                                    <h4>Welcome to the Firestarter Digital Portal</h4>
+                                    <p>Each month, you will find new original content published through our digital portal. Here, we give insight into our ongoing work, share latest research publications, and give unique access to our ongoing media production. 
+                                    </p>
+                                    <p>This month, we are excited to share, <i>We Are In It</i>, a film we produced in 2016 about the experiences of migrant communities living across Houston, TX.</p>
+                                    <!-- Begin Mailchimp Signup Form -->
+                                    <link href="http://cdn-images.mailchimp.com/embedcode/slim-10_7.css" rel="stylesheet" type="text/css">
+                                    <style type="text/css">
+                                        #mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
+                                        /* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
+                                           We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+                                    </style>
+                                    <div id="mc_embed_signup">
+                                        <form action="https://firestarter.us17.list-manage.com/subscribe/post?u=45de124d26652bbcd9a8d20d0&amp;id=b4053a8816" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                                            <div id="mc_embed_signup_scroll">
+                                                <label for="mce-EMAIL">We can remind you when new content is up:</label>
+                                                <div class="form-group">
+                                                    <input type="email" value="" name="EMAIL" class="email form-control" id="mce-EMAIL" placeholder="your email address" required>
+                                                </div>
+                                                <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                                                <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_45de124d26652bbcd9a8d20d0_b4053a8816" tabindex="-1" value=""></div>
+                                                <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+                                            </div>
+                                        </form>
+                                    </div>
+
+                                    <!--End mc_embed_signup-->
+                                    <ul class="social-link">
+                                        <li><a class="facebook" href="https://www.facebook.com/wearethefirestarter/" target="_blank"><i class="fa fa-facebook-f" aria-hidden="true"></i></a></li>
+                                        <li><a class="twitter" href="https://twitter.com/starting_fire" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                                        <li><a class="instagram" href="https://www.instagram.com/wearethefirestarter/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </nav>
+
+        <header class="header">
+            <div class="row">
+                <div class="col-6 clearfix"><a href="our_shelves.html#" class="menu-open menubar-toggle"></a></div>
+                <div class="col-6 clearfix">
+                    <ul class="social d-none d-md-block">
+                        <li><a href="https://www.facebook.com/wearethefirestarter/" target="_blank"><i class="fa fa-facebook-f" aria-hidden="true"></i></a></li>
+                        <li><a href="https://twitter.com/starting_fire" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="https://www.instagram.com/wearethefirestarter/" title="instagram" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                    </ul>
+                    <div class="logo"><a href="index.html"><img src="images/firestarter_lettermark_bw.png" alt=""></a></div>
+                    <ul class="social d-block d-md-none">
+                        <li><a href="https://www.facebook.com/wearethefirestarter" target="_blank"><i class="fa fa-facebook-f" aria-hidden="true"></i></a></li>
+                        <li><a href="https://twitter.com/starting_fire" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="https://www.instagram.com/wearethefirestarter/" title="instagram" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        
+        
+        
+         <body>
+             
+             <div class="w2  animatedParent animateOnce">
+            <div class="image animated fadeInLeft" style="background-image:url('images/Archives/Firestarter_Archive.jpg')"><div class="full-img d-block d-lg-none"><img src="images/Archives/Firestarter_Archive.jpg" alt=""></div></div>
+            <div class="row no-gutters justify-content-end">
+                <div class="col-lg-6 animated fadeInRight">
+                    <div class="content">
+                        <h2>See what we have on our shelves</h2>
+                        <p>Each month, content shown on our digital portal will be moved here to live on the shelf. You can always access previous content here. As a general rule, we will never ask anyone to pay for public reports or overviews of our community investment. However, we ask that you enable us to continue our work by paying for some of the creative media found below.</p>
+                        <p>We are always interested to hear about how the work impacts you. Please reach out through our <a href src="about_firestarter.html#contact">contact form</a> if you are interested in using our content or to schedule a public viewing.  We invite all forms of collaboration. </p>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section w4  animatedParent animateOnce" style="background:#f5f5f5;">
+            <div class="container-fluid">
+                <h2>Search the Shelves</h2>
+
+                <ul id="filters" class="clearfix justify-content-center">
+                    <li><span class="filter active" data-filter="cat1 cat2 cat3">Full Archive</span></li>
+                    <li><span class="filter" data-filter="cat1">Report Publication</span></li>
+                    <li><span class="filter" data-filter="cat2">Media</span></li>
+                    <li><span class="filter" data-filter="cat3">Writing</span></li>
+                    
+                </ul>
+
+                <div class="row animated fadeInUp" id="portfoliolist">
+
+                    <div class="col-md-6 col-lg-3 portfolio cat1" data-cat="cat1">
+                        <div class="portfolio-wrapper">
+                            <a href="firestarer_refugee_realities_Oct18.html">
+                                <div class="overlay"><div class="table-div"><div class="table-cell">
+                                            <hr>
+                                            <h5>October 2018</h5>
+                                            <p>Refugee Realities Report</p>
+                                        </div></div></div>
+                                <img src="images/Archives/October-2018.png" alt="" />
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3 portfolio cat2" data-cat="cat2">
+                        <div class="portfolio-wrapper">
+                            <a href="index.html">
+                                <div class="overlay"><div class="table-div"><div class="table-cell">
+                                            <hr>
+                                            <h5>November 2018</h5>
+                                            <p><i>We Are In It</i>:<br>A Film by Yehuda Sharim</p>
+                                        </div></div></div>
+                                <img src="images/Archives/November-2018.jpg" alt="" />
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6 col-lg-3 portfolio cat3" data-cat="cat3">
+                        <div class="portfolio-wrapper">
+                            <a href="http://eepurl.com/deMGEn" target="_blank">
+                                <div class="overlay"><div class="table-div"><div class="table-cell">
+                                            <hr>
+                                            <h5>December 2018</h5>
+                                            <p>Subscribe for notifications</p>
+                                        </div></div></div>
+                                <img src="images/Archives/December-2018.jpg" alt="" />
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        
+             
+           <script src="https://assets.juicer.io/embed.js" type="text/javascript"></script>
+<link href="https://assets.juicer.io/embed.css" media="all" rel="stylesheet" type="text/css" />
+<ul class="juicer-feed" data-feed-id="wearethefirestarter" data-per="1"><h1 class="referral"></h1></ul>
+             
+               <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 align-self-center"><a href="index.html"><img src="images/firestarter_web_logo.png" alt="" style="display:none;"></a></div>
+                    <div class="col-md-6 align-self-center text-center">© 2018 The Firestarter Group - Digital Development Team</div>
+                    <div class="col-md-3 align-self-center" style="display:none;">
+                        <ul>
+                            <li><a class="facebook" href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook-f" aria-hidden="true"></i></a></li>
+                            <li><a class="twitter" href="https://twitter.com/" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                            <li><a class="google" href="https://plus.google.com" target="_blank"><i class="fa fa-google-plus"></i></a></li>
+                            <li><a class="instagram" href="https://instagram.com/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <a href="our_shelves.html#" class="back-to-top"><i class="fa fa-angle-up"></i></a>
+        <!-- Bootstrap core JavaScript================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="js/jquery-min.js" ></script>
+        <script src="js/popper.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/ie10-viewport-bug-workaround.js"></script>
+        <script src="js/ie-emulation-modes-warning.js"></script>
+        <script src="js/custom.js"></script>
+        <script src="js/jquery.easing.min.js"></script>
+        <script src="js/css3-animate-it.js"></script>
+        <script src="js/jquery.fancybox.js"></script>
+        <script type="text/javascript" src="js/jquery.mixitup.min.js"></script>
+        <script src="js/jquery.matchHeight-min.js"></script>
+        <script type="text/javascript">
+                                $('.coleql_height').matchHeight();
+        </script>
+        <script type="text/javascript">
+            (function () {
+                var bsModal = null;
+                $("[data-toggle=modal]").click(function (e) {
+                    e.preventDefault();
+                    var trgId = $(this).attr('data-target');
+                    if (bsModal == null)
+                        bsModal = $(trgId).modal;
+                    $.fn.bsModal = bsModal;
+                    //$(trgId + " .modal-body").load($(this).attr("href"));
+                    $(trgId).bsModal('show');
+                });
+            })();
+
+            function pdfOption(e) {
+                if (e == '1') {
+                    $('#showinfo input').val('');
+                    $('#showinfo').show();
+                    $('input[name="country"]').removeAttr('disabled');
+                    $('input[name="zipcode"]').removeAttr('disabled');
+                    $('input[name="mailaddr"]').removeAttr('disabled');
+                    $('input[type="submit"]').show();
+
+                    $('#showprefer').hide();
+                    $('input[name="prefer"]').attr('disabled', 'disabled');
+                } else if (e == '2') {
+                    $('#showprefer input').val('');
+                    $('#showinfo').hide();
+                    $('input[name="country"]').attr('disabled', 'disabled');
+                    $('input[name="zipcode"]').attr('disabled', 'disabled');
+                    $('input[name="mailaddr"]').attr('disabled', 'disabled');
+
+                    $('#showprefer').show();
+                    $('input[name="prefer"]').removeAttr('disabled');
+                    $('input[type="submit"]').show();
+                }
+            }
+
+            $(function () {
+                $('form#pdfForm').submit(function (e) {
+                    e.preventDefault(); //prevent form from submitting
+                    var form = $(this);
+                    var url = form.attr('action');
+
+                    //console.log(form.serialize());
+                    //return false;
+
+                    $.ajax({
+                        type: "POST",
+                        url: url,
+                        data: {action: 'pdfform', formdata: form.serialize()}, // serializes the form's elements.
+                        success: function (data) {
+                            //alert(data); // show response from the php script.
+                            //location.href = "http://www.firestarter.org/thank-you.php?msg=1";
+                            //$('#pdfForm')[0].reset();
+                            $('#PdfModal').modal('hide');
+                            window.open('http://www.firestarter.org/images/firestarter_kinder_report.pdf');
+                        }
+                    });
+                });
+            });
+
+            $(document).on('hidden.bs.modal', function (e) {
+                if ($(e.target).attr('data-refresh') == 'true') {
+                    // Remove modal data
+                    $('#pdfForm')[0].reset();
+                    $('#showinfo').hide();
+                    $('input[name="country"]').attr('disabled', 'disabled');
+                    $('input[name="zipcode"]').attr('disabled', 'disabled');
+                    $('input[name="mailaddr"]').attr('disabled', 'disabled');
+
+                    $('#showprefer').hide();
+                    $('input[name="prefer"]').attr('disabled', 'disabled');
+                    $('input[type="submit"]').hide();
+                    $(e.target).removeData('bs.modal');
+                    // Empty the HTML of modal
+                    //$(e.target).html('');
+                }
+            });
+        </script>
+        <!--<a style="display:none;" id="downloadLink" href="http://www.firestarter.org/images/firestarter_kinder_report.pdf" target="_blank" type="application/octet-stream" download="http://www.firestarter.org/images/firestarter_kinder_report.pdf">click here</a>
+        <script type="text/javascript">
+            var delay = 3000;
+            window.setTimeout(function () {
+                $('#downloadLink')[0].click();
+            }, delay);
+        </script>-->
+    </body>
+<script>'undefined'=== typeof _trfq || (window._trfq = []);'undefined'=== typeof _trfd && (window._trfd=[]),_trfd.push({'tccl.baseHost':'secureserver.net'}),_trfd.push({'ap':'cpsh'},{'server':'a2plcpnl0852'}) // Monitoring performance to make your website faster. If you want to opt-out, please contact web hosting support.</script><script src='https://img1.wsimg.com/tcc/tcc_l.combined.1.0.6.min.js'></script></html>

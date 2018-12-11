@@ -1,0 +1,1150 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>The Firestarter Group Digital Portal</title>
+        <meta name="description" content="The Firestarter Group publishes multimedia content each month, featuring our innovative work supporting the vision of communities across the globe.">
+        <!-- keywords -->
+        <meta name="keywords" content="social, philanthropy, innovation, entrepreneurship, social entrepreneurship, community investment">
+        <!-- favicon -->
+        <link rel="shortcut icon" href="images/firestarter_fav.png">
+        <link rel="apple-touch-icon" href="images/apple_touch_firestarter_57.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="images/apple_touch_firestarter_72.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="images/apple_touch_firestarter_114.png">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet"> 
+        <link href="style.css" rel="stylesheet">
+        <link href="css/animations.css" rel="stylesheet">
+        <link href="css/font-awesome.min.css" rel="stylesheet">
+        <link href="css/bootstrap.css" rel="stylesheet">
+        <link href="css/responsive.css" rel="stylesheet">
+        <link rel="stylesheet" href="hint.css">
+        <!--[if lt IE 9]>
+        <script src="js/html5shiv.min.js"></script>
+        <link href="http://www.firestarter.org/css/animations-ie-fix.js" rel='stylesheet'>
+        <![endif]-->
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-25926409-7"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+
+            gtag('config', 'UA-25926409-7');
+        </script>
+    </head>
+
+    <body>
+
+
+
+        <!-- PDF Modal -->
+        <div class="modal fade" id="PdfModal" tabindex="-1" role="dialog" aria-labelledby="PdfModal" aria-hidden="true" data-refresh="true">
+            <div class="modal-dialog  modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Download PDF</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>For our internal outcome tracking, it is helpful to know who gains access to our report.  Please share some of the optional information below if you feel comfortable:</p>
+                        <form id="pdfForm" action="mail.php" method="post">
+                            <div class="radio"><label><input type="radio" name="optradio" value="1" onchange="pdfOption(this.value)"> Yes, I can share some basic info</label></div>
+                            <div class="radio"><label><input type="radio" name="optradio" value="2" onchange="pdfOption(this.value)"> No, I prefer not to share</label></div>
+                            <div id="showinfo" style="display:none;">
+                                <div class="form-group"><input type="text" class="form-control" placeholder="Country" name="country" disabled="disabled" /></div>
+                                <div class="form-group"><input type="text" class="form-control" placeholder="Zip Code (If in the US)" name="zipcode" disabled="disabled"></div>
+                                <div class="form-group"><input type="email" class="form-control" placeholder="E-mail" name="mailaddr" disabled="disabled"></div>
+                            </div>
+                            <!--<div class="form-group" id="showprefer" style="display:none;"><input type="checkbox"  name="prefer" value="Yes" disabled="disabled"/> <label class="form-check-label">I prefer not to share</label></div>-->
+                            <input type="submit" class="btn btn-primary" value="Access PDF" style="display:none;" />
+                        </form>
+                    </div>  
+                </div>
+            </div>
+        </div>
+
+
+        <nav class="menu-hide">
+            <div class="menu-block">
+                <div class="menu-head clearfix">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-12">
+                            <div class="row">
+                                <div class="col-4 col-sm-4 col-md-4 col-lg-7"><a href="firestarer_refugee_realities_Oct18.html#" class="menu-open menubar-toggle"></a></div>
+                                <div class="col-8 col-sm-8 col-md-8 col-lg-4 ml-auto"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="menu-wrapper">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-12">
+                            <div class="row">
+                                <div class="col-lg-7">
+                                    <ul class="navigaltion">
+                                        <li><a href="index.html">Home</a></li>
+                                        <li><a href="about_firestarter.html">About FS</a></li>
+
+                                        <li><a href="films.html">Film</a></li>
+
+                                        <li><a href="about_firestarter.html#contact">Contact</a></li>
+                                        <li><a href="our_shelves.html">Bookshelf</a></li>
+                                    </ul>
+                                </div>
+
+
+
+                                <div class="col-lg-4 ml-auto">
+                                    <div class="modal-logo"><img src="images/firestarter_web_logo.png" alt=""></div>
+                                    <h4>Welcome to the Firestarter Digital Portal</h4>
+                                    <p>Each month, you will find new original content published through our digital portal. Here, we give insight into our ongoing work, share latest research publications, and give unique access to our ongoing media production. 
+                                    </p>
+                                    <p>This month, we are excited to present our report on the outcomes of federal refugee resettlement, highlighting how dramatic funding cuts have prevented new arrivals from achieving long-term success.</p>
+                                    <!-- Begin Mailchimp Signup Form -->
+                                    <link href="http://cdn-images.mailchimp.com/embedcode/slim-10_7.css" rel="stylesheet" type="text/css">
+                                    <style type="text/css">
+                                        #mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
+                                        /* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
+                                           We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+                                    </style>
+                                    <div id="mc_embed_signup">
+                                        <form action="https://firestarter.us17.list-manage.com/subscribe/post?u=45de124d26652bbcd9a8d20d0&amp;id=b4053a8816" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                                            <div id="mc_embed_signup_scroll">
+                                                <label for="mce-EMAIL">We can remind you when new content is up:</label>
+                                                <div class="form-group">
+                                                    <input type="email" value="" name="EMAIL" class="email form-control" id="mce-EMAIL" placeholder="your email address" required>
+                                                </div>
+                                                <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                                                <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_45de124d26652bbcd9a8d20d0_b4053a8816" tabindex="-1" value=""></div>
+                                                <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+                                            </div>
+                                        </form>
+                                    </div>
+
+                                    <!--End mc_embed_signup-->
+                                    <ul class="social-link">
+                                        <li><a class="facebook" href="https://www.facebook.com/wearethefirestarter/" target="_blank"><i class="fa fa-facebook-f" aria-hidden="true"></i></a></li>
+                                        <li><a class="twitter" href="https://twitter.com/starting_fire" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                                        <li><a class="instagram" href="https://www.instagram.com/wearethefirestarter/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </nav>
+
+        <header class="header">
+            <div class="row">
+                <div class="col-6 clearfix"><a href="firestarer_refugee_realities_Oct18.html#" class="menu-open menubar-toggle"></a></div>
+                <div class="col-6 clearfix">
+                    <ul class="social d-none d-md-block">
+                        <li><a href="https://www.facebook.com/wearethefirestarter/" target="_blank"><i class="fa fa-facebook-f" aria-hidden="true"></i></a></li>
+                        <li><a href="https://twitter.com/starting_fire" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="https://www.instagram.com/wearethefirestarter/" title="instagram" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                    </ul>
+                    <div class="logo"><a href="index.html"><img src="images/firestarter_lettermark_bw.png" alt=""></a></div>
+                    <ul class="social d-block d-md-none">
+                        <li><a href="https://www.facebook.com/wearethefirestarter" target="_blank"><i class="fa fa-facebook-f" aria-hidden="true"></i></a></li>
+                        <li><a href="https://twitter.com/starting_fire" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="https://www.instagram.com/wearethefirestarter/" title="instagram" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+
+        <div class="banner-wrapper animatedParent animateOnce">
+            <div class="banner animated fadeIn" style="background-image:url('images/haval_test.png');">
+                <div class="banner-text">
+                    <div class="container">
+                        <h1>Refugee Realities</h1>
+                        <h3>Between National Challenges and Local Responsibilities in Houston, TX</h3>
+                        <p style="text-align: center; font-size: 150%;">by Yan Digilov & Yehuda Sharim</p> 
+                        <p style="font-size: 90%; text-align: center;">First published through The Kinder Institute for Urban Research</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section w1 animatedParent animateOnce">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center animated fadeInUp">
+                        <p>In June 2018, our team published a report in partnership with The Kinder Institute for Urban Research on the long term outcomes of refugee resettlement. It sheds light on the consequences of systematic neglect, tracking its history and providing insight on consequences for families living across the US and in Houston, specifically.</p>
+                        <p>This month through our digital portal, you can access statistics from The Firestarter Open Data Network as well as media built by our digital production artists. Together, our creative exploration and systems analysis produced this work to reimagine a more ethical and functional process for refugee resettlement.</p>
+                        <p style="text-align:center">For a pdf of the report, please click the link below: </p>
+                        <a href="firestarer_refugee_realities_Oct18.html#" data-toggle="modal" data-target="#PdfModal" class="btn btn-primary">DOWNLOAD PDF</a>
+                    </div>
+                    <div class="col-md-6 animated fadeInUp"><img src="images/Kinder_Logo.jpg" alt=""></div>
+                    <div class="col-md-6 animated fadeInUp"><img src="images/firestarter_report_logo.png" alt=""></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="w2  animatedParent animateOnce">
+            <div class="image animated fadeInLeft" style="background-image:url('images/exec_image_test.png')"><div class="full-img d-block d-lg-none"><img src="images/exec_image_test.png" alt=""></div></div>
+            <div class="row no-gutters justify-content-end">
+                <div class="col-lg-6 animated fadeInRight">
+                    <div class="content">
+                        <h2>Executive Summary </h2>
+                        <p>For refugees building a new life, Houston is an extreme urban and social terrain to navigate. While it is among the largest recipients of refugee arrivals in the country, Houston offers less assistance to newly arriving families than any other major destination after the period of initial resettlement. Due to insufficient levels of support from federal and state sources, refugees are forced into rapid employment opportunities at the cost of their long-term health, education, and economic stability. However, despite being largely ignored by policymakers, available data—together with the experiences of refugees—suggests massive opportunity for investing in communities living across Houston.</p>
+                        <p>Over the history of refugee resettlement in the United States, federal systems evolved to consider only a short term snapshot of employment outcomes for newly arriving refugees. Originally, the system was built with a balance between supporting the complex needs of arrivals and encouraging self-sufficiency. However, the scales were quickly tipped in favor of reducing assistance to avoid dependency. Independent of data highlighting the opportunities for investment in refugees, the modern system was built to reward reductions in assistance and to disincentivize long-term care. highlighting the opportunities for investment in refugees, the modern system was built to reward reductions in assistance and to disincentivize long-term care.</p>
+                        <p>With Texas public assistance levels below a livable threshold, the needs of the most vulnerable members of refugee communities go unmet. Single mothers, large families and elderly are forced into models of rapid employment that were never intended for their use. As a result, both families who achieve self-sufficiency through a perpetual cycle of minimum-wage employment and families unable to fit within those narrow confines face increasingly hostile circumstances as Houstonians, as Texans, and as new Americans.</p>
+                        <p>The future of resettlement in Texas is up in the air, as new systems must be built for a long-term vision after the State's official withdrawal in September 2016. As the number of displaced communities rises unlike any other moment in history, it is time to redefine and more effectively recreate our local and national resettlement efforts. The manner in which pathways to the American Dream are extended towards new arrivals mirrors how this country treats all of its vulnerable citizens in 21st-century America.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="section w3 animatedParent animateOnce">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 animated fadeIn">
+                        <h4 style="color: #24a1db;">Some Key Findings Contained in this Report</h4>
+                        <ul>
+                            <li>Ignoring early data showing that refugees outperformed national averages of unemployment, policymakers formed the system of resettlement in America based on the "negative impact" assumption, suggesting that refugees were likely to become dependent on government assistance. </li>
+                            <li>Critically flawed "dependency" metrics were used to justify precipitous cuts in assistance offered to refugees. As per capita support fell from an average of about $12,500 in the 1980s to about $3,500 in 2015, policymakers normalized the view that new arrivals must be forced into rapid employment through reduction in cash assistance programs.</li>
+                            <li>The current model of resettlement stems from bipartisan neglect, having been formed with historical approval from both major political parties. In turn, the system has been long in the making, and resettlement agencies have likewise been unable to articulate a vision for a more ethical process.</li>
+                            <li>Modern priorities for refugee resettlement place short-term employment outcomes above the long-term needs of refugee communities.</li>
+                            <li>Data shows much worse five-year outcomes for the employment-to-population ratio of arrivals who do not know English. Over the last two decades, the number of refugees who do not speak English after five years grew by 4 percent, while the number who came without prior English fell by over 10 percent.</li>
+                            <li>The most vulnerable refugees have suffered the most from reductions in assistance and the monolithic focus on rapid employment.</li>
+                            <li>Data for refugees arriving in Texas from 2011–2015 shows that nearly 20 percent of refugee arrivals did not meet the limited standards of short-term self-sufficiency. Cuts to public assistance in Texas have worsened circumstances for new arrivals, forcing some of the most vulnerable to leave in search of help in other states.</li>
+                            <li>Houston fails to capitalize on experiences from previous waves of refugees to improve the circumstances of new arrivals, especially in the categories of education, cultural adaption and community involvement.</li>
+                            <li>The rapid employment model creates incentives for agency staff to maintain ties with large employers with high staff turnover. A small group of private businesses benefits most from the flow of low-wage, unskilled refugee labor. Opportunities for refugees to learn a craft or become re-certified in a professional field are nearly nonexistent, while federal requirements preclude most refugees from accessing even the limited available programs.</li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-6 animated fadeIn">
+                        <h4 style="color: #24a1db;">Key areas of investment must be made in the following areas</h4>
+                        <ul>
+                            <li>Support the creation of shared community infrastructure for multi-ethnic refugee collaboration, and invest in capacity building within local communities. </li>
+                            <li>New methods of outcome tracking must include long-term indicators for earnings, community health and cultural accommodation.</li>
+                            <li>Housing that is publically owned or owned by private nonprofit agencies would significantly improve service delivery and allow immense resources to be redirected directly to support new arrivals.</li>
+                            <li>Set a target for 100% of new arrivals to be matched with suitable mentors who can assist with employment and social adaption.</li>
+                            <li>Programs must be developed for new arrivals to access free public transportaion and affordable options for vehicle purchase.</li>
+                            <li>Programs have historically been successful in supporting employers who offer quality jobs and opportunities for career growth. This includes subsidizing wages and publically recognizing employers for their social contributions.</li>
+                            <li>Support the creation of stories and artwork from refugee communities. Invest in local community centers, museums and educational institutions across the city, including opportunities to affordably access historic Houston art institutions.</li>
+                            <li>Free loan programs must be made accessible for adult education, ESL, re-certification and training.</li>
+                            <li>Greater city investment must focus on the construction of multiple "tracks" to meet the needs of refugees arriving with distinct backgrounds, including single mothers, large households, highly skilled workers and non-English speakers.</li
+                            ></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section w4  animatedParent animateOnce" style="background:#f5f5f5;">
+            <div class="container-fluid">
+                <h2>Table of Contents</h2>
+
+                <ul id="filters" class="clearfix justify-content-center">
+                    <li><span class="filter active" data-filter="cat1 cat2 cat3 cat4 cat5">Full Report</span></li>
+                    <li><span class="filter" data-filter="cat1">Introduction</span></li>
+                    <li><span class="filter" data-filter="cat2">National Resettlement</span></li>
+                    <li><span class="filter" data-filter="cat3">Local Outcomes</span></li>
+                    <li><span class="filter" data-filter="cat4">Recommendations & Supplements</span></li>
+                </ul>
+
+                <div class="row animated fadeInUp" id="portfoliolist">
+
+                    <div class="col-md-6 col-lg-3 portfolio cat1" data-cat="cat1">
+                        <div class="portfolio-wrapper">
+                            <a href="firestarer_refugee_realities_Oct18.html#section-1">
+                                <div class="overlay"><div class="table-div"><div class="table-cell">
+                                            <hr>
+                                            <h5>Introduction</h5>
+                                        </div></div></div>
+                                <img src="images/contents_1.png" alt="" />
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3 portfolio cat1" data-cat="cat1">
+                        <div class="portfolio-wrapper">
+                            <a href="firestarer_refugee_realities_Oct18.html#section-2">
+                                <div class="overlay"><div class="table-div"><div class="table-cell">
+                                            <hr>
+                                            <h5>Seeking Refuge:</h5>
+                                            <p>Definitions and Limitations</p>
+                                        </div></div></div>
+                                <img src="images/contents_2.png" alt="" />
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3 portfolio cat2" data-cat="cat2">
+                        <div class="portfolio-wrapper">
+                            <a href="firestarer_refugee_realities_Oct18.html#section-3">
+                                <div class="overlay"><div class="table-div"><div class="table-cell">
+                                            <hr>
+                                            <h5>Rapid Employment:</h5>
+                                            <p>Contextualizing U.S. Federal Resettlement Standards</p>
+                                        </div></div></div>
+                                <img src="images/contents_3.png" alt="" />
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3 portfolio cat2" data-cat="cat2">
+                        <div class="portfolio-wrapper">
+                            <a href="firestarer_refugee_realities_Oct18.html#section-4">
+                                <div class="overlay"><div class="table-div"><div class="table-cell">
+                                            <hr>
+                                            <h5>
+                                                A Single Lever of Adjustment
+                                            </h5>
+                                        </div></div></div>
+                                <img src="images/contents_4.png" alt="" />
+                            </a>
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-6 col-lg-3 portfolio cat2" data-cat="cat2">
+                        <div class="portfolio-wrapper">
+                            <a href="firestarer_refugee_realities_Oct18.html#section-5">
+                                <div class="overlay"><div class="table-div"><div class="table-cell">
+                                            <hr>
+                                            <h5>
+                                                Creating a New Normal
+                                            </h5>
+                                        </div></div></div>
+                                <img src="images/contents_5.png" alt="" />
+                            </a>
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-6 col-lg-3 portfolio cat2" data-cat="cat2">
+                        <div class="portfolio-wrapper">
+                            <a href="firestarer_refugee_realities_Oct18.html#section-6">
+                                <div class="overlay"><div class="table-div"><div class="table-cell">
+                                            <hr>
+                                            <h5>
+                                                National Outcomes of Rapid Employment
+                                            </h5>
+                                        </div></div></div>
+                                <img src="images/contents_6.png" alt="" />
+                            </a>
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-6 col-lg-3 portfolio cat2" data-cat="cat2">
+                        <div class="portfolio-wrapper">
+                            <a href="firestarer_refugee_realities_Oct18.html#section-7">
+                                <div class="overlay"><div class="table-div"><div class="table-cell">
+                                            <hr>
+                                            <h5>
+                                                Diminishing Funding Structures
+                                            </h5>
+                                        </div></div></div>
+                                <img src="images/contents_7.png" alt="" />
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3 portfolio cat3" data-cat="cat3">
+                        <div class="portfolio-wrapper">
+                            <a href="firestarer_refugee_realities_Oct18.html#section-8">
+                                <div class="overlay"><div class="table-div"><div class="table-cell">
+                                            <hr>
+                                            <h5>
+                                                Refugee Realities in Houston, TX
+                                            </h5>
+                                        </div></div></div>
+                                <img src="images/contents_8.png" alt="" />
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3 portfolio cat3" data-cat="cat3">
+                        <div class="portfolio-wrapper">
+                            <a href="firestarer_refugee_realities_Oct18.html#section-9">
+                                <div class="overlay"><div class="table-div"><div class="table-cell">
+                                            <hr>
+                                            <h5>
+                                                Beyond Self-Sufficiency
+                                            </h5>
+                                        </div></div></div>
+                                <img src="images/contents_9.png" alt="" />
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3 portfolio cat3" data-cat="cat3">
+                        <div class="portfolio-wrapper">
+                            <a href="firestarer_refugee_realities_Oct18.html#section-10">
+                                <div class="overlay"><div class="table-div"><div class="table-cell">
+                                            <hr>
+                                            <h5>
+                                                Texas: An Unwelcoming State
+                                            </h5>
+                                        </div></div></div>
+                                <img src="images/contents_10.png" alt="" />
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3 portfolio cat3" data-cat="cat3">
+                        <div class="portfolio-wrapper">
+                            <a href="firestarer_refugee_realities_Oct18.html#section-11">
+                                <div class="overlay"><div class="table-div"><div class="table-cell">
+                                            <hr>
+                                            <h5>
+                                                Rapid Employment Incentives
+                                            </h5>
+                                        </div></div></div>
+                                <img src="images/contents_11.png" alt="" />
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3 portfolio cat3" data-cat="cat3">
+                        <div class="portfolio-wrapper">
+                            <a href="firestarer_refugee_realities_Oct18.html#section-12">
+                                <div class="overlay"><div class="table-div"><div class="table-cell">
+                                            <hr>
+                                            <h5>
+                                                Education & New Paths for Investments
+                                            </h5>
+                                        </div></div></div>
+                                <img src="images/contents_12.png" alt="" />
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3 portfolio cat4" data-cat="cat4">
+                        <div class="portfolio-wrapper">
+                            <a href="firestarer_refugee_realities_Oct18.html#section-13">
+                                <div class="overlay"><div class="table-div"><div class="table-cell">
+                                            <hr>
+                                            <h5>
+                                                Recommendations & Conclusions
+                                            </h5>
+                                        </div></div></div>
+                                <img src="images/contents_13.png" alt="" />
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3 portfolio cat4" data-cat="cat4">
+                        <div class="portfolio-wrapper">
+                            <a href="timeline/index.html">
+                                <div class="overlay"><div class="table-div"><div class="table-cell">
+                                            <hr>
+                                            <h5>
+                                                Appendix: Timeline
+                                            </h5>
+                                        </div></div></div>
+                                <img src="images/contents_14.png" alt="" />
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3 portfolio cat4" data-cat="cat4">
+                        <div class="portfolio-wrapper">
+                            <a href="firestarer_refugee_realities_Oct18.html#section-14">
+                                <div class="overlay"><div class="table-div"><div class="table-cell">
+                                            <hr>
+                                            <h5>
+                                                Acknowledgments, Bibliography & Endnotes
+                                            </h5>
+                                        </div></div></div>
+                                <img src="images/contents_15.png" alt="" />
+                            </a>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+
+        <div class="w5 animatedParent animateOnce" id="section-1">
+            <div class="image animated fadeInRight" style="background-image:url('images/intro_image.png')"><div class="full-img d-block d-lg-none"><img src="images/intro_image.png" alt=""></div></div>
+            <div class="row no-gutters justify-content-start">
+                <div class="col-lg-6 animated fadeInLeft">
+                    <div class="content">
+                        <h2>Introduction</h2>
+                        <p>For refugees building a new life, Houston is an extreme urban and social terrain to navigate. While it is among the largest recipients of refugee arrivals in the country, Houston offers less assistance to newly arriving families than any other major destination after the period of initial resettlement. Due to insufficient levels of support from federal and state sources, refugees are forced into rapid employment opportunities at the cost of their long-term health, education, and economic stability. However, despite being largely ignored by policymakers, available data—together with the experiences of refugees—suggests massive opportunity for investing in communities living across Houston.</p>
+                        <p>Over the history of refugee resettlement in the United States, federal systems evolved to consider only a short term snapshot of employment outcomes for newly arriving refugees. Originally, the system was built with a balance between supporting the complex needs of arrivals and encouraging self-sufficiency. However, the scales were quickly tipped in favor of reducing assistance to avoid dependency. Independent of data highlighting the opportunities for investment in refugees, the modern system was built to reward reductions in assistance and to disincentivize long-term care. highlighting the opportunities for investment in refugees, the modern system was built to reward reductions in assistance and to disincentivize long-term care.</p>
+                        <p>With Texas public assistance levels below a livable threshold, the needs of the most vulnerable members of refugee communities go unmet. Single mothers, large families and elderly are forced into models of rapid employment that were never intended for their use. As a result, both families who achieve self-sufficiency through a perpetual cycle of minimum-wage employment and families unable to fit within those narrow confines face increasingly hostile circumstances as Houstonians, as Texans, and as new Americans.</p>
+                        <p>The future of resettlement in Texas is up in the air, as new systems must be built for a long-term vision after the State's official withdrawal in September 2016. As the number of displaced communities rises unlike any other moment in history, it is time to redefine and more effectively recreate our local and national resettlement efforts. The manner in which pathways to the American Dream are extended towards new arrivals mirrors how this country treats all of its vulnerable citizens in 21st-century America.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section scroll-content" id="section-2">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 mb-4 full-img"><img src="images/def_imag_firestarter.png" alt=""></div>
+
+                    <div class="col-md-12 mb-4">
+                        <h2 class="title">Seeking Refuge: Definitions and Limitations</h2>
+                        <p><span class="first-letter-block">A</span>ttempts to categorize various forms of immigration, which describe border crossing as seeking refuge, claiming asylum, entering illegally or searching for work are central to local, national and global discourse. It is critical to acknowledge both the limitations and utility of such categorization in any analysis describing the experiences of border crossing. The term refugee, in particular, is charged with ephemeral and, at times, contradictory meaning</p>
+                        <p>The Refugee Act of 1980 represented a massive step forward for a country that had a longstanding, complex relationship with immigrants. It recognized the positive contributions of diverse immigrant groups—not only from Europe—to American society. Rather than categorizing all immigrants as foreigners with potentially nefarious intentions, refugees<sup class="hint--bottom hint--bounce hint--large" style="background:#24a1db" aria-label="The often-quoted 1951 Office of the United Nations High 
+                                                                                                                                                                                                        Commissioner for Refugees (UNHCR) Convention offers the 
+                                                                                                                                                                                                        following description to the term that is still deployed, today: 
+                                                                                                                                                                                                        &#10;
+                                                                                                                                                                                                        &#10;
+                                                                                                                                                                                                        &#10;
+                                                                                                                                                                                                        ... someone who, owing to a well-founded fear of being persecuted for 
+                                                                                                                                                                                                        reasons of race, religion, nationality, membership of a particular social 
+                                                                                                                                                                                                        group or political opinion, is outside the country of his nationality and is 
+                                                                                                                                                                                                        unable or, owing to such fear, is unwilling to avail himself of the protection
+                                                                                                                                                                                                        of that country; or who, not having the nationality and being outside 
+                                                                                                                                                                                                        the country of his former habitual residence as a result of such events, is 
+                                                                                                                                                                                                        unable or, owing to such fear, is unwilling to return to it.
+
+                                                                                                                                                                                                        For more reading about about the complex nature of the term, please 
+                                                                                                                                                                                                        see: Jane McAdam, “Human Rights and Forced Migration, in The 
+                                                                                                                                                                                                        Oxford Handbook of Forced Migration
+                                                                                                                                                                                                        (2015), pp. 203-215; 
+
+                                                                                                                                                                                                        Zetter, R. (2007) “More Labels, Fewer Refugees: Remaking the 
+                                                                                                                                                                                                        Refugee Label in an Era of Globalization”. 
+                                                                                                                                                                                                        Journal of Refugee Studies 
+                                                                                                                                                                                                        20(2); and Shacknove, A. (1985) “Who is a Refugee”. Ethics 95(2).">1 (hover on footnote for details)</sup> were to be welcomed based on a shared commitment to justice and moral responsibility in the face of global catastrophe.</p>
+                        <p>Fast forward three decades, refugee, as a term and an experience, has been transformed from those who are in need of rescue to those who could be a potential threat to the country's economy and security. In one example of such rhetoric, Texas Governor Greg Abbott, who in the final months of 2016 led the state's withdrawal from the work of refugee resettlement, stated:</p>
+                    </div>
+
+                    <div class="col-md-12 mb-4">
+                        <blockquote>
+                            <p>"Texas has repeatedly requested that the director of the Federal Bureau of Investigation and the director of national intelligence provide assurances that refugees resettled in Texas will not pose a security threat, and that the number of refugees resettled in Texas would not exceed the state's original allocation in fiscal year 2016—both of which have been denied by the federal government."<sup class="hint--bottom hint--bounce hint--large" style="background:#24a1db" aria-label="“Texas Officially Withdraws from Refugee Resettlement Program,” by Alexa Ura. The Texas Tribune, September 30, 2016: https://www. texastribune.org/2016/09/30/texas-officially- withdraws-refugeeresettlement-pr/">2</sup> </p>
+                            <cite> Greg Abbott</cite>
+                        </blockquote>
+                    </div>
+
+                    <div class="col-md-12 mb-4">
+                        <p>In Texas, the functional consequences of Abbott's decision were almost unnoticeable. Refugees continued arriving in cities across the state, while the responsibility of allocating funding merely shifted from a state entity to nonprofit institutions. Nonetheless, the consequences of his rhetoric and symbolic actions run deep.6 Rice University Kinder Institute for Urban Research Not only does Abbott suggest that the word refugee is synonymous with "threat," but moreover, his underlying assumption is that all refugees are alike, they are one big mass, sharing very particular cultural traits, customs and political views. <sup class="hint--bottom hint--bounce hint--large" style="background:#24a1db" aria-label="Peter Gatrell’s argument regarding the growing sense of “anonymity” that has become “a central conceit of modern representation [of refugees],” is particularly germane here. See:
+                                                                                                                                                                                                        Peter Gatrell. The Making of Modern Refugee. (London: Oxford University Press, 2013): pp. 9- 10, 12.">3</sup> With the definition and experiences of the refugee thoroughly hijacked, Abbott moved quickly to pose an unanswerable question based on his own simplified depictions. How do these simplified narratives, which require no justification based on data or real experiences, come to dominate public discourse and policy?</p>
+
+                        <p>The reduction of complex refugee narratives — be it with the intention to save or to isolate those who "pose a security threat" — inevitably leads to a perpetuated sense of division between those in power and those who wait for permission to act. The governor is not alone in bringing unanimity to the experiences of a diverse community. Recent news articles and columns such as Bono's "A Marshall Plan for Refugees" in the New York Times arguing that "refugees want work" so "let's help them,"<sup class="hint--bottom hint--bounce hint--large" style="background:#24a1db" aria-label="See “A Marshall Plan for Refugees” by Bono. The New York Times, April 12, 2016, page A21. ">4</sup> suggests that the future depends only on the observer and his possible actions. This discourse is cyclic and iterative but critical in shaping public opinion and views. The need to establish order through division creates a very particular state of affairs, where the underpinning assumption is that the observer is the one with agency and thus needs to provide help to those who appear to lack resources or will. When refugees and immigrants act without permission, they are deemed illegal, undocumented and as harbingers of global crisis.</p>
+                    </div>
+
+                    <div class="col-md-12">
+                        <div class="row">
+                            <div class="col-lg-5 full-img mb-4"><img src="images/def_imag_firestarter2.png" alt=""></div>
+                            <div class="col-lg-7 mb-4">
+                                <p>To challenge this approach, where refugees become associated only with "economic self-sufficiency" or as those who have become "experts in suffering,"<sup class="hint--bottom hint--bounce hint--large" style="background:#24a1db" aria-label="For a number of examples that stress the ways public discourse frames refugees as communities that grew accustomed of suffering, please see: see “What Houston’s Refugees Can Teach Harvey Survivors” by Claudia Kolker. The Houston Chronicle, September 27, 2017: http://www.houstonchronicle.com/local/gray-matters/article/ What-Houston-s-refugees-can-teach- Harvey-survivors-12241127.php">5</sup> the questions posed by new Americans must be at the forefront. Too much of what we think we know or don't know depends upon unaccountable reports that don't go beyond the "threat" or "needy" narratives, where the voices of immigrants and refugees are often erased or appropriated.</p>
+
+                                <p>In an attempt to complicate a discourse that tends to erase differences and essentialize refugees as a monolithic whole, giving the impression that all of "them" arrive in the US with the same needs and experiences, our work centers on the personal experiences of individuals that cannot be summarized in a news headline. Here, we highlight three narratives that frame the conversation to follow. First, we look at the implications of the resettlement program's heavy emphasis on rapid employment and the toll it takes on recent arrivals still managing the trauma of their past.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-12 mb-4">
+                        <blockquote><p>"It's hard, you know when I first came to here, because when you come through those programs for refugees, they have to, you have to start working because the main goal of those programs is to get you to the way of selfsufficiency so you can support your family. I remember that time, not the case worker, that was kind of my supervisor, he's like, he told me, "We're gonna help you with this month, but this is gonna be your last month. We're not gonna help you more." I said, "Okay. Don't try to put the pressure on me, because I'm already planning on trying to work. And if you're gonna do it this way, I don't want your rent. I'm better to borrow from someone or start working than the way you tell me." So it's … It's just sometimes the attitude of the people is different. But I remember after that, I went to work in the warehouse, even though as I said it was hard, you know …<sup class="hint--bottom hint--bounce hint--large" style="background:#24a1db" aria-label="Name: Haval Khider; Gender: Male; Origin: Baghdad, Iraq; Arrival: 2008; Interview conducted by: Yehuda Sharim, 2016; Edited and compiled by: Jasmine Lin; page 5.">6</sup>" </p></blockquote>
+                    </div>
+
+                    <div class="col-md-12 mb-4"><p>Next, we shed light on the unique consequences of systemic failure as they play out in a state with extremely limited access to public assistance:</p></div>
+
+                    <div class="col-md-12 mb-4">
+                        <blockquote><p>    "Oh, thinking about next month, how to do, I need to pay the rent. I don't have the money. It's a problem. Maybe next month, a lot of bills here, a lot of bills coming. You don't have the money, how to do? You don't have the good job. Only the price, the food price, coming up up up up up … Why the people working not coming up too? Before, this apartment about 700. I'm working 7.50 dollars, one hour, right? Now, this apartment go high, to the 900. I'm working for 7 dollars, 7.50. Same … see? This apartment, the price high, why I working the same money, to pay the money? The price high, the apartment. It's a problem. Why this food, right? Food, the, before, somebody only sell about 2 dollars. Now people sell the one more, about 5 dollars. Yeah, go higher. And then, I'm working, why no go … why the money no go high for the hour? I'm working same place, same money. The all, all the food, all the rent, everything that go high high high. How to do? The people working 7.50. It's a problem. The people, my people, big problem. They don't have the money. They don't speak English, nothing.<sup class="hint--bottom hint--bounce hint--large" style="background:#24a1db" aria-label="Name: Tu Tu; Gender: Male; Origin: Burma; Thailand; Arrival: 2008; Interview conducted by: Yehuda Sharim, 2016; Edited and compiled by: Jasmine Lin, Pages 1-2.">7</sup>"</p></blockquote>
+                    </div>
+
+                    <div class="col-md-12 mb-4"><p>And lastly, we insist on highlighting the resourcefulness and new visions that need to be promoted locally in order to assist the most vulnerable among us:</p></div>
+
+                    <div class="col-md-12 mb-4">
+                        <blockquote><p>    "When you first come to Houston, you know, you try to explore in the area, one of the, I would say the hard thing is you know, the transportation. We tried to use the bus, and the bus system … I don't think is really good here in Houston, you know. Because I remember one of the time I tried to use the bus, you know, and I had to wait like two hours just for the bus to come. So, it was … That moment I said, you know, I gotta come up with something, you know. I ask my brother, I can borrow some money or something, I mean, I gotta get a car for the family because here in Houston with the bus it looks like, you know, it's not gonna work out. It's just really, especially if you have a big family, you have to take them to school, you have doctor appointments, you know, yeah. To go to work, you know, you don't want to be late every day, nobody's gonna hire you at work if you, you know. And not all areas the buses go, so that was one of the main challenges. So that was when, my brother helped me buy a car for the family, yeah. <sup class="hint--bottom hint--bounce hint--large" style="background:#24a1db" aria-label="Name: Haval Khider; Gender: Male; Origin: Baghdad, Iraq; Arrival: 2008; Interview conducted by: Yehuda Sharim, 2016; Edited and compiled by: Jasmine Lin; page 4.">8</sup>"</p></blockquote>
+                    </div>
+
+                    <div class="col-md-12">
+                        <p>America is often regarded as "a nation of immigrants" and the leader of the free world.</p>
+
+                        <p>But is this statement still true today?</p>
+
+                        <p>Like 115 millions of America's poor, marginalized and incarcerated African American and Hispanic communities, handicapped people, gay and lesbian people, refugees are not the only ones who vehemently believe in this dream of liberty, equality and hope still woven deeply into the fabric of this country, this democracy. The demise and privatization of public support together with a barrage of negative stereotypes and divisive rhetoric oppresses America's most vulnerable.</p>
+
+                        <p>The 21st century American promise to treat, heal and offer chances to the most vulnerable must be maintained, particularly in the face of the unprecedented immigrant and refugee catastrophe where more than 65 million individuals are currently displaced. In a country that has embraced, not without struggle, Henry David Thoreau's insistence that the role of the individual is to "do justice, cost what it may," it is our moral obligation to ask critical questions about the U.S. resettlement system and then offer visions that insist on decency, responsibility and radical communal kindness.</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-section" id="section-3" style="background-image:url('images/rapid_employment_firestarter.png');">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <h2>Rapid Employment: Contextualizing U.S. Federal Resettlement Standards</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section scroll-content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 mb-4 text-lg">
+                        <p><span class="first-letter-block">T</span>he objectives of refugee resettlement in the U.S. have come to revolve around a snapshot of employment taken just months after arrival. This narrow view— which has failed to adjust for the massive shifts in demographic composition and the complex psychological toll of migration—stems from several key assumptions about the negative impact of refugees on their new communities. To understand how those assumptions guided the program's evolution since 1980, they must be put into the context of the data available about the long-term circumstances of refugees who arrived prior to the formation of the formal process and in the earliest years of the federal process. </p>
+                    </div>
+
+                    <div class="col-md-12 mb-4">
+                        <p>Since the enactment of the Refugee Act of 1980, the Office of Refugee Resettlement (ORR) has published annual reports to Congress, describing the circumstances of recent arrivals across the country. Statistics exist starting in 1981, the first year in which ORR provided data to Congress about refugees who arrived in the US as early as 1975. These original documents are the first to suggest that, over time, refugees approach national averages for employment and labor participation. In fact, Figure 1 shows that refugees who came prior to the formation of the federal system outperform national averages after an initial period of adjustment<sup class="hint--bottom hint--bounce hint--large" style="background:#24a1db" aria-label="1982 ORR Report to Congress, page 23.">9</sup>. While unemployment rates spiked in 1982 when U.S. labor markets were shocked by recession, refugees who had been in the country longer maintained employment near national averages. In addition, a number of economic factors showed the positive contributions of refugees across the nation.</p>
+
+                        <p>The congressional reports delivered by ORR show that by the end of 1982, the U.S. Treasury had collected over $317 million of income tax revenue from refugee communities since the formation of the federal process.<sup class="hint--bottom hint--bounce hint--large" style="background:#24a1db" aria-label="1984 ORR Report to Congress, page 101.">10</sup> That sum equaled 52 percent of the average ORR annual budget for FY1980–1982. The same figures show over $3 trillion in in come received by refugee communities, suggesting massive economic contributions to local business, as well as city and state budgets across the country. These earliest ORR figures suggest that as the numbers of refugees living in the U.S. grew over time, their net economic impact would eventually outweigh the annual cost of resettlement.</p>
+
+                        <p>Reporting on education and health showed great potential for return on investment, as well. In the first four years of resettlement, ORR allocated an average of about $21 million to support an education transition program for primary and secondary students. Reports on this program stated, "The end-result of such programming according to State officials is that refugee children are performing in school at higher levels than anticipated."<sup class="hint--bottom hint--bounce hint--large" style="background:#24a1db" aria-label="1983 ORR Report, page 48.">11</sup> Investment in health for refugee communities included funding through the Center for Disease Control (CDC) and direct costs of Medicaid. About $6.5 million dollars each year was being spent on a CDC program, which had effectively mitigated any risk of serious infection from incoming refugees. Figure 2 shows a survey from 1985 comparing Aid to Families with Dependent Children (AFDC) refugees enrolled in Medicaid to the general population across California, New York and Tennessee. Costs for refugees were on average 20 percent less than others in the program.<sup class="hint--bottom hint--bounce hint--large" style="background:#24a1db" aria-label="1985 ORR Report, page 83.">12</sup> While concerns were raised about the need to study health utilization among new arrivals, policymakers favored conversation about reducing assistance over making it more accessible.</p>
+                    </div>
+
+                    <div class="col-md-12 mb-4 figures">
+                        <p><a href="images/figure_1_sept18.png" class="fancybox"><img src="images/figure_1_sept18.png" alt=""></a></p>
+                        <a href="https://docs.google.com/spreadsheets/d/1adTV85wFo9Vm2b4xfPOI8iU8-H76KO0wbiTUdN1tNbY/edit?usp=sharing" target="_blank"> Click here to access raw data available from the Firestarter Open Data Network.</a>
+                    </div>
+
+                    <div class="col-md-12 mb-4 figures">
+                        <p><a href="images/figure_2_sept18.png" class="fancybox"><img src="images/figure_2_sept18.png" alt=""></a></p>
+                        <a href="https://docs.google.com/spreadsheets/d/12hZQeP1PTvC9Rpvd7_Es0r9WXjBS8u05l51WGSVYQSQ/edit?usp=sharing" target="_blank"> Click here to access raw data available from the Firestarter Open Data Network.</a>
+                    </div>
+
+                    <div class="col-md-12 mb-4">
+                        <p>The early architects of federal resettlement maintained a central focus on preventing refugees from becoming dependent on public welfare. While this concern was unsupported by the data, attempts to track the outcomes of resettlement revolved entirely on measuring the rate of dependency for each nationality being welcomed. Inexplicably, this pursuit superseded data suggesting alternative systems would be required to deal with the complex needs of refugee communities. Large families were in need of education and training. Employable adults required English language acquisition to reclaim their productive potential. Single mothers needed childcare assistance to find work and community support to manage the emotional burdens of migration. While in the long run, refugees consistently approached national levels of employment, exceeding them when equipped with basic tools, adjustments made by policymakers focused entirely on limiting the duration and annual cost of refugee assistance.</p>
+
+                        <p>A historical assessment of the transition to rapid employment highlights how assumptions about the negative impact of refugees led to the creation of a rapid employment model. Critically flawed measurements were used to reinforce those unsubstantiated beliefs before outcome tracking was removed from the system entirely. In the process, policymakers normalized the view that investment in refugee communities leads them to become unproductive. By minimizing levels of assistance, refugees could be forced into employment, according to this approach.</p>
+
+                        <p>The ultimate direction that U.S. resettlement took was in stark contrast to the delicate balance presented in the original framework of the system. Foundational documents stipulated that refugees must be provided "the opportunity to acquire sufficient English language training" and ensure "that women have the same opportunity as men to participate in training and instruction." At the same time, there always existed an urgency to achieve self-sufficiency "as quickly as possible" and a notion that assistance could be given in a manner that might "discourage self-sufficiency."<sup class="hint--bottom hint--bounce hint--large" style="background:#24a1db" aria-label="Title IV Chapter 2 Immigration and Nationality Act Section 412 - AUTHORIZATION FOR PROGRAMS FOR DOMESTIC RESETTLEMENT OF AND ASSISTANCE TO REFUGEES">13</sup> Simply put, the balance was between faith in the productive capacities of refugees and fear that they would not contribute as much as they receive.</p>
+
+                        <p>Independent of data and without the benefit of feedback from communities being resettlement, the scales would quickly tip in favor of one side of this balance thanks to a clear belief that refugees contributed negatively to their surrounding communities. As such, the ORR director was instructed not to allow refugees to be placed in areas "highly impacted by the presence of refugees or comparable populations." The underlying assumption, which explains policymakers' unwavering focus on cutting assistance for new arrivals, was that refugees were negative detractors from their local communities. Through this lens, states participating in the program would not be judged by the number of hours of instruction given to refugees. They were not asked to measure the number who spoke English after a year in the country, nor did they track the gap in wages between women and men utilizing employment services. Instead, metrics were built around a measure called the dependency rate. Over time, all the adjustments made to the federal process revolved around efforts to lower that rate. Policymakers pulled on a single lever, gradually reducing community investment from an eligibility period of three years to eight months.</p>
+                    </div>
+
+                    <div class="col-md-12 mb-4" id="section-4">
+                        <h2 class="title">A Single Lever of Adjustment</h2>
+
+                        <p>Testimony was given before the 1983 Senate Subcommittee on Immigration and Refugee Policy in September of that year stating that "high on the list of issues that tend to receive significant public attention is the national dependency rate of refugees on assistance." <sup class="hint--bottom hint--bounce hint--large" style="background:#24a1db" aria-label="“Hearing before the subcommittee on Immigration and refugee policy of the committee on the judiciary United States Senate, ninety-eighth congress first session on oversight hearing to review the progress of this year’s refugee resettlement program, focusing on the consultation process in providing asylum to persons fleeing political persecution: September 26, 1983.">14</sup> The degree to which new arrivals would be dependent detractors of welfare budgets overwhelmed any conversations about investment strategies for refugee communities. At the time, however, no data existed to back up this claim. The federal dependency rate was created by the Refugee Assistance Amendments of 1982 and only first reported in 1984. <sup class="hint--bottom hint--bounce hint--large" style="background:#24a1db" aria-label="1983 ORR report. Page 28.">15</sup></p>
+
+                        <p>The same amendment eliminated Refugee Cash Assistance (RCA) eligibility for full-time students and cut eligibility in half from a period of 36 months to 18 months. According to the 1982 congressional report, the Department of Health and Human Services (HHS) believed that those changes were necessary to "reduce the likelihood of unnecessary welfare dependency among refugees." The report pointed to anecdotal evidence from staff in the field and overseas who said that the Refugee Act of 1980 gave new arrivals a feeling, termed "entitlement mentality." <sup class="hint--bottom hint--bounce hint--large" style="background:#24a1db" aria-label="1982 ORR report to Congress, page 8.">16</sup> Thanks to anecdotal reports, ORR began tracking an official dependency rate by nationality and state of arrival. While there was perceived value in determining which ethnic groups were most unproductive, no steps were ever taken by the system to adjust for unique needs of diverse populations. Instead, dependency rate calculations formed the central mechanism for broad reductions in public support to all refugee arrivals.</p>
+
+                        <p>To highlight some of the flaws within the dependency rate calculation, it is important to contrast ORR contributions to the two programs for which utilization was calculated. The first component of the dependency rate calculation was directly tied to the belief that refugees made a negative net impact on state budgets. In turn, ORR reimbursed states for public welfare assistance given to families with children, elderly and disabled refugees. While states simultaneously collected tax payments in a variety of forms and their local economies benefited from the contributions of refugees, states were reimbursed by ORR for public assistance to refugees 2–3 years after arrival throughout the 1980s. Direct RCA contributions from ORR to refugees comprised the second component of the dependency rate calculation. Table 1 shows the speed at which direct contributions were cut, in stark contrast to the gradual reduction of reimbursements to states. Here, we see the origins of structural imbalance between the uninformed assumption that refugees brought negative impacts and the quickly diminishing recognition that refugees required an investment to ensure successful resettlement.</p>
+                    </div>
+
+                    <div class="col-md-12">
+                        <div class="row">
+                            <div class="col-lg-5 full-img mb-4 figures">
+                                <p><a href="images/table_1_sept18.png" class="fancybox"><img src="images/table_1_sept18.png" alt=""></a></p>
+                                <a href="https://docs.google.com/spreadsheets/d/16EagwQrS94U2TcutDcRxzYw5WaMt0RJV8Y7SxsjPp3I/edit?usp=sharing" target="_blank">Click here to access raw data available from the Firestarter Open Data Network. </a>
+                            </div>
+                            <div class="col-lg-7 mb-4">
+                                <p>While policymakers focused on reducing the costs of refugees, they failed to consider the growing contributions of communities who had been resettled. Data reported annually to Congress showed that investments in refugees were maturing less than a decade after the program had begun. Refugee wages rose steadily throughout the 1980s, and as a result, Figure 3 shows that refugees from South Asia alone were paying back 63 percent of the annual ORR budget by 1988. If budgets had stayed at the 1980s average and those tax contributions grew at the same average rate, South Asian refugees would be paying back 75 percent of the annual budgets by the mid 1990s, all by themselves. Nevertheless, ORR budgets continued to plummet, with inflation adjusted costs dropping by 43 percent from the 1980s to the 1990s. By ignoring the contributions of refugee communities who had previously come, those cuts limited the opportunities for future arrivals to thrive.</p>
+                                <p>The decision to eliminate assistance for full time students in 1982 was inexplicable based on available data and contradicted the system's earliest commitment to the value of education. A survey from 1982 showed that 52 percent of arrivals from 1980–1982 did not speak any English upon entering the country. <sup class="hint--bottom hint--bounce hint--large" style="background:#24a1db" aria-label="1982 ORR report to Congress, page 25.">17</sup> Data highlighted a massive gap in employment between those who learned English and those who did not, with only 2.4 percent of fluent English speakers utilizing cash assistance in 1982. Anticipating the potential gap in outcomes for non-English speakers, a $10 million program was established in 1980 with the goal of providing intensive English as a Second Language (ESL) courses for 92 percent of refugees waiting in camps overseas, but the program fell victim to funding cuts before those targets could be reached two years later. <sup class="hint--bottom hint--bounce hint--large" style="background:#24a1db" aria-label="1980 ORR report, page 2.">18</sup> Additional surveys showed the overwhelming desire for education within refugee communities. Of refugees who were not seeking work, nearly 25 percent ages 25–34 were attempting to receive an education. This figure was still at 20 percent for those ages 35–44. <sup class="hint--bottom hint--bounce hint--large" style="background:#24a1db" aria-label="Ibid page 24">19</sup></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-12 mb-4">
+                        <p>The measurements used to support the case for negative impacts, however, gave policymakers all they needed to reinforce their beliefs. After three years of formally reporting dependency rates, which held steady around 54 percent, budget cuts in the ORR budget from the 1985 Gramm-Rudman-Hollings legislative requirements limited the amount of funding available for state reimbursements to a maximum of 31 months after arrival. The lever of funding eligibility came down further in 1988, reducing the period to 24 months. In both instances, Figure 4 illustrates that the dependency rate increased as a result of actions taken to reduce it, since those refugees who had been in the states longer were not part of the eligibility pool. In other words, when state reimbursement periods were cut in order to reduce dependency, those refugees who were most likely to be independent no longer factored into the calculation, causing the rate to rise.</p>
+
+                        <p>Built upon the assumption that refugees inevitably made a negative impact, the dependency rate calculation had a fatal flaw. Each time the lever of assistance was pulled lower, the rate itself would rise, justifying further cuts. With a diminishing period of eligibility, only the most recent arrivals could be counted in the ratio, eliminating from the calculation those who were most likely to be surviving on earnings alone. A resulting downward spiral in ORR assistance ensued throughout the 1980s based on the assumption that reducing assistance would deter the potential negative impact of refugees. The strategy of adjustment would thus reinforce itself, ignoring the bigger picture of long run outcomes and data being collected by ORR about the complex needs of refugee arrivals.
+                    </div>
+
+                    <div class="col-md-12 mb-4 figures">
+                        <p><a href="images/figure_3_sept18.png" class="fancybox"><img src="images/figure_3_sept18.png" alt=""></a></p>
+                        <a href="https://docs.google.com/spreadsheets/d/1Zbsy9gW8hecOmX8bovIygepjI7LlHf10dbwMAO2V_lI/edit?usp=sharing" target="_blank"> Click here to access raw data available from the Firestarter Open Data Network.</a>
+                    </div>
+
+                    <div class="col-md-12 mb-4 figures">
+                        <p><a href="images/figure_4_sept18.png" class="fancybox"><img src="images/figure_4_sept18.png" alt=""></a></p>
+                        <a href="https://docs.google.com/spreadsheets/d/16YRnDSvxUyZumrXsJ7CT1sPCGkY7c9-Lqe286Tp62lw/edit?usp=sharing" target="_blank"> Click here to access raw data available from the Firestarter Open Data Network.</a>
+                    </div>
+
+                    <div class="col-md-12 mb-4" id="section-5">
+                        <h2 class="title">Creating a New Normal</h2>
+
+                        <p>The downward spiral effect suggested that realities of refugee resettlement could be shaped by presupposition, rather than purposefully constructed with the best interests of participants in mind. The notion that resettlement should revolve around a system of rapid employment came long before the impact of reductions in support could be truly analyzed. After the first instance of long-term eligibility reductions, ORR wrote to Congress in 1986:</p>
+
+                        <blockquote>   <p> ...the success of many States may be attributed to a commonly shared view that the refugees' long-term interests are best served by early work experience where they can renew their sense of self-worth, of pride in self-reliance, and of independence in the freedom of making economic choices.<sup class="hint--bottom hint--bounce hint--large" style="background:#24a1db" aria-label="1986 ORR report, page 131.">20</sup></p></blockquote>
+                        <p>
+                            The following year, recommendations were made to drastically reduce the period of direct cash assistance in favor of a privatized, short-term model, providing a glimpse into the structures policymakers had envisioned all along. <sup class="hint--bottom hint--bounce hint--large" style="background:#24a1db" aria-label="1987 ORR report, page 97.">21</sup> Reductions in assistance could force refugees into immediate employment, satisfying only the needs of private employers who benefit from workers that spoke no English and held no vision of upward mobility. A number of discretionary projects fished for evidence that a model for short-term employment was viable. While these experiments yielded mixed results, at best, the congressional action moved the system in that direction, regardless.</p>
+
+                        <p>Demonstration projects and programs called Wilson-Fish initiatives were launched across the country as early as 1984. In 1986, the first project in California tested whether removing employment disincentives within public welfare "will result in more refugees becoming employed and to test the effects of increased employment experience upon refugee self-sufficiency." <sup class="hint--bottom hint--bounce hint--large" style="background:#24a1db" aria-label="1986 ORR report, page 133.">22</sup> In the same year, Oregon worked with welfare ineligible clients to place 75 percent of refugees in full-time permanent employment within 18 months, 50 percent within 12 months, and 25 percent within 6 months.</p>
+
+                        <p>Results failed to show a clear path for reducing the period of resettlement. The first California demonstration project realized cost saving, immediately. Another California project in 1989, however, led to lower wages and higher administrative cost. <sup class="hint--bottom hint--bounce hint--large" style="background:#24a1db" aria-label="1989 ORR report, page 55.">23</sup> The Oregon experiment missed all time-bound markers, employing only 70 percent total participants over the course of three years, with only 55.7 percent retaining their work for at least 90 days. An evaluation of another series of ORR discretionary support for enhanced skills training revealed deep flaws in the system's ability to engage with refugee clients:</p>
+                    </div>
+
+                    <div class="col-md-12">
+                        <div class="row">
+                            <div class="col-lg-7 mb-4"><blockquote><p>
+
+                                        Many of the discretionary projects fail to recruit and/or enroll appropriate clients, as a result of a variety of factors including: absence of procedures for initialized screening and service planning; edibility criteria that were defined either too broadly or narrowly; a lack of detailed familiarity with the service needs of target population; and an absence of referral system with other service providers. <sup class="hint--bottom hint--bounce hint--large" style="background:#24a1db" aria-label="1986 ORR report, page 84.">24</sup>
+                                    </p></blockquote>
+                            </div>
+                            <div class="col-lg-5 mb-4 full-img"><img src="images/rapid_img_firestarter.png" alt=""></div>
+                            <div class="col-lg-12 mb-4">
+                                <p>The limitations of those experimental programs did not stand out to policymakers as much as the promise of cost-savings. In 1990, the system experienced massive reductions across all categories of assistance. While not officially reported, the functional dependency rate would have been the entirety of the eligible population or 100 percent, since drastic cuts left cash assistance cases "virtually equal to the total national caseloads at the time." <sup class="hint--bottom hint--bounce hint--large" style="background:#24a1db" aria-label="1990 ORR report, page 30.">25</sup> After a decade of actions taken to reduce welfare dependency based upon subjective descriptions of refugees and unsubstantiated assumptions about their productivity, the flawed metric primarily utilized to justify those reductions came to a fittingly absurd end.</p>
+
+                                <p>While data being collected throughout the decade was incomplete, at best, the lever to reduce assistance was pulled with certainty. Severe budget cuts all but eliminated long term investment in state reimbursements, and national agencies were informed in 1990 that funds were likely insufficient for even the diminished 12 month RCA period. The system had finally tipped the scales entirely in the favor of one ideology. The argument for negative impact and depictions of unproductive refugees had won, making use of measurements based on their own flawed assumptions until they made no sense at all. By that point, all decisions about the direction of resettlement had been finalized and a new status quo emerged.</p>
+
+                                <p>A number of actions taken by Congress in the same year point to discrepancies in areas where the cost-savings approach would and would not be applied. While Congress claimed that it could not pay for the full cost of eligible RCA payments, it made room to authorize the "Dire Emergency Supplemental Act," which sent an additional $6 million in response to populations that arrived in Florida a decade prior during the Mariel Boatlift in 1980. Those funds came in addition to $14 million in targeted assistance already budgeted to Dade County. That year, Florida received $10 million more in targeted assistance funds than California, despite the fact that California resettled about 25 percent of national arrivals compared to about 6 percent coming to Florida. While the lives of refugees arriving across the country were not perceived to be in dire emergency, politically expedient funding was disproportionately sent to Dade County throughout the 1990s. Table 2 illustrates the uneven levels of Targeted Assistance funding sent to Florida throughout the 1990s compared to California, New York and Texas. </p>
+                                <div class="figures" style="padding-bottom: 30px">
+                                    <p><a href="images/table_2_sept18.png" class="fancybox"><img src="images/table_2_sept18.png" alt=""></a></p>
+                                    <p><a href="https://docs.google.com/spreadsheets/d/11z-azSGLFUKLxbg0G5-0j0RAj9_U7_Scm_5ViZC95TY/edit?usp=sharing" target="_blank"> Click here to access raw data available from the Firestarter Open Data Network.</a></p>
+                                </div>
+
+                                <p>Further changes made in 1990 show the disparity between support given to groups with financial or political power and those with no voice. That year ORR found ways to reverse the cuts from 1986, insofar as they impacted refugees coming from the Soviet Union, who tended to come with more English language skills and higher education levels. Funding for the Matching Grant (MG) Program was increased from a cap of $957 per person to the previous level of $1,000. While Soviet refugees who had the strong financial support of local communities were given a leg up, another group with no political voice suffered. In 1990, Congress took the unprecedented step of cutting all funding for the refugee educational transition program, which had been funded every year since 1980. Congress did not approve a single penny of the $16 million requested for primary and secondary school students who just arrived in the country.<sup class="hint--bottom hint--bounce hint--large" style="background:#24a1db" aria-label="1990 ORR report, page 40.">26</sup></p>
+
+                                <p>It is important to note that while the modern political divide has labeled the Democratic Party in support of refugees, they controlled both houses of the legislature in that pivotal year. At the conclusion of the 1990 fiscal year, the director of ORR writes a familiar trope to guide the future of the resettlement program.</p>
+
+                                <blockquote><p>    A priority for ORR in FY 1991 will be to continue to reduce welfare dependency in States with large numbers of refugee welfare recipients and to promote assistance to special populations through the national discretionary program.<sup class="hint--bottom hint--bounce hint--large" style="background:#24a1db" aria-label="1990 ORR report, page 106.">27</sup></p></blockquote>
+
+                                <p>The following year, President George. H. W. Bush made a declaration to celebrate the first ever World Refugee Day. "The United States has long been both a symbol of hope and a source of substantial aid for refugees around the world," he wrote. "By working hard to reap the rewards of freedom and opportunity, thousands of refugees have not only built new lives for themselves in the United States but also made invaluable contributions to our country." <sup class="hint--bottom hint--bounce hint--large" style="background:#24a1db" aria-label="OCT. 28, 1991, found in the front page of ORR Report to Congress FY1991.">28</sup> Festivities across the country began hailing the contributions of refugee community members, while systems built to support them were erased. </p>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-12 mb-4" id="section-6">
+                        <h2 class="title">National Outcomes of Rapid Employment</h2>
+
+                        <p>The advent of rapid employment narrowed even further the priorities of U.S. refugee resettlement. After six years of operating without metrics of success, in 1996 ORR began measuring entered employment, health benefits and average hourly wage, as well as 90-day job retention for each state. In addition, they began collecting figures about self-sufficiency after 120 and 180 days.<sup class="hint--bottom hint--bounce hint--large" style="background:#24a1db" aria-label="1996 ORR report, page 16.">29</sup> Whereas reducing investment in refugee communities led to an implosion of the previous tool, new metrics were reverse engineered to fit a purely short-term model. By measuring performance with a momentary depiction of life just weeks after coming to the country, questions of health, language acquisition, financial stability and overall cultural adaption never became factors in the system's feedback mechanism. Survey data reported to Congress in the first two decades of rapid employment shows the alarming consequences of that narrow focus.</p>
+
+                        <p>A major emphasis for ORR regulators in the '90s was to ensure that ESL instruction did not preclude refugees from accepting employment. In 1995, ORR published a rule "which significantly affects the provision of social services to refugees." <sup class="hint--bottom hint--bounce hint--large" style="background:#24a1db" aria-label="1995 ORR report, page 9.">30</sup> The office mandated that "ORR funded language instruction be provided in a concurrent, rather than sequential, time period with employment or other employment-related services." <sup class="hint--bottom hint--bounce hint--large" style="background:#24a1db" aria-label="Ibid.">31</sup> In other words, refugees were forced to accept any employment prior to learning English.</p>
+                    </div>
+
+                    <div class="col-md-12">
+                        <div class="row">
+                            <div class="col-lg-7 mb-4"><p>Table 3 shows the consequence of enforcing this view of rapid employment. In the 1990s, 10 percent of refugees on average had not learned to speak English after five years of living in the U.S. In the next decade, the number of arrivals who came without any English language dropped by 11 percent, however the number who still spoke no English after five years in the country grew by 4 percent. While issues of physical and cultural isolation go unnoticed in order to meet the demands of rapid employment, the long-term economic cost is clearly visible, undermining even the narrow objectives of the system itself.</p>
+
+                                <p>Surveys reported to Congress measured the employment-to-population ratio (EPR) for arrivals at the time they arrived and again five years later. Figure 5 shows that between 1991 and 2000 refugees who arrived with no English proficiency experienced an average drop of 32 percent in EPR from time of arrival to time of survey five years later. In the next decade, the same gap in long-term versus short-term employment continued with a reduction of 16 percent in average EPR. If the motivation behind rapid employment was to force more refugees into work, then it did so by neglecting the basic needs of its most vulnerable participants. The failed experiment comes at great cost to families struggling in traps of perpetual poverty, leaving them unable to voice opposition and demand a higher standard.</p>
+                            </div>
+                            <div class="col-lg-5 mb-4 figures">
+                                <p><a href="images/table_3_sept18.png" class="fancybox"><img src="images/table_3_sept18.png" alt=""></a></p>
+                                <p><a href="https://docs.google.com/spreadsheets/d/1Ep-5TU7kHhkfx5Cn6HLbhklPpA-3KnGacoeMADkeFjs/edit?usp=sharing" target="_blank"> Click here to access raw data available from the Firestarter Open Data Network.</a></p>
+                            </div>
+                            <div class="col-lg-12 mb-4">
+                                <p>Another critical trend found within the performance indicators is the frequency with which refugees enter employment that offers access to health benefits. It is important to note that this statistic measures only the existence of health benefits as an optional term of employment. Thereby, it overstates the number of refugees who might be insured in those early days after arrival. National performance data suggests that on average 62 percent of entered employments offered health insurance between 2002 and 2014. Figure 6 shows the results of annual surveys indicating 14 percent to 33 percent of refugees had no access to medical coverage in any of the past 12 months between 2009 and 2014. The Affordable Care Act, a comprehensive health care reform law, was enacted in March 2010, although major provisions came into force in January 2014. Any future reforms to healthcare access that do not recognize those circumstances could, once again, cause significant challenges to refugee families. </p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-12 mb-4 figures">
+                        <p><a href="images/figure_5_sept18.png" class="fancybox"><img src="images/figure_5_sept18.png" alt=""></a></p>
+                        <a href="https://docs.google.com/spreadsheets/d/1Ep-5TU7kHhkfx5Cn6HLbhklPpA-3KnGacoeMADkeFjs/edit?usp=sharing" target="_blank"> Click here to access raw data available from the Firestarter Open Data Network.</a>
+                    </div>
+
+                    <div class="col-md-12 mb-4 figures">
+                        <p><a href="images/figure_6_sept18.png" class="fancybox"><img src="images/figure_6_sept18.png" alt=""></a></p>
+                        <a href="https://docs.google.com/spreadsheets/d/1iPscW5b98F1nq5nBUBPNdc3TVcRVrHJpItGrUGTiTUw/edit?usp=sharing" target="_blank"> Click here to access raw data available from the Firestarter Open Data Network.</a>
+                    </div>
+
+                    <div class="col-md-12 mb-4" id="section-7">
+                        <h2 class="title">Diminishing Funding Structures</h2>
+
+                        <p>Significant demographic shifts have gone unnoticed for the past three decades, all-but-eliminating the role that local resources played in caring for new arrivals. Rapid employment was first enacted at a time when well-resourced local religious communities welcomed the majority of arrivals from Eastern Europe. As a result, it functioned as a simple handoff, providing for immediate basic needs and inviting local infrastructure to care for the rest. Simultaneously, massive cuts in ORR budgets have placed added strains on the work of resettlement agencies. Resettlement agencies have gradually become responsible for performing critical tasks that they are neither designed nor adequately funded to perform. With the growing diversity of nationalities arriving in relatively small numbers, the federal system increasingly began to resettle refugees without a plan for their long-term care.</p>
+
+                        <p>Figures 7 and 8 illustrate the relationship between ORR per capita funding and the ability of resettlement agencies to match refugees with employment. Nationally, job placements have plateaued around 45,000 in recent years. As a percentage of total caseloads, however, the capacity of agencies to place refugees in work has plummeted in direct proportion to per capita ORR reduction. Since the recession of 2008, the increased strain has been especially bad, resulting in placement for less than half of all arrivals. Additionally, the recent influx of Cuban parolees asked agencies to connect arrivals with an ever-increasing number of jobs, while per capita budget allocations are at all-time lows.</p>
+
+                        <p>Along with broad reductions, funding structures of direct assistance fail to meet the needs of individual refugees in a critical manner. Regardless of family composition, funding is distributed based on the number of people in each household. Two working parents with two teenaged children would receive the same amount of support as a single mother with three toddlers. This is one of the most problematic features of the ORR funding structure, which turns a purposefully blind eye to the unique needs of arriving families. This problem is only worsened through administrative funding calculations. Previously, a portion of administrative funding utilized formulas based on arrival numbers of the past three years. By looking backwards to determine funding, agencies were constantly behind in periods of expansion. Now, with numbers greatly diminished, agency staff have been informed that they will not benefit from the faulty funding mechanism, as ORR plans to restructure payments in line with future limited projections. In all cases, staff are again hamstrung with the per capita funding structure, that takes into account overall numbers, as opposed to the vastly differing needs of newly arriving communities.</p>
+
+                        <p>Historical adjustments made to the federal resettlement process reveal more attention was placed in the national debate on the role of welfare than the national commitment to welcoming refugees. Anecdotal accounts transformed the depiction of refugees from families working to build a new life into just another community at risk of economically draining federal budgets. It is impossible to separate that transformation from the realities of racial division that birthed those arguments in 1980 and retain power in defining policy today. Statistics about the dependency of each nationality arriving in the country dominated the interest of policymakers, replacing moral—or even economic—discussion about the needs of those communities. Throughout, Congress was given information about the costs of rapid employment, but they insisted on pursuing answers for a question that was statistically answered long ago. Mirroring data about refugees who came prior to the creation of federal resettlement, 11 of the 23 surveys conducted between 1989 and 2011 showed that refugees who had been in the country for five years outperformed national EPR averages. Taken out of context, this data can be used to suggest that federal systems force refugees to become productive and contributing members of their community. A broader look at historical data, along with common sense and decency might have led policymakers to understand that this has always been the case. </p>
+                    </div>
+
+                    <div class="col-md-12 mb-4 figures">
+                        <p><a href="images/figure_7_sept18.png" class="fancybox"><img src="images/figure_7_sept18.png" alt=""></a></p>
+                        <a href="https://docs.google.com/spreadsheets/d/1ialPf5Hx-Hd5apHP6doUDO4WAPyOz8BKu4IeH6MiBKw/edit?usp=sharing" target="_blank"> Click here to access raw data available from the Firestarter Open Data Network.</a>
+                    </div>
+
+                    <div class="col-md-12 mb-4 figures">
+                        <p><a href="images/figure_8_sept18.png" class="fancybox"><img src="images/figure_8_sept18.png" alt=""></a></p>
+                        <a href="https://docs.google.com/spreadsheets/d/1ialPf5Hx-Hd5apHP6doUDO4WAPyOz8BKu4IeH6MiBKw/edit?usp=sharing" target="_blank"> Click here to access raw data available from the Firestarter Open Data Network.</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-section" id="section-8" style="background-image:url('images/Houston_Outcomes_Firestarter.png');">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <h2>Refugee Realities in Houston, TX</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section scroll-content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 mb-4 text-lg">
+                        <p><span class="first-letter-block">I</span>n the winter of 2017, we walked to the front of a local refugee resettlement agency, where a woman sat waiting for us, holding her newborn son. We were asked by a close friend to meet her and share resources available to her as a single mother who had arrived in the country months ago. Neither of us spoke her native language, but a member of the agency staff who did was outside having a cigarette. He offered to translate, knowing all of us well. The woman had given birth shortly after coming to Houston. Her federal refugee assistance funds were exhausted. The agency raised funds locally to help her for several months, but the cost of rent, diapers, food and living expenses left her unable to pay the electricity bill. The lights in her apartment were off. She didn't know what to do. </p>
+                    </div>
+
+                    <div class="col-lg-12 mb-4">
+                        <p>Through our work, we manage a full directory of resources for refugees, but in that moment, no real options stood out. We were just blocks away from a Head Start program, where childcare could allow her to begin working, but their registration had been full for months. A nearby community church was the best option for short-term aid, but they had already given her money the month prior. Our community connection portal had helped single mothers find English language partners in the past, but she was in too delicate a circumstance to benefit from socializing with strangers. "What are you supposed to do in these cases?" we asked our friend who worked for the resettlement agency. "In these cases, to be honest," he responded, "I tell them to leave. Go to another state."</p>
+
+                        <p>As federal funding diminished over time, local infrastructure has come to define the ecosystem for refugee resettlement in Houston. In a city where physical constraints leave many communities isolated and in a state that does not believe in public assistance, resettlement agency staff place refugees in employment with added urgency, recognizing that living without work for even a week can lead to imminent crisis. After losing assistant within 3–6 months of arriving, many families are left all alone to deal with the immense challenges of mental anguish, financial stress and cultural adaption. While the state's high rates of refugee employment outcomes are touted as a model of success for the entire country, a deeper analysis reveals why unacceptable standards commonly fall within the boundaries of success.</p>
+
+                        <p>Three critical issues underlie our examination of resettlement in Houston. First, a strong conclusion based on our experiences working with all five local resettlement agencies precedes the forthcoming analysis: Resettlement agency staff, predominantly composed of refugees themselves and regularly work beyond the defined parameters of their official roles, spend each day looking for ways to support refugees as much as they possibly could. The status quo asks more of them than can be reasonably expected. Guided by an internal moral compass, staff regularly exceeds the expectations of the federal system.</p>
+
+                        <p>Second, it is important to recognize that no statistic can define the realities of life for an individual or family. Nonetheless, a single term is used in an attempt to do just that. Self-sufficiency is a simple calculation made by comparing cumulative wages to basic expenses for rent, utility and food. For example, a family of five with one parent working fulltime at $9 per hour and one older child earning the same through a part time job might earn just under $2,000 each month. If their monthly rent and utilities costs $1,200, with the assistance of Supplemental Nutrition Assistance Program (SNAP) benefits, the family would be marked as self-sufficient. Of course, that is not a determination of quality of life. The snapshot does not take into account the risks of losing employment, floods, broken vehicles or other potentially disruptive events. The standard of self-sufficiency is not the standard communities might set for themselves, their families, their neighbors, nor their friends. Even when considering self-sufficiency as an optimal outcome, a look at those who do not meet its narrow confines shows the need to move beyond current incentive structures.</p>
+
+                        <p>Lastly, it is also critical to note that refugee resettlement in Texas is currently operating through temporary continued resolutions. When the State withdrew from resettlement in October 2016, this did not stop the flow of new arrivals. Rather, the State simply absolved itself of the responsibility to calculate and channel funding distributions to service providers across the state. While examples exist throughout history in which this was done, never before has a state as large as Texas been forced to build structures for resettlement independent of the state government. Funding from ORR, federal metrics for outcome tracking and standard guidelines for service delivery will continue to define the process moving forward, but for the first time, a major U.S. resettlement destination has the opportunity to define its own vision for supporting refugee communities.</p>
+                    </div>
+
+
+                    <div class="col-lg-12 mb-4" id="section-9">
+                        <h2 class="title">Beyond Self-Sufficiency</h2>
+
+                        <p>While self-sufficiency figures for refugees across Texas are generally high, a closer look at the same data points to the heavy cost of imposing a panacea of rapid employment on all refugee arrivals. Resettlement agency staff consistently pointed to a heavy divergence between the priorities of the formal system and the needs of refugees it serves. A deeper analysis of high self-sufficiency rates suggests more about the failures of the system than the successes of refugees that arise despite it.</p>
+
+                        <p>Table 4 utilizes available data for agency caseloads across Texas from 2011–2015, including over 60 percent of arrivals to Houston. It points to the immediate circumstances greeting refugees upon coming to America. <sup class="hint--bottom hint--bounce hint--large" style="background:#24a1db" aria-label="Data comes from caseloads of Matching Grant cases. Since this system was built to be applied to the most employable, it should overstate employment outcomes. In Texas, however, the limitations of public welfare force many families into the Matching Grant program, thereby making the sample set more representative of average cases.">32</sup> The sample shows that in Houston, 79 percent of refugees were labeled as self-sufficient after 180 days. This was the lowest number among the four big cities in Texas, though Houston's caseload was significantly greater than the rest. Statewide, the sample shows that about 18 percent of refugees did not meet the model's goal within that timeframe. In Houston, that amounts to over 2,000 refugees reported not to have achieved basic self-sufficiency through the short-term model between 2011 and 2015. In other words, about 400 individuals fall out of the system's reach each year. The model of cost-minimization deems this large group, their status and experiences, to be an acceptable loss.</p>
+
+                        <div class="figures" style="padding-bottom: 30px";><p><a href="images/table_4_sept18.png" class="fancybox"><img src="images/table_4_sept18.png" alt=""></a></p>
+                            <p><a href="https://docs.google.com/spreadsheets/d/1cFY8ndFeATpvWh83-1ETOtfcrvSdJgljnXKmQmOuagw/edit?usp=sharing" target="_blank"> Click here to access raw data available from the Firestarter Open Data Network.</a></p></div>
+                        <p>Of the refugees who did achieve self-sufficiency, it is telling to see how many of them achieved that mark prior to living in the country for four months. The data shows that about 78 percent of self-sufficient refugees reach that point within 120 days. This achievement can be touted as a remarkably positive — to some even an unbelievable —outcome through the lens of minimizing aid. A vastly different picture emerges, however, when taking into account how the process was intended to work. To do this, we can compare these figures with refugees arriving in the 1990s and early 2000s through one agency in particular.</p>
+
+                        <p>The Hebrew Immigrant Aid Society (HIAS) continues to resettle refugees across the country, though they discontinued services in Houston after 2003. Between 1996 and 2003, they received 26 percent of all national Matching Grant funding, despite being just one of nine national volunteer agencies. This was a result of the immense local community support and funds raised to assist mostly Jewish refugees coming from the former Soviet Union. Almost the entirety of their clients came through this program, which relied on the participation of local communities to guide the way. They reported between 75 to 91 percent self-sufficiency within 180 days over that time period. However, only 33 to 48 percent of those refugees were self-sufficient in the first 120 days, suggesting a longer period of adjustment prior to entering employment. When local residents set standards for treating their own community, the window for employment was significantly pushed back, allowing for other critical services to be delivered first.</p>
+                    </div>
+
+                    <div class="col-lg-6 mb-4 full-img"><img src="images/Houston_P2_firestarter.png" alt=""></div>
+                    <div class="col-lg-6 mb-4">
+                        <p>Over time, the composition of refugee communities has changed. They include communities with fewer financial resources, smaller numbers of established residents living in the city and less participation in the political system. The balancing act that might have once featured periods of long-term planning alongside paths towards financial sustainability now sits lopsided. With no local communities advocating for critical social service delivery, rapid employment is the chief priority imposed upon new arrivals.</p>
+                        <p>Agency staff echoed this sentiment, expressing that the focus on rapid employment is in stark contrast to the expectations of refugees arriving to the city. Opportunities to address emotional stress, long-term planning, education and cultural acclimation can be shelved until employment has been found and subsequently easily forgotten altogether. A staff member who had come as a refugee from Cuba shared her experience discussing the imminent need for employment with refugees who arrived just weeks prior.</p>
+                    </div>
+
+                    <div class="col-lg-12 mb-4">
+                        <blockquote><p>
+
+                                I feel very discouraged because, people who have master's degrees or diplomas, I feel bad, because they have high expectations about what their life is going to be here. For me it is difficult to tell them you have to start from zero. I cannot assure you that we have a job for you according to your diploma. This is realistic. I cannot lie to you. Maybe we can find something good or maybe you will have to start as a dishwasher. They feel so frustrated. I see that they don't want to cooperate. They totally shut down. We have to start working on that in another way.
+                            </p></blockquote>
+                    </div>
+
+
+                    <div class="col-lg-12 mb-4">
+                        <p>Almost 80 percent of staff interviewed are refugees themselves, further complicating the interaction between members of local communities and new arrivals in need of support. Whereas local communities once led the way in caring for the complex needs of new community members, a refugee's first experience hearing a familiar language can be tainted with misunderstanding and mistrust. Within days of arrival in Houston, when refugees first begin to experience a dream of life in America, they are welcomed with the harsh realities of a federal system obsessed with cutting costs, rather than supporting its citizens.</p>
+                    </div>
+
+                    <div class="col-lg-12 mb-4" id="section-10">
+                        <h2 class="title">Texas: An Unwelcoming State</h2>
+
+                        <p>State policy places further constraints on the already minimal levels of assistance offered by the federal system, failing to recognize the needs of its most vulnerable recipients, such as single mothers, large families and the elderly. Funding available for social adjustment takes a clear backseat to opportunities for immediate entry into the workforce. The struggle out of poverty for refugee communities without an education, unaccustomed to their surroundings, and ineligible for long-term public assistance can be insurmountable.</p>
+
+                        <p>The Texas Administrative Code, which falls in line with national standards and continues to guide the system after the State's withdrawal, emphasizes that Social Adjustment Services are required only insofar as they can assist in obtaining rapid employment. Refugees lose cash assistance if they refuse a job deemed appropriate by agency staff. Regulations are far less imposing, however, for vocational training, ESL, cultural orientation, recertification programs and other initial investments built to increase future earnings, which are entirely optional. <sup class="hint--bottom hint--bounce hint--large" style="background:#24a1db" aria-label="Texas Administrative Code. TITLE 1 ADMINISTRATION, PART 15 TEXAS HEALTH AND HUMAN SERVICES COMMISSION, CHAPTER 375 REFUGEE CASH ASSISTANCE AND MEDICAL ASSISTANCE PROGRAMS, SUBCHAPTER C PROGRAM ADMINISTRATION FOR THE REFUGEE CASH ASSISTANCE PROGRAM (RCA).">33</sup> Refugees who maintain minimum-wage employment without learning English and survive paycheck to paycheck throughout the course of their adult lives experience circumstances far from the view of rapid-employment once proposed in 1985 to "renew their sense of self-worth, of pride in self-reliance, and of independence in the freedom of making economic choices."</p>
+
+                        <p>The funding distribution for Social Adjustment Services (SAS), which are intended to support refugees up to five years after arrival, illustrates the imbalance of priorities for the long-term portion of resettlement funding. Any refugee who comes to a resettlement agency within that period of time will be provided case management, funded through SAS funding. Table 5 shows how these funds were distributed to Houston-area agencies during an eight-month period in 2017. They fall in line with systematic incentives putting employment above all other factors. Specific programs outside of employment represent only 20 percent of funding allocations. Social adjustment case management is thus left with few programs to utilize outside of employment services.</p>
+
+                        <p>It is important to note that employment assistance offered to a refugee searching for work after three years is no different from that offered after 30 days. There is far more pressure on agency staff to maintain relationships that yield rapid employment over cultivating strategies to guide a long-term career path. Job placement after the initial resettlement period is not considered in performance evaluation. Staff interviewed indicated that long-term case management could nonetheless provide helpful assistance to refugees struggling to survive, but that those services were underutilized. Though staff might have a desire to maintain long-term relationships with refugees, incentives found within the system encourage ties to be broken with refugees as quickly as possible, labeling families as self-sufficient without consideration of their ongoing needs.</p>
+
+                        <p>In the absence of a federal process interested in long-term outcomes, states stand as the final source of safety net and support funding. While ORR recognized the need to ensure availability of welfare support throughout the 1980s for refugee families in need, the 1990 ORR reforms and the 1997 welfare reforms all but eliminated this possibility for arrivals resettled in the state of Texas. Drastic reductions in the state's public assistance infrastructure resulted in an increasingly hostile environment for both families who entered low-wage work prior to their termination of assistance and those who did not fit within the rapid employment model. </p>
+
+                        <div class="figures" style="padding-bottom: 15px"> <p><a href="images/table_5_sept18.png" class="fancybox"><img src="images/table_5_sept18.png" alt=""></a></p>
+
+                            <p><a href="images/figure_9_sept18.png" class="fancybox"><img src="images/figure_9_sept18.png" alt=""></a></p>
+                            <p><a href="https://docs.google.com/spreadsheets/d/1zT6zam3GYMWRrD2eQo7721_6K1UiVov-Q4GY3QgEmZE/edit?usp=sharing" target="_blank"> Click here to access raw data available from the Firestarter Open Data Network.</a></p>
+                        </div>
+                        <div class="figures" style="padding-bottom: 30px">
+                            <p ><a href="images/figure_10_sept18.png" class="fancybox" style="padding-bottom: 30px";><img src="images/figure_10_sept18.png" alt=""></a></p>
+                            <p><a href="https://docs.google.com/spreadsheets/d/1adTV85wFo9Vm2b4xfPOI8iU8-H76KO0wbiTUdN1tNbY/edit#gid=0" target="_blank"> Click here to access raw data available from the Firestarter Open Data Network.</a></p>
+                        </div>
+
+                        <p>In Texas, minuscule levels of public welfare force the most vulnerable families into programs that were once built as special paths for highly employable refugees. The Matching Grant program was designed "to help refugees attain self-sufficiency within four to six months after arrival." <sup class="hint--bottom hint--bounce hint--large" style="background:#24a1db" aria-label="Retrieved from https://www.acf.hhs.gov/orr/resource/annual-orrreport-to-congress-2005-public-private-partnerships#Voluntary%20 Agency%20Matching%20Grant%20Program">34</sup> Alternatively, the Refugee Cash Assistance program offers benefits for up to eight months, but it is designed for families who do not qualify for public welfare. In Texas, public welfare or TANF offers a single mother with three children $348 in assistance each month, while a two-parent household with two children gets an additional $9.<sup class="hint--bottom hint--bounce hint--large" style="background:#24a1db" aria-label="TANF Cash Help (https://yourtexasbenefits.hhsc.texas.gov/ programs/tanf/families) ">35</sup> In both cases, this level of assistance would leave a family homeless. Since the eight-month program is only available for cases that do not qualify for public assistance and Texas assistance levels are insufficient to live, families with children are enrolled in a program once built for the easiest cases.</p>
+
+                        <p>Figure 9 shows that 20 years ago Harris County residents received over 10 times more public assistance than in 2016. Then, refugees facing the most challenging conditions might be supported through a combination of public assistance and local community support. Now, the solution for them is rapid employment. While the system of funding has remained unchanged for almost three decades, the consequences for refugee families worsen, year by year.</p>
+
+                        <p>Since welfare reform created a block grant system in 1997, a third of public assistance has been lost nationally due to inflation alone. Texas, however, has accelerated the pace of reduction beyond most other states. The state ranks 49th in its share of total spending on basic assistance programs and 50th in contributions to core activities, including work activities and work support services. <sup class="hint--bottom hint--bounce hint--large" style="background:#24a1db" aria-label="The analyses in this spreadsheet use federal and state TANF spending data collected by the Department of Health and Human Services (HHS) using a financial data reporting form (Form ACF196, http://www.acf.hhs.gov/ofa/resource/tanf-acf-pi-2014-02) that states are required to submit no later than 45 days after the end of each quarter. The data from fiscal year 2015 can be found here: http://www.acf.hhs.gov/ofa/resource/tanf-financial-data-fy-2015.">36</sup> The state is one of only four across the country to eliminate all funding to childcare, which is particularly challenging for refugee single parents attempting to satisfy the demands of rapid employment. The bipartisan Center for Budget and Policy Priorities reported in 2015, "For every 100 poor families with children in Texas, only 5 received TANF cash assistance, down from 24 in 2001. During that time, Texas slashed its spending on basic assistance and eliminated spending on child care, even as the number of families with children below 50 percent of the poverty line increased."</p>
+
+                        <p>Figure 10 illustrates the state's divestment as compared to changes in annual refugee arrival numbers. This trend towards the elimination of public welfare in Texas is the primary reason that multiple staff interviewed reported cases in which they have told refugees that their best option would be to move out of state. For those families, single mothers and skilled workers in need of vocational training or recertification, Houston remains an entirely unwelcoming place. The same lever once pulled to reduce assistance for refugees, in spite of all data about the potential return on investment, is being pulled with certainty for families living across the state. In a city with limited access to public transportation and ample space for communities to be left entirely out of view of one another in particular, refugees are among those forced to face the worst of these consequences.</p>
+                    </div>
+
+                    <div class="col-lg-12 mb-4" id="section-11">
+                        <h2 class="title">Rapid Employment Incentives</h2>
+
+                        <p>A vital question remains unasked and unanswered within the data collected around employment outcomes for refugees. If rapid employment sacrifices the opportunity to learn English, the ability to manage mental health or the availability of vocational training and recertification programs, then what is gained to outweigh those costs? Further, if data suggests that the speed at which refugees are thrust into employment has continued to accelerate, what does this acceleration mean for refugees building a life in Houston?</p>
+
+                        <p>A job represents more than an hourly wage for refugees arriving to Houston. Especially for those who have spent decades in a refugee camp or years living amid war, the opportunity to support oneself financially and provide for a family is a critical component of healing from the trauma of the past. An unknown number of employers across the city—most of whom do not advertise the profound role they play guiding families in their new life as Americans—have learned the value of providing an opportunity for new arrivals to contribute productively. Historical data has consistently shown the upside potential of an investment in the productive capacity of refugee arrivals. Unfortunately, current metrics of evaluating the system fail to show the degree to which new arrivals fulfill their full potential.</p>
+
+                        <p>According to figures from the resettlement agencies, 2,933 arrivals were served in 2016. Using estimates from the 2011–2015 samples, it amounts to over 2,300 individuals who became self-sufficient thanks to refugee employment services that year. Assuming a ratio of one working adult for every two others, about 750 jobs were found, a task that would be challenging for any staffing company, let alone an underfunded social service provider. Resettlement agencies, however, operate within uniquely challenging incentive systems. Pressures to maintain ties with large employers overwhelm the process, encouraging connections to be made as quickly as possible without considering better long-term alternatives.</p>
+
+                        <p>In addition to capturing self-sufficiency snapshots at the 120- and 180-day targets, agencies report on the rates of job retention after 90 days of employment. In Texas, these figures have averaged about 84 percent of jobs retained beyond 90 days since data collection began in 1996. If Texas averages extend to our estimates, over 100 refugees left their initial job in 2016 prior to the end of three months. The 90-day target, however, fails to describe the quality of work being offered, whether it prepares refugees to care for their families and whether it utilizes the full productive capacities of community members. Interviews with members of the community and agency staff, however, can paint a better picture.</p>
+
+                        <p>Most commonly, agency staff emphasized the competing interests of refugees themselves and the system built to guide them. As a primary illustration of this conflict, employment staff reported that placing a refugee into a job without any English language skills after weeks of arrival is an optimal outcome for the process. The system's short-term priorities are most confounding when compared to historical data correlating long-term employment with language acquisition. Instead, incentives are placed on agencies to maintain strong ties with a small group of low-wage employers.</p>
+
+                        <p>By tightening funding constraints on the system, rapid employment incentives leave the door open for a small group of large employers to benefit, disproportionately. One employment staff member revealed that 40 percent of recent arrivals in his agency were placed with a single top employer and that 80–90 percent are sent to the top five. Given the immense pressure placed on staff to employ large numbers of new arrivals, the power dynamics are overwhelmingly in favor of large employers who maintain ongoing ties with agencies. The ubiquitous presence of staffing agencies allows many of those employers to avoid hiring full-time staff, skimming valuable dollars off the top of wages and further reducing the power of refugees searching for meaningful opportunities. Ideal outcomes reported by agency staff and encouraged by the federal model thus incentivize refugees to be connected with employers offering seasonal employment or overseeing conditions that are conducive to high staff turnover. This revolving door ensures that recent arrivals can take the place of others who occupied the same position just months prior. Empowered employers who benefit from a workforce that does not speak English and cannot envision upward mobility are positioned to become the most powerful beneficiaries of the short-term employment model.</p>
+
+                        <blockquote><p>    "Really, the long-term goal we don't really plan or we don't have a setup to help them to plan for their long-term goal," said one agency employment staff who arrived as a refugee from Burma, "because our main goal is to help them find a job within that eight-month period." While the system is well equipped to quickly connect refugees with opportunities to enter a cycle of perpetual low-wage labor, no efforts are made to support the communities who are left to fend for themselves in the fight for long-term survival and prosperity.</p></blockquote>
+
+                    </div>
+
+                    <div class="col-lg-12 mb-4" id="section-12"><h2 class="title">Education and New Paths for Investments</h2></div>
+                    <div class="col-lg-6 mb-4 full-img"><img src="images/Education_p2_firestarter.png" alt=""></div>
+                    <div class="col-lg-6 mb-4">
+                        <p>If the costs of rapid employment are evident, then a parallel investment in education might yet balance out those losses. Unfortunately, there is no clear path built within the system for a recent arrival to work hard, study, and over time, build a career path. Nonetheless, the experiences of refugee community members show that this does occur despite all odds, and so an investment in education for recent arrivals, young and old, is one of the areas that stands to realize the most promising returns.</p>
+
+                        <p>Agency staff commonly differentiates between two categories of arrivals, those who come overqualified for the work made available to them and those who come with no qualifications at all. Refugees coming with professional degrees stand to benefit from recertification and training programs that are not made accessible in the first months of arrival. Many others who commonly arrive after decades of waiting in a refugee camp are most likely to go without English language training and thereby most likely to be unemployed after five years, according to national statistics. While the realities of Texas social support preclude anyone from staying in the state without work, they also force individuals with a thirst for knowledge and strong work ethic to remain in a perpetual state of minimum-wage employment.</p>
+
+                        <p>Resettlement agency staff shared that the greatest gap in expectations between refugees who come and the reality that awaits them is in their desire to obtain an education. One staff member from the Democratic Republic of Congo stated:</p></div>
+                </div>
+
+                <div class="col-lg-12">
+                    <blockquote><p>
+
+                            "Most people are interested in education. Their interest is education, but work is first. And then we tell them why work is first. On and on, the conversation for education comes because they bring it up. But we kind of bring up the work conversation, because without work you have nowhere to stay... They are made to give up their education.... When I came I wanted to come to school. In my country there was a lot of oppression and education is not open to everybody. When you know in the U.S. that education is open, it is a shock for most people that come here."
+                        </p></blockquote>
+
+                    <p>This can be particularly traumatic for parents of children who are 18–20, arriving here without ever having the opportunity to obtain an education. Federal guidelines prohibit cash assistance for full-time students, leaving these young adults between a rock and a hard place; shall they forego the dream of an education to meet the short-term financial needs of their family? Unfortunately, the realities of the system rarely leave room for choice in the matter.</p>
+
+                    <p>In the areas of ESL and continued education, Houston's service offerings have been consistently noncompetitive and insufficient. A single for-profit institution manages the contract to offer ESL for all adult refugee arrivals. A narrow subsection of refugees have access to those free introductory courses. They must live close to the classes offered, have no need for childcare assistance and find time to attend classes outside of their work schedule. While agencies and communities do all they can to add flexibility and offer solutions for attending those courses, for the vast majority of refugees, especially those working to survive, this opportunity to attend ESL is out of reach.</p>
+                    <p>
+                        A number of churches and ethnic community organizations have built an informal network of courses offered across the city. However, no regularly updated directory exists. Whereas local capacity to offer more accessible classes might exist across the city, limited funding channels and lack of coordination with alternative providers precludes it from developing broadly.The greatest pressure, however, precluding ESL access does not come from limited organizational capacity. It stems from a need to work within days of arrival.</p>
+
+                    <p>Similar pressures limiting ESL preclude vocational training and continued education from positively impacting the lives of refugees. Previously, Houston Community College held the primary contract to extend training opportunities for qualified refugees. Interviews with their staff showed a major lack in capacity, and ultimately their contract was terminated. Programs that remain available are hamstrung by the same short-term focus that inexplicably limits the potential of refugees interested in bettering their present circumstances. ORR-funded programs for continued education stipulate that participants complete their training and show positive employment outcomes before the end of the fiscal year ending in September. The window of opportunity thus shrinks every month after October. Again, arbitrary funding targets present extreme limitations for even the most motivated refugees who happen to arrive in the wrong month and will never again have a window of opportunity to receive professional training.</p>
+
+                    <p>Local support institutions have played a significant role in assisting in one area of educational needs for young refugee arrivals. A number of nonprofit organizations and resettlement agencies play an important role in offering extra help for refugee students, contributing critically needed resources for refugee students in Houston. Afterschool programs supported by local philanthropy have created a model for central coordination of assistance where public institutions lack the funding to do so. Those groups now have some of the best longitudinal data tracking the progress of refugee students, offering a model for implementing systems to track long-term outcomes. If the federal system is uninterested in understanding the long-term consequences of inaction, then only local models can inform future efforts to raise the standards of support. In the case of children, definite returns on investment can be seen across the city, and yet adult education, which might show improvement at a much quicker pace, remains unfunded.</p>
+
+                    <p>Without an investment in their education, refugees face insurmountable costs for transcript verification and recertification programs, leaving even highly qualified professionals working at low-wages. In the past, free loan programs for these costs were utilized across the country, particularly in conjunction with support services offered by HIAS. While one of the primary organizations that served refugees in Houston throughout the 1990s continues operations, it no longer extends those to new refugee arrivals. National staff from their organization reported repayment rates in the area of 90 percent, highlighting the success with which the program was able to thrust refugees into higher levels of employment. Free loans to lower barriers for refugees to continue working in their professional capacity is just one example of programs that offer definitive returns on investment and yet fall out of bounds for the monolithic rapid employment model.</p>
+
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="bg-section" id="section-13" style="background-image:url('images/recommendations_refugee_firestarter.png');">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+                        <h2>
+                            Recommendations and Conclusions
+                        </h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section scroll-content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 mb-4 text-lg">
+                        <p><span class="first-letter-block">T</span>he age of the masked and the alone begins, we look for sinister states, a loss shall learning suffer before this circle of this sun be done, the palace birds of the new tyrants rise flying into the wounded sky, sky of catastrophe; help may be near, but remedy is far... </p>
+                    </div>
+
+                    <div class="col-lg-12">
+                        <cite style="text-align: right;">--Fourth Elegy: &ldquo;The Refugees&rdquo; Muriel Rukeyser (1949)<sup class="hint--bottom hint--bounce hint--large" style="background:#24a1db" aria-label="Rukeyser, Muriel. Elegies. (New York, NY: New Directions Paperbook, (1949) 2013): pp. 19- 4.">37</sup></cite><br><br>
+
+
+                        <p>Unlike what we are told, there is no &ldquo;immigrant   and refugee crisis,&rdquo; but a catastrophe, an ongoing mistreatment of   displaced communities. The American-Jewish poet, Muriel Rukeyser,   reminds us that momentary help that is devoid of long-term   responsibility could prove to be more harmful and negligent than   offering any kind of support. While providing short-term assistance is   an important first step, particularly in thinking about the growing   number of displaced communities in the world today, lasting solutions   ask for more substantial involvement, dialogue and planning. To be sure,   this is not a report that is based merely on an intellectual analysis;   it drew on primary and secondary sources together with voices,   frustrations and hopes of Houston immigrant communities in a way to   clear this &ldquo;sky of catastrophe&rdquo; and brazen violence that goes unnoticed   in America.</p>
+                        <p>
+                            A number of opportunities exist on both local and   national scales to build more humane systems to guide resettlement. The   following list was compiled by incorporating the needs of agencies,   community members and our own efforts in Houston to meet the emerging   needs of families.</p>
+                        <h3 >1. Federal Resettlement &ldquo;Tracks&quot;</h3>
+                        <p>While each of our new community members comes   with a unique history and complex needs, several categories of cases   continually exhibit recurring needs for support. Currently, new arrivals   have no choice in determining the programs they utilize for assistance.   By creating multiple tracks, families can be given the option to choose   between trajectories that fit their needs. Choice is critical in   allowing individuals to reclaim agency that the system has methodically   taken away over the past four decades. Furthermore, federal entities are   not the only ones who can build such systems, with massive opportunity   existing for local communities, cities, and states interested in   ensuring the long-term wellbeing of new arrivals.</p>
+                        <p>
+                            Creating an   option for single parents, and particularly single mothers, is first on   the list of necessary alternative tracks. These families require an   upfront investment that ensures the single provider is able to speak   English, receive the emotional support of local community institutions,   and make long term plans to care for the family. Financial assistance   may be required for 10–12 months while those investments are made. In   addition, arrangements must be made for children of single refugee   parents to be placed into free childcare or afterschool care facilities.   Existing infrastructure at schools and community centers must be   leveraged for plans to be built prior to the arrival of these families.</p>
+                        <p>
+                            Second,   large families require the flexibility of additional case management   and financial assistance. Young adults in those households should not be   asked to forgo an education in order to support their siblings through   perpetual minimum-wage employment. If education is not an option for   these family members, vocational training programs or apprenticeships   must be set up in order to avoid losing the long term productive   capacities of these young refugees. In the past, ORR has funded   employment programs that pay employers a supplemental wage for positions   that offer training and long-term growth potential. Programs such as   this must be offered for young adult members of large families in order   create educational opportunities even amidst challenging circumstances.</p>
+                        <p>
+                            Third,   a differentiation must be made between refugees who arrive without   educations and those who come with extensive scholastic records. Loan   programs must be made available to individuals who require degree   verification or entry into recertification programs. Community members   who have gone through similar processes must be engaged to guide new   arrivals through those often complex, bureaucratic systems. Personal   mentorship can help ensure employment services are delivered in a   sensitive manner, recognizing the significant mental anguish that comes   from losing a lifetime of scholastic achievement in the process of   migration. </p>
+                        <h3 >2. Ongoing Dialogue as Input for Systems of Resettlement</h3>
+                        <p>Rather than being treated as &ldquo;clients&rdquo; who are   expected to find a &ldquo;survival job&rdquo; and then disappear in the suburbs,   refugees must play a central role in evaluating the degree to which   systems are supporting their changing needs. Refugee communities should   be invited to a democratic space where they are primarily responsible   for and capable of identifying their own needs. Gatherings like this,   held in major cities across the country, can facilitate the creation of   surveys mirroring those collected nationally by ORR in order to paint a   picture of long-term outcomes. It is unacceptable for the system of   resettlement to operate without meaningful tools for ongoing dialogue   and performance evaluation. Successful outcomes must be defined beyond   the short-term model of rapid employment.</p>
+                        <p>
+                            When we think about   data with regard to the refugee population, we think merely about one   particular perspective: data about refugees, their income level,   employment rate and self-sufficiency status. To better inform local   agencies and various policymakers, refugees should be encouraged to   claim their voices and to take part in conversations about their   experiences, challenges and changing needs. Much like the refugee   consortium presently brings together all five resettlement agencies on a   quarterly basis, such meetings will bring greater transparency and   encourage different refugee communities to forge meaningful allegiances.</p>
+                                             <p><img alt="" src="images/refugee_recommendations_firestarter.png" /></p>
+                        <h3 >3. Ethical Engagement with Business Community</h3>
+                        <p>We have been exploring the use of digital systems   to increase the number of opportunities refugees have in obtaining   employment. While there is no easy way to guarantee all arrivals are   perfect fits for all job openings, current systems unquestionably   require greater levels of transparency.</p>
+                        <p>
+                            Diversification of   employment opportunities, in particular, is possible through digital   tools. Employers who hire refugees should be highlighted publicly for   the role they play in welcoming new arrivals. Business leaders would   benefit from public recognition. In addition, refugees themselves should   have access to this public list to better understand opportunities that   might be available to them.</p>
+                        <p>
+                            A variety of businesses might also   benefit from offering special services to refugees. In addition to   public recognition, gyms, restaurants, utility providers, and many other   companies will benefit from engaging refugees as new clients. Much like   the initial period of resettlement assistance, businesses who offer   several months of free services stand to benefit from long-time   customers from within the refugee communities.</p>
+   
+                        <h3 >4. Diversify Access to ESL</h3>
+                        <p>A standard must be set for all refugees to have   real opportunities for English language training. The ability to   communicate makes an immense impact on employment potential and   emotional well-being. Steps can be taken both prior to arrival in the   country and once refugees have begun their new lives to meet this   standard.</p>
+                        <p>
+                            Currently, more refugees are stranded living in camps   across the world than ever before, presenting an opportunity for   improving the circumstances of those arrivals prior to entering the   country. Mirroring programs initiated in the early 1980s, refugees who   are otherwise unengaged while waiting to leave a camp must be offered   real opportunities for education and training. Intensive ESL can be   provided to mitigate the numbers of refugees who never learn English   after arrival. A variety of academic courses are also being developed   and delivered directly to refugee camps. These programs should be   permanent companions to any invitation extended to refugees for arrival   in the U.S.</p>
+                        <p>
+                            Locally, the funding mechanism for ESL limits the   ability of qualified teachers to deliver instruction across the city. By   directing funds through one organizational funnel, an unrealistic   standard is set for a single organization to meet the needs of all   refugee arrivals. A network of ESL courses offered at religious   institutions, schools, and communities centers across the city must be   combined with federally funded programs to reach as many newcomers as   possible. A central digital database made accessible to agency staff and   community members could accomplish this effectively.</p>
+                                                <h3 >5. Investment in Permanent Housing Solutions</h3>
+                        <p>Refugee arrival numbers over the past several years lead to $5-$10 million in new business for multiunit housing owners, each year. Over time, this amounts to hundreds of millions in funding sent to local property owners rather than being invested in the long-term interest of refugee arrivals. Refugee experiences with Hurricane Harvey highlighted the uneven power dynamics at play in the business of refugee housing. Families who have no credit or ability to pay for security deposits are often forced into units that house more families than are legally permitted to avoid paying unsustainable costs of living. In Texas, especially, where property owners are given high legal protection, and in Houston, where public housing is entirely inaccessible to recent arrivals, solutions to refugee housing requirements are difficult to imagine.</p>
+                        <p>
+                            One model that might be ideal for Houston resettlement is to invest housing funds into units owned by the agencies themselves or some nonprofit service provider. Ideally, funds for housing assistance would be spent in the interests of refugees themselves or the agencies tasked with resettling them, rather than private housing interests. Were the city or the agencies to own land, they could have 
+much more success in delivering secondary services and engaging recent arrivals until they are ready to venture out on their own. In addition, it would prevent the rising cost of living from presenting serious challenges to the process in the near future, while likely raising revenue for 
+service providers in the long-run.</p>
+                     <p><img alt="" src="images/housing.jpg" /></p>
+                        <h3 >6. Mentorship</h3>
+                        <p>The initial guidance of a family mentor or   professional advisor can have a profound impact on the path of a   refugee. This is the experience we have learned through the Houston in   Motion community collaborative, which has created the opportunity for   deep engagement between previously isolated communities spread across   the city. Through a digital connection portal, we have set a three-year   target of 100 percent matching for recent arrivals with local mentors.   Mentors connected through our digital portal have assisted as English   language partners, employment mentors for highly skilled arrivals and   social adjustment partners. Through collaboration with agencies, service   providers and community volunteers across the city, this target can   ensure that no refugees struggle with challenges that could be easily   overcome through introduction to local network connections.</p>
+                        <h3 >7. Transportation Assistance</h3>
+                        <p>One of the most common barriers to employment is   access to transportation. Several agencies across Houston have been   actively working with donors to provide vehicles to recent arrivals.   Donation programs to provide 500 vehicles for free each year can make a   profound impact on the long-term outcomes of refugee arrivals. In   addition, public transportation should be offered free of charge for   refugees still adapting to life in the city. The system of buses and   rail can open recent arrivals to corners of the city they would not   otherwise have an opportunity to explore, while significantly increasing   opportunity for employment.</p>
+                        <p><img alt="" src="http://www.firestarter.org/images/OfficeImageTemp/Recommendations2_refugees_houston_firestarter.png" /></p>
+                        <h3 >8. The Critical Role of Arts and Culture</h3>
+                        <p>Cultural institutions around the city including   museums, theaters, sports teams, and more should build special   opportunities for refugee families to attend free of charge. A trip to   the opera or ballet can be a memorable occasion, especially for young   children, but also an opportunity for families to leave the stressful   realities of rapid employment and cultural fear behind. Institutions   interested in affirming their mission to reach diverse communities   should be encouraged to extend invitations to refugee communities.</p>
+                        <p>
+                            While   exposure to Houston&rsquo;s cultural sites is valuable, artwork made by   refugees themselves creates an invaluable opportunity for refugee   communities to voice their personal experiences. An investment must be   made in opportunities for refugee community artists to show their work.   As a tool to educate and an opportunity to heal, events that bring   diverse communities together strengthen the capacity of Houstonians   across the city to support new arrivals in their ongoing journey.</p>
+                        <h3 >9. Free Loans for Education and Training</h3>
+                        <p>A necessary solution must be conceived for the   contribution of no-interest loans to assist in the recertification and   training process. Programs that couple loans with entry into training   programs show promise for meeting the needs of refugees, employers and   agency staff. Our experiences have shown that experienced employment   mentors can play a critical role in ensuring that funds are used for   meaningful programs and introducing refugees to new employment networks.   While employment staff is limited to a short-term perspective, mentor   matching programs are currently being run through digital tools at   almost no cost across the globe.</p>
+                        <p>
+                            Most importantly, we hope that   these recommendations can be combined with others in open forums that   place the needs of our community members at the center. Now more than   ever, in the face of growing natural and political crisis, we must shape   a common vision. There is no excuse for being unable to fulfill the   longstanding ethical commitments of this country. Even if our history   suggests that those commitments require an ongoing struggle, this   pursuit is worth fighting for and defending to ensure we live in a   country that liberates and sustains us all.</p><br><br>
+
+                        <p><a href="timeline/index.html"  target="_blank"><img alt="" src="images/firestarter_refugee_timeline.png" style="border-style:double;"/></a></p>    
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-section" id="section-14" style="background-image:url('images/Acknowledgements_refugees_houston_firestarter.png');">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+                        <h2>
+                            Acknowledgments
+                        </h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section scroll-content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 mb-4 text-lg">
+                        <p><span class="first-letter-block">T</span>his work would not be possible without the support and kindness of the following individuals and communities.</p>
+                    </div>
+
+                    <div class="col-lg-12">
+                        <p>Among our closest friends and supporters who drove us throughout this process are Dr. Nancy Adossi, Hussein Al-Khudhari, Carolina Ramirez, Karla De Jesus, Oscar Hernandez, Serge Amani, Tu Tu, Dahan Baraily, Obaid Essazay, Sibhatleab Gebrekidan, Riziki, Haval Khidher, Rand Omran, Margaret Ayot and many others. </p>
+                        <p>Rice faculty including professor Dr. Alan Matusow, Dr. Elizabeth Long, Dr. Matthias Henze, Dr. Jose Aranda, Dr. Anne Chao, Dr. Michael Mass, Dr. Lisa Spiro and Provost Dr. Marie Lynn Miranda have all been instrumental in the making of this work. </p>
+                        <p>Additionally, the contributions of leaders working within the local resettlement agencies, the majority of whom are refugees themselves, fueled us with love and encouragement. Dario Lipovac continues to be a mentor and friend. Ali Al Sudani has believed in our work throughout. Miriam Diria shows us a rare model of genuine leadership. Sara Kaufman pushed us to seek out the truth amid a forest of misinformation. Wafa Abdin encouraged us to transgress borders and labels that only dehumanize us all. </p>
+                        <p>Rice Students have been great support in shaping this project: Lauren Williams, Keerthi Bandi, Vincent Nguyen, Viviano Solano, Anne Thomas, Jasmine Lin, Marica Sharashenidze and Erin Rieger. </p>
+                        <p>The whole work of Houston in Motion would not be possible without our friends at the Houston Endowment, Lauren Caldarera and Rice’s Center for Civic Leadership, Jie Wu, Lisa Emmite-Baker, Leah Binkovitz, Bill Fulton, and Dr. Stephen Klineberg at the Kinder Institute for Urban Research, and Naomi Eisenberger from The Good People Fund. </p>
+                        <p>The Board of Directors at Firestarter also played an immense role in the production of this research. Bob Fleming’s history in refugee resettlement provided a vital background and buoyed our search. Jay Resh, along with his whole family, played a role that goes beyond research or reports. Our group’s founding members, David Clifford, Riikaa Clifford, and Worth Wray set a course for endeavors that continue guiding us to this day. </p>
+                        <p>Quynh Anh McMahan once brought us together with Ghulam Kehar, Nicole Ellis, and Roxanne Paiva to be led by Suzanne Hinds in a leader’s circle that played a critical role in pushing this work forward. We are indebted to each of them for their continued support and belief. Abdirahman Hassan has also played an immense role in this process, working without pay and without the support of well-resourced institutions. His role—along with Dave Muanz, Mohammed Meki, and Hakim Samatar—in building links between ethnic groups from across Africa and in guiding our work with compassion, dedication, and dignity cannot be understated. </p>
+                        <p>Without our families, this would be impossible: Irina Digilova, Mikhail Digilov, Felix Digilov, Flora and Ezra (Fereydoun) Sharim, Yair Sharim and his family. </p>
+                        <p>And of course: Maggie, Lorena and Micaela. All love!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 align-self-center"><a href="index.html"><img src="images/firestarter_web_logo.png" alt="" style="display:none;"></a></div>
+                    <div class="col-md-6 align-self-center text-center">© 2018 The Firestarter Group - Digital Development Team</div>
+                    <div class="col-md-3 align-self-center" style="display:none;">
+                        <ul>
+                            <li><a class="facebook" href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook-f" aria-hidden="true"></i></a></li>
+                            <li><a class="twitter" href="https://twitter.com/" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                            <li><a class="google" href="https://plus.google.com" target="_blank"><i class="fa fa-google-plus"></i></a></li>
+                            <li><a class="instagram" href="https://instagram.com/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <a href="firestarer_refugee_realities_Oct18.html#" class="back-to-top"><i class="fa fa-angle-up"></i></a>
+        <!-- Bootstrap core JavaScript================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="js/jquery-min.js" ></script>
+        <script src="js/popper.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/ie10-viewport-bug-workaround.js"></script>
+        <script src="js/ie-emulation-modes-warning.js"></script>
+        <script src="js/custom.js"></script>
+        <script src="js/jquery.easing.min.js"></script>
+        <script src="js/css3-animate-it.js"></script>
+        <script src="js/jquery.fancybox.js"></script>
+        <script type="text/javascript" src="js/jquery.mixitup.min.js"></script>
+        <script src="js/jquery.matchHeight-min.js"></script>
+        <script type="text/javascript">
+                                $('.coleql_height').matchHeight();
+        </script>
+        <script type="text/javascript">
+            (function () {
+                var bsModal = null;
+                $("[data-toggle=modal]").click(function (e) {
+                    e.preventDefault();
+                    var trgId = $(this).attr('data-target');
+                    if (bsModal == null)
+                        bsModal = $(trgId).modal;
+                    $.fn.bsModal = bsModal;
+                    //$(trgId + " .modal-body").load($(this).attr("href"));
+                    $(trgId).bsModal('show');
+                });
+            })();
+
+            function pdfOption(e) {
+                if (e == '1') {
+                    $('#showinfo input').val('');
+                    $('#showinfo').show();
+                    $('input[name="country"]').removeAttr('disabled');
+                    $('input[name="zipcode"]').removeAttr('disabled');
+                    $('input[name="mailaddr"]').removeAttr('disabled');
+                    $('input[type="submit"]').show();
+
+                    //$('#showprefer').hide();
+                    //$('input[name="prefer"]').attr('disabled', 'disabled');
+                } else if (e == '2') {
+                    $('#showprefer input').val('');
+                    $('#showinfo').hide();
+                    $('input[name="country"]').attr('disabled', 'disabled');
+                    $('input[name="zipcode"]').attr('disabled', 'disabled');
+                    $('input[name="mailaddr"]').attr('disabled', 'disabled');
+
+                    //$('#showprefer').show();
+                   //$('input[name="prefer"]').removeAttr('disabled');
+                    $('input[type="submit"]').show();
+                }
+            }
+
+            $(function () {
+                $('form#pdfForm').submit(function (e) {
+                    e.preventDefault(); //prevent form from submitting
+                    var form = $(this);
+                    var url = form.attr('action');
+
+                    //console.log(form.serialize());
+                    //return false;
+
+                    $.ajax({
+                        type: "POST",
+                        url: url,
+                        data: {action: 'pdfform', formdata: form.serialize()}, // serializes the form's elements.
+                        success: function (data) {
+                            //alert(data); // show response from the php script.
+                            //location.href = "http://www.firestarter.org/thank-you.php?msg=1";
+                            //$('#pdfForm')[0].reset();
+                            $('#PdfModal').modal('hide');
+                            window.open('http://www.firestarter.org/images/firestarter_kinder_report.pdf');
+                        }
+                    });
+                });
+            });
+
+            $(document).on('hidden.bs.modal', function (e) {
+                if ($(e.target).attr('data-refresh') == 'true') {
+                    // Remove modal data
+                    $('#pdfForm')[0].reset();
+                    $('#showinfo').hide();
+                    $('input[name="country"]').attr('disabled', 'disabled');
+                    $('input[name="zipcode"]').attr('disabled', 'disabled');
+                    $('input[name="mailaddr"]').attr('disabled', 'disabled');
+
+                    //$('#showprefer').hide();
+                    //$('input[name="prefer"]').attr('disabled', 'disabled');
+                    $('input[type="submit"]').hide();
+                    $(e.target).removeData('bs.modal');
+                    // Empty the HTML of modal
+                    //$(e.target).html('');
+                }
+            });
+        </script>
+        <!--<a style="display:none;" id="downloadLink" href="http://www.firestarter.org/images/firestarter_kinder_report.pdf" target="_blank" type="application/octet-stream" download="http://www.firestarter.org/images/firestarter_kinder_report.pdf">click here</a>
+        <script type="text/javascript">
+            var delay = 3000;
+            window.setTimeout(function () {
+                $('#downloadLink')[0].click();
+            }, delay);
+        </script>-->
+    </body>
+<script>'undefined'=== typeof _trfq || (window._trfq = []);'undefined'=== typeof _trfd && (window._trfd=[]),_trfd.push({'tccl.baseHost':'secureserver.net'}),_trfd.push({'ap':'cpsh'},{'server':'a2plcpnl0852'}) // Monitoring performance to make your website faster. If you want to opt-out, please contact web hosting support.</script><script src='https://img1.wsimg.com/tcc/tcc_l.combined.1.0.6.min.js'></script></html>
